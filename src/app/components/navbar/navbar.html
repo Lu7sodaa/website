@@ -1,0 +1,18 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <div class="navbar-brand">
+            <span ng-click="nav.toggleSidebar()"
+                  class="glyphicon glyphicon-menu-hamburger"></span>
+
+            <a class="skoli-logo" ui-sref="home">
+                Skoli
+            </a>
+
+            <span ng-if="!nav.$state.is('home')">
+                &nbsp;/&nbsp;{{ nav.$state.current.name }}
+            </span>
+        </div>
+    </div>
+  </div>
+</nav>

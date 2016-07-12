@@ -1,0 +1,8 @@
+<div class="sidebar">
+    <ul class="list-unstyled">
+        <li><a ui-sref="home">{{ sidebar.$state.get('home').data.title | capitalize }}</a></li>
+        <li><a ui-sref="offer">{{ sidebar.$state.get('offer').data.title | capitalize }}</a></li>
+        <li><a ui-sref="agency">{{ sidebar.$state.get('agency').data.title | capitalize }}</a></li>
+        <li ng-click="sidebar.scrollTo('#contact')">Contact</li>
+    </ul>
+</div>

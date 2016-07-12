@@ -1,0 +1,65 @@
+.offer {
+    &__chapter {
+        padding-top: 2em;
+        padding-bottom: 6em;
+        h1 {
+            position: relative;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            &:after {
+                width: 58px;
+                height: 5px;
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+        }
+        &__description {
+            margin-bottom: 1em;
+        }
+        &__description, &__services {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+
+        &__services {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 1em;
+            padding-bottom: 0;
+            // padding-bottom: 1em;
+            // position: absolute;
+            // right: 0;
+            // top: 0;
+            // bottom: 0;
+
+            // @media screen and (max-width: @screen-md-min){
+            //     position: static;
+            // }
+            .service {
+                margin-bottom: 1em;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+                &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                }
+                &__name {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    // text-align: right;
+                    font-size: 1.25em;
+                }
+                &__subservice {
+                    margin-bottom: 1em;
+                }
+            }
+            & > ul > li {
+                li {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

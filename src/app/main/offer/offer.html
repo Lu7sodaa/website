@@ -1,0 +1,67 @@
+<div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
+    <skoli-sidebar></skoli-sidebar>
+    <div class="view">
+        <skoli-navbar></skoli-navbar>
+        <div class="main offer">
+            <section class="main__header">
+                <div class="text-center">
+                    <h1>Notre offre</h1>
+                    <p>
+                        Nous proposons d’accompagner les organisations de recherche dans la
+                        transition numérique de leurs activités, et en particulier dans l’usage des
+                        données numériques.
+                    </p>
+                </div>
+            </section>
+
+            <!-- <section class="offer__chapter" ng-class="chapter.color_class"
+                ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
+                ng-init="even=($index % 2 === 0)">
+                <div class="row" ng-class="{ even: even, odd: !even }">
+                    <div class="col-md-6 col-xs-12  offer__chapter__description">
+                        <div class="description col-md-8 col-md-offset-2">
+                            <h1><i class="fa" ng-class="chapter.icon_class"></i>&nbsp;{{ chapter.title }}</h1>
+                            <p ng-bind-html="chapter.description"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 offer__chapter__services">
+                        <ul class="col-md-8 col-md-offset-2 list-unstyled">
+                            <li ng-repeat="service in chapter.services">
+                                {{ service.name }}
+                                <ul ng-if="service.sub_services.length">
+                                    <li ng-repeat="sub_service in service.sub_services">
+                                        {{ sub_service.name }}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+            <section class="offer__chapter row" ng-class="chapter.color_class"
+                ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
+                ng-init="even=($index % 2 === 0)">
+                <div class="offer__chapter__description col-md-6 col-md-offset-3">
+                    <h1>
+                        <!-- <i class="fa" ng-class="chapter.icon_class"></i>&nbsp; -->
+                            {{ chapter.title }}
+                        </h1>
+                    <p ng-bind-html="chapter.description"></p>
+                </div>
+                <div class="offer__chapter__services col-md-6 col-md-offset-4" ng-if="chapter.services.length">
+                    <div class="row service" ng-repeat="service in chapter.services">
+                        <div class="col-md-5 service__name">
+                            {{ service.name }}
+                        </div>
+                        <div class="col-md-7" ng-if="service.sub_services.length">
+                            <div class="service__subservice" ng-repeat="sub_service in service.sub_services">
+                                {{ sub_service.name }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <skoli-footer></skoli-footer>
+        </div>
+    </div>
+</div>
