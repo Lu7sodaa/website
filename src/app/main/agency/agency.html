@@ -17,29 +17,20 @@
                     à la hauteur de l’intelligence mobilisée pour le produire.
                 </p>
             </section>
-            <section>
+            <section class="agency__members">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h2>Lucas</h2>
-                        <img class="rounded-img" src="http://lorempixel.com/200/200/"/>
-                        <p>Ex- Sciences Po Grenoble et Grenoble EM.
-                            J’ai été datajournaliste chez WeDoData et stagiaire
-                            au Monde Diplomatique. Je cherche à “rendre intéressant
-                            ce qui est important”, non l’inverse.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h2>Pierre</h2>
-                        <img class="rounded-img" src="http://lorempixel.com/200/200/"/>
-                        <p>Ex-développeur chez J++ (agence de journalisme de données),
-                            ex-consultant au HCR. Je conçois et développe des outils
-                            et services web à forte valeur démocratique ajoutée.
-                        </p>
+                    <div class="col-md-4" ng-repeat="member in agency.listMembers()">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="text-center">
+                                <h2>{{ member.name }}</h2>
+                                <img class="img-rounded" src="{{ member.photo }}"/>
+                                <h3>{{ member.title }}</h3>
+                            </div>
+                            <p class="text-justify">{{ member.description }}</p>
+                        </div>
                     </div>
                 </div>
             </section>
-
-
             <skoli-footer></skoli-footer>
         </div>
     </div>
