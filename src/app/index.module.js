@@ -7,6 +7,7 @@ import { HomeController   } from './main/home/home.controller';
 import { OfferController  } from './main/offer/offer.controller';
 import { CHAPTERS         } from './main/offer/offer.constant';
 import { AgencyController } from './main/agency/agency.controller';
+import { MEMBERS         } from './main/agency/agency.constant';
 
 // directives
 import { NavbarDirective             } from '../app/components/navbar/navbar.directive';
@@ -37,6 +38,7 @@ angular.module('siteWebV0', dependencies )
   .config(config)
   .config(routerConfig)
   .run(runBlock)
+  .constant('MEMBERS', MEMBERS)
   .constant('CHAPTERS', CHAPTERS)
   .constant('EVENTS', EVENTS)
   // .service('ChaptersService', ChaptersService)

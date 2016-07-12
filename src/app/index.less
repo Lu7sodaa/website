@@ -42,9 +42,16 @@ nav.navbar {
 
 // @nav-height: 50px;
 
+.img-rounded {
+    border-radius: 50%;
+}
 
 .main {
     margin-top: 50px;
+    pointer-events: none;
+    section {
+        pointer-events: all;
+    }
     &__header {
         background: white;
         color: black;

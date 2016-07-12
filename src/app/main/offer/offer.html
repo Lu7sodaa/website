@@ -13,31 +13,6 @@
                     </p>
                 </div>
             </section>
-
-            <!-- <section class="offer__chapter" ng-class="chapter.color_class"
-                ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
-                ng-init="even=($index % 2 === 0)">
-                <div class="row" ng-class="{ even: even, odd: !even }">
-                    <div class="col-md-6 col-xs-12  offer__chapter__description">
-                        <div class="description col-md-8 col-md-offset-2">
-                            <h1><i class="fa" ng-class="chapter.icon_class"></i>&nbsp;{{ chapter.title }}</h1>
-                            <p ng-bind-html="chapter.description"></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xs-12 offer__chapter__services">
-                        <ul class="col-md-8 col-md-offset-2 list-unstyled">
-                            <li ng-repeat="service in chapter.services">
-                                {{ service.name }}
-                                <ul ng-if="service.sub_services.length">
-                                    <li ng-repeat="sub_service in service.sub_services">
-                                        {{ sub_service.name }}
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section> -->
             <section class="offer__chapter row" ng-class="chapter.color_class"
                 ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
                 ng-init="even=($index % 2 === 0)">
@@ -60,6 +35,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="col-md-6 col-md-offset-4 text-center">
+                    <i class="unicode-char">{{ chapter.unicode_char }}</i>
+                </div> -->
             </section>
             <skoli-footer></skoli-footer>
         </div>

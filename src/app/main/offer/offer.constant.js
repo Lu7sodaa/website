@@ -2,6 +2,7 @@ export var CHAPTERS = [
     {
         title: 'Data',
         icon_class: 'fa-bar-chart',
+        unicode_char: '▰',
         color_class: 'bh-yellow',
         home_description: `Nous accompagnons les organisations de recherche dans
         'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
@@ -46,6 +47,7 @@ export var CHAPTERS = [
         title: 'Design',
         icon_class: 'fa-desktop',
         color_class: 'bh-orange',
+        unicode_char: '◈',
         home_description: 'Nous proposons aux organisations de recherche d’inventer '+
         'ensemble de nouveaux formats de restitution afin de rendre le savoir scientifique '+
         'accessible au plus grand nombre.',
@@ -91,6 +93,7 @@ export var CHAPTERS = [
     },{
         title: 'Interface',
         icon_class: 'fa-users',
+        unicode_char: '◎',
         color_class: 'bh-blue',
         home_description: 'Nous voulons agir pour reconnecter recherche et démocratie afin de restituer le rôle des sciences dans le débat public et l’éclairage des politiques publiques.',
         description: 'Convaincus que le numérique transforme aussi les structures politiques, nous '+
