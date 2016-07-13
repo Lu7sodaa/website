@@ -18,8 +18,8 @@ class FooterController {
     constructor ($element) {
         'ngInject';
         $element = angular.element($element[0]);
-        let $main = angular.element('.main');
+        let $main = angular.element('.inner');
         let h = $element.height();
-        $main.css('padding-bottom', h);
+        $main.css('margin-bottom', h);
     }
 }

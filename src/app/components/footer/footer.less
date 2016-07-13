@@ -1,10 +1,25 @@
 footer {
+    pointer-events: all;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     padding-bottom: 1em;
+    background-color: #BEBEBE;
+    iframe {
+        position: relative;
+        z-index: 0;
+        cursor: default;
+        pointer-events: none;
+    }
+    .footer__content {
+        padding-top: 15px;
+        background-color: #BEBEBE;
+        z-index: 1;
+        position: relative;
+        top: -38px;
+    }
     .contact {
         &__title {
             margin-top: 0;

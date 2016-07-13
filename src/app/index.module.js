@@ -10,12 +10,13 @@ import { AgencyController } from './main/agency/agency.controller';
 import { MEMBERS         } from './main/agency/agency.constant';
 
 // directives
-import { NavbarDirective             } from '../app/components/navbar/navbar.directive';
-import { SidebarDirective            } from '../app/components/sidebar/sidebar.directive';
-import { FooterDirective             } from '../app/components/footer/footer.directive';
-import { BackgroundImageDirective } from '../app/components/backgroundImage/backgroundImage.directive';
-import { TriangleBackgroundDirective } from '../app/components/triangleBackground/triangleBackground.directive';
-import { FullHeightSectionDirective  } from '../app/components/fullHeightSection/fullHeightSection.directive';
+import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
+import { SidebarDirective             } from '../app/components/sidebar/sidebar.directive';
+import { FooterDirective              } from '../app/components/footer/footer.directive';
+import { AreaChartBackgroundDirective } from '../app/components/areaChartBackground/areaChartBackground.directive';
+import { BackgroundImageDirective     } from '../app/components/backgroundImage/backgroundImage.directive';
+import { TriangleBackgroundDirective  } from '../app/components/triangleBackground/triangleBackground.directive';
+import { FullHeightSectionDirective   } from '../app/components/fullHeightSection/fullHeightSection.directive';
 
 // filters
 import { CapitalizeFilter  } from '../app/components/filters/capitalize';
@@ -46,6 +47,7 @@ angular.module('siteWebV0', dependencies )
   .controller('OfferController', OfferController)
   .controller('AgencyController', AgencyController)
   .filter('capitalize', CapitalizeFilter)
+  .directive('areaChartBackground', AreaChartBackgroundDirective)
   .directive('backgroundImage', BackgroundImageDirective)
   .directive('triangleBackground', TriangleBackgroundDirective)
   .directive('fullHeightSection', FullHeightSectionDirective)
