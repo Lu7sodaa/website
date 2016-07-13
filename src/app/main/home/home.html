@@ -3,41 +3,45 @@
     <div class="view">
         <skoli-navbar></skoli-navbar>
         <div class="main home">
-            <section class="intro main__header full-height-section">
-                <h1 class="skoli-logo">Skoli</h1>
-                <h2 class="subtitle">Synchroniser Savoirs & Société</h2>
-                <p class="lead text-right">
-                    Notre agence accompagne <br>la <span class="bh-yellow bh-label">construction</span>, la <span class="bh-orange bh-label">valorisation</span> et <br>la <span class="bh-blue bh-label">médiation numérique</span> des savoirs.
-                </p>
-            </section>
-            <section class="home__interval">
-                <div class="home__interval__parallax"
-                    parallax-background parallax-ratio="0.2"
-                    background-image="../assets/images/photos/yale_library.jpg">
-                </div>
-            </section>
-            <section class="home__offer">
-                <div class="row">
-                    <div class="col-md-4 home__offer__chapter"
-                        ng-class="chapter.color_class"
-                        ng-repeat="chapter in home.listChapters()"
-                        ng-click="home.goChapter(chapter.title)">
-                        <div class="col-md-10 col-md-offset-1">
-                            <h2 class="bold">{{ chapter.title }}</h2>
-                            <p class="col-md-offset-1 col-md-9"
-                               ng-bind-html="home.chapterDescription(chapter)">
-                            </p>
+            <div class="inner">
+                <section class="intro main__header full-height-section area-chart-background">
+                    <div class="area-chart-background__overlay">
+                        <h1 class="skoli-logo">Skoli</h1>
+                        <h2 class="subtitle">Synchroniser Savoirs & Société</h2>
+                        <p class="lead text-right">
+                            Notre agence accompagne <br>la <span class="bh-yellow bh-label">construction</span>, la <span class="bh-orange bh-label">valorisation</span> et <br>la <span class="bh-blue bh-label">médiation numérique</span> des savoirs.
+                        </p>
+                    </div>
+                </section>
+                <section class="home__interval">
+                    <div class="home__interval__parallax"
+                        parallax-background parallax-ratio="0.2"
+                        background-image="../assets/images/photos/yale_library.jpg">
+                    </div>
+                </section>
+                <section class="home__offer">
+                    <div class="row">
+                        <div class="col-md-4 home__offer__chapter"
+                            ng-class="chapter.color_class"
+                            ng-repeat="chapter in home.listChapters()"
+                            ng-click="home.goChapter(chapter.title)">
+                            <div class="col-md-10 col-md-offset-1">
+                                <h2 class="bold">{{ chapter.title }}</h2>
+                                <p class="col-md-offset-1 col-md-9"
+                                   ng-bind-html="home.chapterDescription(chapter)">
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="agency text-center triangle-background">
-                <div class="triangle-background__overlay">
-                    <h1>Notre agence</h1>
-                    <p>Donec placerat elit et venenatis mattis. Sed metus dolor, facilisis et pellentesque nec, viverra nec ante. Nunc fringilla porta iaculis. Maecenas sit amet tempor dolor, eu congue dolor. Duis nisi risus, vestibulum eget ex vitae, blandit tempor nulla.</p>
-                    <a ui-sref="agency" class="btn btn-primary">Découvrez nous</a>
-                </div>
-            </section>
+                </section>
+                <section class="agency text-center triangle-background">
+                    <div class="triangle-background__overlay">
+                        <h1>Notre agence</h1>
+                        <p>Donec placerat elit et venenatis mattis. Sed metus dolor, facilisis et pellentesque nec, viverra nec ante. Nunc fringilla porta iaculis. Maecenas sit amet tempor dolor, eu congue dolor. Duis nisi risus, vestibulum eget ex vitae, blandit tempor nulla.</p>
+                        <a ui-sref="agency" class="btn btn-primary">Découvrez nous</a>
+                    </div>
+                </section>
+            </div>
             <skoli-footer></skoli-footer>
         </div>
     </div>

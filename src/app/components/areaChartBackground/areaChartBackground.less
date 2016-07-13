@@ -1,4 +1,4 @@
-.triangle-background {
+.area-chart-background {
     position: relative;
     color: white;
     // padding-top: 2em;
@@ -8,22 +8,26 @@
     padding-top:30px;
     padding-bottom:30px;
     &__overlay {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         z-index: 1;
     }
     svg {
         z-index: 0;
         position: absolute;
-        top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        // z-index: -1;
-        background-color: #1a232c;
-        path {
-          fill: none;
-          stroke: #CCC;
-          stroke-width: .5px;
+
+        .area {
+            // fill: white;
+            fill: rgba(100, 100, 100, 0.3);
+            &.even {
+                fill: rgba(100, 100, 100, 0.4);
+            }
         }
     }
 }
