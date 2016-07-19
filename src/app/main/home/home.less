@@ -2,7 +2,8 @@
 
     background: none;
     .main__header {
-        padding: 1em 2em;
+        padding-left: 15px;
+        padding-right: 15px;
         background: @blue-grey;
         color: white;
         position: relative;
@@ -28,18 +29,39 @@
             line-height: 2em;
             // width: 400px;
             position: absolute;
-            right: 1em;
-            bottom: 1em;
+            right: 0;
+            bottom: 0;
             text-align: right;
+        }
+        @media screen and (max-width: @screen-sm){
+            p.lead {
+                right: auto;
+                width: 100%;
+                text-align: left;
+            }
+        }
+        @media screen and (max-width: @screen-xs){
+            h1 {
+                font-size: 5em;
+                margin-top: 20px;
+            }
+            h2.subtitle {
+                font-size: 1.25em;
+                margin-left: 35px;
+                margin-top: -0.5em;
+            }
+            p.lead {
+                font-size: 1.25em;
+                line-height: 2em;
+            }
         }
     }
 
     &__interval {
-        &__parallax {
-            height: 60vh;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;
+        overflow: hidden;
+        height: 60vh;
+        img {
+            width: 100%;
         }
     }
 

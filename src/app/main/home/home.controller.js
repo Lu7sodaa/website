@@ -1,6 +1,7 @@
 export class HomeController {
-    constructor ($state, CHAPTERS) {
+    constructor ($scope, $state, CHAPTERS, parallaxHelper) {
         'ngInject';
+        $scope.background = parallaxHelper.createAnimator(-0.3);
         this.$state = $state
         this.chapters = CHAPTERS;
     }
