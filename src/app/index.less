@@ -81,6 +81,17 @@ nav.navbar {
     }
 }
 
+@media screen and (max-width: @screen-sm) {
+    .main {
+        &__header {
+            padding-top: 6em;
+            h1 {
+                font-size: 6em;
+            }
+        }
+    }
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your less files automatically

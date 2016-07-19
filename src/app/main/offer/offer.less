@@ -5,14 +5,14 @@
 
         .pictogram {
             img {
-                height: 200px;
+                margin-bottom: -30px;
                 width: 200px;
             }
         }
 
         h1 {
             // font-family: 'Josefin Slab', serif;
-            position: relative;
+            // position: relative;
             font-weight: 100;
             font-size: 3.5em;
             margin-bottom: 0.5em;
@@ -62,6 +62,21 @@
                 li {
                     font-weight: normal;
                 }
+            }
+        }
+    }
+
+    // responsive
+    @media screen and (max-width: @screen-xs) {
+        &__chapter {
+            padding-top: 1em;
+            .pictogram {
+                img {
+                    width: 100px;
+                }
+            }
+            h1 {
+                font-size: 2em;
             }
         }
     }
