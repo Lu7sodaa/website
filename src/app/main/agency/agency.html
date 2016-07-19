@@ -3,34 +3,36 @@
     <div class="view">
         <skoli-navbar></skoli-navbar>
         <div class="main agency">
-            <section class="main__header">
-                <h1 class="text-center">Notre agence</h1>
-                <p>Skoli est un prestataire de services numériques et s’adresse
-                    à tous les “producteurs de savoirs” : chercheurs, auteurs,
-                    organismes de recherche, universités, institutions, think-
-                    tank, éditeurs, fondations, etc.<br><br>
-                    Nous voulons aider la recherche à capturer et analyser des
-                    données numériques, désormais incontournables pour comprendre
-                    le monde.<br><br>
-                    Nous voulons réhabiliter la dimension universelle du savoir
-                    en créant des formats de restitution percutants et innovants,
-                    à la hauteur de l’intelligence mobilisée pour le produire.
-                </p>
-            </section>
-            <section class="agency__members">
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="member in agency.listMembers()">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="text-center">
-                                <h2>{{ member.name }}</h2>
-                                <img class="img-rounded" src="{{ member.photo }}"/>
-                                <h3>{{ member.title }}</h3>
+            <div class="inner">
+                <section class="main__header">
+                    <h1 class="text-center">Notre agence</h1>
+                    <p>Skoli est un prestataire de services numériques et s’adresse
+                        à tous les “producteurs de savoirs” : chercheurs, auteurs,
+                        organismes de recherche, universités, institutions, think-
+                        tank, éditeurs, fondations, etc.<br><br>
+                        Nous voulons aider la recherche à capturer et analyser des
+                        données numériques, désormais incontournables pour comprendre
+                        le monde.<br><br>
+                        Nous voulons réhabiliter la dimension universelle du savoir
+                        en créant des formats de restitution percutants et innovants,
+                        à la hauteur de l’intelligence mobilisée pour le produire.
+                    </p>
+                </section>
+                <section class="agency__members">
+                    <div class="row">
+                        <div class="col-md-4" ng-repeat="member in agency.listMembers()">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="text-center">
+                                    <h2>{{ member.name }}</h2>
+                                    <img class="img-rounded" src="{{ member.photo }}"/>
+                                    <h3>{{ member.title }}</h3>
+                                </div>
+                                <p class="text-justify">{{ member.description }}</p>
                             </div>
-                            <p class="text-justify">{{ member.description }}</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <skoli-footer></skoli-footer>
         </div>
     </div>
