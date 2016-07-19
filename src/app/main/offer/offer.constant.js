@@ -1,17 +1,18 @@
 export var CHAPTERS = [
     {
         title: 'Data',
+        detailed_title: 'Accompagner les usages numériques de la recherche',
         icon_class: 'fa-bar-chart',
-        unicode_char: '▰',
+        pictogram: '../assets/images/data.svg',
         color_class: 'bh-yellow',
         home_description: `Nous accompagnons les organisations de recherche dans
         'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
         description: `Nous proposons d’accompagner les organisations de recherche dans la
         transition numérique de leurs activités, et en particulier dans l’usage des
-        données numériques.<br><br>
+        données numériques.
         Pour ce faire, nous mettons à disposition notre savoir-faire en nous intégrant
         dans des projets de recherche pour des missions de sous-traitance, d’
-        accompagnement ou de formation.<br><br>
+        accompagnement ou de formation.
         Nous proposons également de faciliter le travail de collecte des chercheurs en
         co-construisant avec eux des outils sur-mesure.`,
         services: [
@@ -45,9 +46,10 @@ export var CHAPTERS = [
         ]
     },{
         title: 'Design',
+        detailed_title: 'Valoriser et diffuser les travaux de recherche',
         icon_class: 'fa-desktop',
         color_class: 'bh-orange',
-        unicode_char: '◈',
+        pictogram: '../assets/images/valorisation.svg',
         home_description: 'Nous proposons aux organisations de recherche d’inventer '+
         'ensemble de nouveaux formats de restitution afin de rendre le savoir scientifique '+
         'accessible au plus grand nombre.',
@@ -92,8 +94,9 @@ export var CHAPTERS = [
         ]
     },{
         title: 'Interface',
+        detailed_title: 'Interfacer la Recherche et la société',
         icon_class: 'fa-users',
-        unicode_char: '◎',
+        pictogram: '../assets/images/interface.svg',
         color_class: 'bh-blue',
         home_description: 'Nous voulons agir pour reconnecter recherche et démocratie afin de restituer le rôle des sciences dans le débat public et l’éclairage des politiques publiques.',
         description: 'Convaincus que le numérique transforme aussi les structures politiques, nous '+
