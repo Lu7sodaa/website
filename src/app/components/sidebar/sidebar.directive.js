@@ -15,21 +15,24 @@ export function SidebarDirective() {
 }
 
 class SidebarController {
-    constructor ($log, $rootScope, EVENTS) {
+    constructor ($log, $rootScope,$window, EVENTS) {
         'ngInject';
-        $rootScope.sidebar_opened = false;
-        this.$log = $log;
+        this.$w = $window;
         this.$state = $rootScope.$state;
+
         this.handler = $rootScope.$on(EVENTS.sidebar.toggle, (e, data)=>{
             $rootScope.sidebar_opened = data;
+            $rootScope.apply();
         });
+
+        $rootScope.sidebar_opened = false;
     }
 
-    scrollTo(selector){
-        let $el = angular.element(selector);
-        let scroll_top = $el.offset().top;
-        this.$log.log('scroll: ', scroll_top);
-        angular.element('.view').scroll(scroll_top);
+    scrollToBottom(){
+        let scroll_top = angular.element('div[ui-view]').innerHeight();
+        jQuery('html,body').animate({
+            scrollTop:  scroll_top
+        });
     }
 
 }
