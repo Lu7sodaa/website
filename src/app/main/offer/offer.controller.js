@@ -1,7 +1,6 @@
 export class OfferController {
-    constructor ($log, chapters) {
+    constructor (chapters) {
         'ngInject';
-        $log.log('OfferController - resolved chapters', chapters);
         this.chapters = chapters
     }
 
