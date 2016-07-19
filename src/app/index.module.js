@@ -14,7 +14,6 @@ import { NavbarDirective              } from '../app/components/navbar/navbar.di
 import { SidebarDirective             } from '../app/components/sidebar/sidebar.directive';
 import { FooterDirective              } from '../app/components/footer/footer.directive';
 import { AreaChartBackgroundDirective } from '../app/components/areaChartBackground/areaChartBackground.directive';
-import { BackgroundImageDirective     } from '../app/components/backgroundImage/backgroundImage.directive';
 import { TriangleBackgroundDirective  } from '../app/components/triangleBackground/triangleBackground.directive';
 import { FullHeightSectionDirective   } from '../app/components/fullHeightSection/fullHeightSection.directive';
 
@@ -23,7 +22,6 @@ import { CapitalizeFilter  } from '../app/components/filters/capitalize';
 
 // constants
 import { EVENTS } from '../app/components/constants/events';
-// import { ChaptersService } from '../app/components/chapters/chapters.service';
 
 var dependencies = [
     'duParallax',
@@ -48,7 +46,6 @@ angular.module('siteWebV0', dependencies )
   .controller('AgencyController', AgencyController)
   .filter('capitalize', CapitalizeFilter)
   .directive('areaChartBackground', AreaChartBackgroundDirective)
-  .directive('backgroundImage', BackgroundImageDirective)
   .directive('triangleBackground', TriangleBackgroundDirective)
   .directive('fullHeightSection', FullHeightSectionDirective)
   .directive('skoliFooter', FooterDirective)
