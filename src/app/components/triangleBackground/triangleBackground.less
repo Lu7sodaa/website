@@ -6,7 +6,16 @@
     color: white;
     // background-color: #1a232c;
     padding-top:30px;
-    padding-bottom:30px;
+    padding-bottom:60px;
+
+    text-shadow: 1px 1px @blue-grey;
+    .btn {
+        text-shadow: none;
+        border-color: @blue-grey;
+        &:hover {
+            background-color: @blue-grey;
+        }
+    }
     &__overlay {
         position: relative;
         z-index: 1;
@@ -22,7 +31,7 @@
         background-color: #1a232c;
         path {
           fill: none;
-          stroke: #CCC;
+          stroke: fade(#CCC, 50%);
           stroke-width: .5px;
         }
     }

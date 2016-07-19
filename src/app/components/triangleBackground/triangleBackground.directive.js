@@ -26,7 +26,7 @@ class TriangleBackgroundController {
         this.vertices = [];
         let $el = d3.select(this.$element[0]);
         this.width =  this.$element.width();
-        this.height = this.$element.height() + 60;
+        this.height = this.$element.height() + 110;
 
         if(this.$svg){
             this.$svg.select('g').remove();
