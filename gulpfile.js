@@ -32,7 +32,6 @@ gulp.task('deploy', function(){
     return gulp.src('./dist/**/*')
         .pipe(ghPages({
             branch:'master',
-            // origin: 'gh-pages',
             remoteUrl:'https://github.com/Skoli-Code/skoli-code.github.io.git',
             force: true
         }));
