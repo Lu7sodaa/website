@@ -13,7 +13,7 @@
     "animate.css": "~3.4.0",
     "angular": "~1.5.7",
     "d3": "^4.1.0",
-    "angular-parallax": "^0.0.2",
+    "ng-parallax": "^0.1.8",
     "leaflet": "^0.7.7"
   },
   "devDependencies": {

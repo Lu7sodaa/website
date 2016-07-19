@@ -22,11 +22,11 @@ import { FullHeightSectionDirective   } from '../app/components/fullHeightSectio
 import { CapitalizeFilter  } from '../app/components/filters/capitalize';
 
 // constants
-import { EVENTS           } from '../app/components/constants/events';
+import { EVENTS } from '../app/components/constants/events';
 // import { ChaptersService } from '../app/components/chapters/chapters.service';
 
 var dependencies = [
-    'angular-parallax',
+    'duParallax',
     'ngAnimate',
     'ngCookies',
     'ngTouch',
