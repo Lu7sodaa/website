@@ -7,11 +7,6 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             templateUrl: 'app/main/home/home.html',
             controller: 'HomeController',
             controllerAs: 'home',
-            resolve: {
-                chapters: function(CHAPTERS){
-                    return CHAPTERS;
-                }
-            }
         })
         .state('offer', {
             data: { title: 'offre' },
