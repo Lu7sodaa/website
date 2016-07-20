@@ -21,6 +21,10 @@ class NavbarController {
         this.EVENTS = EVENTS;
         this.$rootScope = $rootScope;
         this.$state = $rootScope.$state;
+
+        this.handler = this.$rootScope.$watch('sidebar_opened', (newVal)=>{
+            this.sidebar_opened = newVal;
+        });
     }
 
     toggleSidebar(){
