@@ -45,15 +45,17 @@
         position: relative;
         padding-top: 0;
         padding-bottom: 0;
+        overflow: hidden;
     }
 
     &__offer__chapter {
-        min-height: 25em;
+        // min-height: 25em;
         // position: absolute;
         // top: 0;
         // bottom: 0;
-        padding-top: 2.5em;
-        padding-bottom: 3.2em;
+        min-height: 25vh;
+        padding-top: 15px;
+        padding-bottom: 30px;
 
         &, h2:after {
             transition: color .33s ease, background-color .33s ease;
@@ -79,7 +81,7 @@
 
     &__agency {
         .btn {
-            margin-top: 15px;
+            margin-top: 10px;
         }
     }
 
@@ -99,10 +101,18 @@
         }
     }
     @media screen and (max-width: @screen-xs){
-        &__interval {
+        section&__interval {
             height: auto;
             img {
+                -moz-transform: none !important;
+                -webkit-transform: none !important;
                 transform: none !important;
+            }
+        }
+        &__offer {
+            &__chapter {
+                padding-top: 15px;
+                padding-bottom: 15px;
             }
         }
 

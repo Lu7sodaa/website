@@ -13,7 +13,7 @@ export class HomeController {
         return chapter.home_description ? chapter.home_description : chapter.description;
     }
     goChapter(chapter_title){
-        this.$state.go('offer', {chapter: chapter_title.toLowerCase() });
+        this.$state.go('offer', {chapter: chapter_title.toLowerCase() }, {scroll_top: true});
     }
 
 
