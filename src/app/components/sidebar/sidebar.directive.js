@@ -22,15 +22,16 @@ class SidebarController {
 
         this.handler = $rootScope.$on(EVENTS.sidebar.toggle, (e, data)=>{
             $rootScope.sidebar_opened = data;
-            $rootScope.apply();
         });
 
         $rootScope.sidebar_opened = false;
+        this.$scope = $rootScope;
     }
 
     scrollToBottom(){
         let scroll_top = angular.element('div[ui-view]').innerHeight();
-        jQuery('html,body').animate({
+        this.$scope.sidebar_opened = false;
+        angular.element('html,body').animate({
             scrollTop:  scroll_top
         });
     }
