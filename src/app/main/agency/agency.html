@@ -17,17 +17,73 @@
                         en créant des formats de restitution percutants et innovants,
                         à la hauteur de l’intelligence mobilisée pour le produire.
                     </p>
+                    <triangle-chart data="agency.chartData"></triangle-chart>
                 </section>
-                <section class="agency__members">
-                    <div class="row">
-                        <div class="col-md-4" ng-repeat="member in agency.listMembers()">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="text-center">
-                                    <h2>{{ member.name }}</h2>
-                                    <img class="img-rounded" src="{{ member.photo }}"/>
-                                    <h3>{{ member.title }}</h3>
-                                </div>
-                                <p class="text-justify">{{ member.description }}</p>
+                <section class="main__interval"
+                    ng-init="lucas = agency.getMember('lucas'); gauth = agency.getMember('gauthier'); pierre = agency.getMember('pierre')">
+                    <img src="../assets/images/photos/getty_prez_bw.jpg" alt="Photo de l'équipe Skoli - Pierre Gauthier Lucas" />
+                    <div class="overlay hidden-xs hidden-sm">
+                        <!-- <div class="elem bh-label" style="left:11%; top:8%">{{ pierre.name }}</div> -->
+                        <!-- <div class="elem bh-label" style="left:26%; top: 13%">{{ gauth.name }}</div> -->
+                        <!-- <div class="elem bh-label" style="left:56.5%; top: 17%">{{ lucas.name }}</div> -->
+
+                        <div class="member member-overlay" ng-class="pierre.color" style="bottom:2%; left: 1%;">
+                            <a rel="nofollow" ng-href="{{ pierre.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                            <h3>
+                                {{ pierre.name }}<br>
+                                <span class="title">
+                                    {{ pierre.title }}
+                                </span>
+                            </h3>
+                            <p>{{ pierre.function }}</p>
+                        </div>
+                        <div class="member member-overlay" ng-class="gauth.color" style="bottom:2%; left: 32%;">
+                            <a rel="nofollow" ng-href="{{ gauth.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                            <h3>
+                                {{ gauth.name }}<br>
+                                <span class="title">
+                                    {{ gauth.title }}
+                                </span>
+                            </h3>
+                            <p>{{ gauth.function }}</p>
+                        </div>
+                        <div class="member member-overlay" ng-class="lucas.color" style="bottom:2%; left: 59%;">
+                            <a rel="nofollow" ng-href="{{ lucas.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                            <h3>
+                                {{ lucas.name }}<br>
+                                <span class="title">
+                                    {{ lucas.title }}
+                                </span>
+                            </h3>
+                            <p>{{ lucas.function }}</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="agency__members visible-xs visible-sm">
+                        <div class="member col-sm-4 col-xs-12" ng-class="member.color" ng-repeat="member in agency.listMembers()">
+                            <div class="member__description">
+                                <a rel="nofollow" ng-href="{{ member.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                                <h3>{{ member.name }}<br><span class="title" >{{ member.title }}</span></h3>
+                                <p>
+                                    {{ member.function }}
+                                </p>
+                            </div>
+                        </div>
+                </section>
+                <section class="agency__previous-work">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="bold col-md-12">Réalisations antérieurs auxquelles nous avons participé</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
+                                <a href="{{ previousWork.link }}" rel="nofollow">
+                                    <img src="{{ previousWork.picture }}"/>
+                                    <span>
+                                        <h3>{{ previousWork.title }}</h3>
+                                        <h5>{{ previousWork.subtitle }}</h5>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>

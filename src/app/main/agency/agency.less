@@ -1,6 +1,117 @@
 .agency {
-    &__members {
-        padding-top: 1em;
-        padding-bottom: 2em;
+    .main__interval {
+        padding: 0;
+        .overlay {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .member.member-overlay {
+                padding: 5px;
+                position: absolute;
+                width: 270px;
+                a {
+                    top: 0px;
+                    right: 7px;
+                }
+            }
+        }
+    }
+
+    .member {
+        font-size: 1.4em;
+        position: relative;
+        p {
+            font-size: 0.8em;
+            line-height: 1em;
+        }
+        a {
+            display: block;
+            position: absolute;
+            font-size: 1.1em;
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: @blue-grey;
+            }
+        }
+        h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            .title {
+                font-size: 0.8em;
+                font-weight: bold;
+            }
+        }
+        &__description {
+            padding: 5px;
+        }
+    }
+
+    section&__members {
+        div.member {
+            padding-left: 15px;
+            &__description {
+                position: relative;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            a {
+                top: 5px;
+                right: 0;
+            }
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    &__previous-work {
+        padding-top: 15px;
+        .previous-work {
+            margin-bottom: 30px;
+
+            a {
+                h3, h5 {
+                    margin-top: 0px;
+                    margin-bottom: 0;
+                }
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                span {
+                    display: block;
+                    padding: 15px;
+                }
+                &:hover {
+                    background-color: @brand-primary;
+                    color: white;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    &.main section&__process {
+        background: none;
+        background-color: white;
+        color: @blue-grey;
+        .triangle-chart {
+            padding-bottom: 15px;
+            padding-top: 50px;
+        }
     }
 }
