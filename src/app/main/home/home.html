@@ -17,7 +17,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="home__interval">
+                <section class="main__interval">
                     <img src="../assets/images/photos/yale_library.jpg" du-parallax y="background"/>
                 </section>
                 <section class="home__offer">
@@ -25,12 +25,12 @@
                         <div class="col-md-4 home__offer__chapter"
                             ng-class="chapter.color_class"
                             ng-repeat="chapter in home.listChapters()"
-                            ng-click="home.goChapter(chapter.title)"
-                        ng-attr-tabindex="{{$index + 1      }}">
+                            ng-click="$state.go('app.offer', {'#': chapter.title.toLowerCase() })"
+                            ng-attr-tabindex="{{$index + 1}}">
                             <div class="col-md-10 col-md-offset-1">
                                 <h2 class="bold">{{ chapter.title }}</h2>
-                                <p class="col-md-offset-1 col-md-11"
-                                   ng-bind-html="home.chapterDescription(chapter)">
+                                <p class="col-md-offset-1 col-md-10"
+                                   ng-bind-html="chapter.home_description">
                                 </p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
 
                         <div class="col-md-8 col-md-offset-2">
                             <p>Donec placerat elit et venenatis mattis. Sed metus dolor, facilisis et pellentesque nec, viverra nec ante. Nunc fringilla porta iaculis. Maecenas sit amet tempor dolor, eu congue dolor. Duis nisi risus, vestibulum eget ex vitae, blandit tempor nulla.</p>
-                            <a ui-sref="agency" class="btn btn-primary">Découvrez nous</a>
+                            <a ui-sref="app.agency({'#': 'top'})" class="btn btn-primary">Découvrez nous</a>
                         </div>
                     </div>
                 </section>

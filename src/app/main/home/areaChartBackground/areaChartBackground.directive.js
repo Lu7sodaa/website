@@ -34,11 +34,6 @@ class AreaChartBackgroundController {
         'ngInject';
         this.$log = $log;
         this.data = DATA;
-        this.data.forEach(function(dataset){
-            dataset.forEach(function(d){
-                d.date = d3.timeParse('%Y-%m-%d')(d.date);
-            });
-        });
 
         this.$window = angular.element($window);
         this.$origin_el = angular.element($element[0]);

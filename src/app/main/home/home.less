@@ -33,7 +33,7 @@
         }
     }
 
-    &__interval {
+    .main__interval {
         overflow: hidden;
         height: 60vh;
         img {
@@ -41,29 +41,28 @@
         }
     }
 
-    section&__offer {
-        position: relative;
+    &__offer {
         padding-top: 0;
         padding-bottom: 0;
-        overflow: hidden;
+        .row {
+            overflow: hidden;
+        }
     }
 
     &__offer__chapter {
-        // min-height: 25em;
-        // position: absolute;
-        // top: 0;
-        // bottom: 0;
-        min-height: 25vh;
+        // height: 26vh;
         padding-top: 15px;
-        padding-bottom: 30px;
-
+        // fix to have the same height for all chapters.
+        /// took from http://stackoverflow.com/a/19695851/885541 
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
         &, h2:after {
             transition: color .33s ease, background-color .33s ease;
         }
 
-        h2, p {
-            line-height: normal;
-        }
+        // h2, p {
+        //     line-height: normal;
+        // }
         h2 {
             position: relative;
             &:after {
@@ -71,9 +70,12 @@
                 height: 5px;
                 content: "";
                 position: absolute;
-                bottom: 2px;
+                bottom: -5px;
                 left: 0;
             }
+        }
+        p {
+            padding-bottom: 30px;
         }
 
         div&:hover h2:after { background-color: white; }
@@ -86,11 +88,6 @@
     }
 
     // responsive rules
-    @media screen and (max-width: @screen-md){
-        &__offer__chapter {
-            min-height: auto;
-        }
-    }
     @media screen and (max-width: @screen-sm){
         .main__header {
             p.lead {
@@ -99,9 +96,7 @@
                 text-align: left;
             }
         }
-    }
-    @media screen and (max-width: @screen-xs){
-        section&__interval {
+        .main__interval {
             height: auto;
             img {
                 -moz-transform: none !important;
@@ -109,6 +104,9 @@
                 transform: none !important;
             }
         }
+    }
+
+    @media screen and (max-width: @screen-xs){
         &__offer {
             &__chapter {
                 padding-top: 15px;
