@@ -5,12 +5,12 @@
             <span ng-click="nav.toggleSidebar()"
                   class="glyphicon glyphicon-menu-hamburger"></span>
 
-            <a class="skoli-logo" ui-sref="home">
+            <a class="skoli-logo" ui-sref="app.home({'#': 'top'})">
                 Skoli
             </a>
 
-            <span ng-if="!nav.$state.is('home')">
-                &nbsp;/&nbsp;{{ nav.$state.current.name }}
+            <span ng-if="!nav.$state.is('app.home')">
+                &nbsp;/&nbsp;{{ nav.$state.current.data.title }}
             </span>
         </div>
     </div>
