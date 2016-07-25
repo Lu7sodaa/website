@@ -21,8 +21,13 @@ html body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
 }
+
 .bold {
     font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
 }
 
 .bh-label {
@@ -56,6 +61,16 @@ nav.navbar {
         z-index: 1;
         position: relative;
     }
+
+    section&__interval {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            position: relative;
+        }
+    }
+
     &__header {
         background: white;
         color: black;

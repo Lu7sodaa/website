@@ -4,17 +4,19 @@ import { runBlock } from './index.run';
 
 // controllers
 import { HomeController   } from './main/home/home.controller';
+
 import { OfferController  } from './main/offer/offer.controller';
 import { CHAPTERS         } from './main/offer/offer.constant';
 import { AgencyController } from './main/agency/agency.controller';
-import { MEMBERS         } from './main/agency/agency.constant';
+import { MEMBERS, PREVIOUS_WORK  } from './main/agency/agency.constant';
 
 // directives
+import { AreaChartBackgroundDirective } from './main/home/areaChartBackground/areaChartBackground.directive';
+import { TriangleBackgroundDirective  } from './main/home/triangleBackground/triangleBackground.directive';
+import { TriangleChartDirective       } from '../app/components/triangleChart/triangleChart.directive';
 import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
 import { SidebarDirective             } from '../app/components/sidebar/sidebar.directive';
 import { FooterDirective              } from '../app/components/footer/footer.directive';
-import { AreaChartBackgroundDirective } from '../app/components/areaChartBackground/areaChartBackground.directive';
-import { TriangleBackgroundDirective  } from '../app/components/triangleBackground/triangleBackground.directive';
 import { FullHeightSectionDirective   } from '../app/components/fullHeightSection/fullHeightSection.directive';
 
 // filters
@@ -38,6 +40,7 @@ angular.module('siteWebV0', dependencies )
   .config(routerConfig)
   .run(runBlock)
   .constant('MEMBERS', MEMBERS)
+  .constant('PREVIOUS_WORK', PREVIOUS_WORK)
   .constant('CHAPTERS', CHAPTERS)
   .constant('EVENTS', EVENTS)
   // .service('ChaptersService', ChaptersService)
@@ -47,6 +50,7 @@ angular.module('siteWebV0', dependencies )
   .filter('capitalize', CapitalizeFilter)
   .directive('areaChartBackground', AreaChartBackgroundDirective)
   .directive('triangleBackground', TriangleBackgroundDirective)
+  .directive('triangleChart', TriangleChartDirective)
   .directive('fullHeightSection', FullHeightSectionDirective)
   .directive('skoliFooter', FooterDirective)
   .directive('skoliNavbar', NavbarDirective)
