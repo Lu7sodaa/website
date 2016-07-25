@@ -28,13 +28,12 @@
     transition: @value;
 }
 
-.label-color(@color){
-    .bh-label.@{color} {
-        background-color: @@color;
-    }
+.bh-label {
+    background-color: @blue-grey;
+    color: white;
 }
 
-.offer-color(@color){
+.bh-color(@color){
     &.offer {
         section.@{color} {
             // .odd .offer__chapter__description {
@@ -58,11 +57,11 @@
     &.home {
         .home__offer__chapter {
             &.@{color} {
-                &:hover, h2:after {
+                &:hover, &:focus, &:active, h2:after {
                     background-color: @@color;
                 }
             }
-            &:hover {
+            &:hover, &:focus, &:active       {
                 cursor: pointer;
                 color: contrast(@@color, #AEAEAE, #333);
                 h2:after {
@@ -72,6 +71,23 @@
             }
         }
     }
+    .bh-label.bh-label-inverted.@{color}{
+        background-color: white;
+        color: @@color;
+    }
+
+    .bh-label.@{color} {
+        background-color: @@color;
+    }
+
+    .member-overlay.@{color} {
+        color: white;
+        background-color: fade(@@color, 75%);
+    }
+    .member.@{color} {
+        color: white;
+        background-color: @@color;
+    }
 }
 
 
@@ -80,8 +96,7 @@
 .main {
     .-(@i: length(@colors)) when (@i > 0) {
         @name: extract(@colors, @i);
-        .offer-color(@name);
-        .label-color(@name);
+        .bh-color(@name);
         .-((@i - 1));
     } .-;
 }
