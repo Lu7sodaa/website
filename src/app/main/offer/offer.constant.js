@@ -55,7 +55,7 @@ export var CHAPTERS = [
         'accessible au plus grand nombre.',
         description: 'Grâce au numérique et au web, nous proposons aux organisations de '+
         'recherche d’inventer ensemble de nouveaux formats de restitution afin de '+
-        'rendre le savoir scientifique accessible au plus grand nombre.<br><br>'+
+        'rendre le savoir accessible au plus grand nombre.<br><br>'+
         'Trop souvent ignorée des médias traditionnels, la connaissance issue de la '+
         'recherche est aussi confinée par les standards de l’édition scientifique '+
         'traditionnelle.<br><br>'+
