@@ -21,7 +21,7 @@ export class AgencyController {
                 nous travaillons ensemble à la conception et au design d’une interface
                 de restitution sur-mesure.`
             },{
-                name: 'Développement',
+                name: 'Réalisation',
                 value: 25,
                 description: `Nous mettons en oeuvre notre expertise technique
                 pour développer et maintenir des interfaces et des outils fiables

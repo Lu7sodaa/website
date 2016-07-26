@@ -25,124 +25,209 @@ export function TriangleChartDirective() {
 class TriangleChartController {
     constructor($element, $log, $window, $timeout){
         'ngInject';
+        this.$timeout = $timeout;
         this.$window = angular.element($window);
         this._element = angular.element($element[0]);
         this.$element = d3.select($element[0]);
         this.$axis = this.$element.select('.triangle-chart__axis');
         this.$svg = this.$element.select('svg');
+
+        this.scale = d3.scaleLinear().domain([0, d3.max(this.data, function(d){ return d.value; }) ]),
         this.overlapx = 60;
         this.margin = {
             left: 85,
             right: 30,
             top: 0,
-            bottom: 0
+            bottom: 0,
+            mobile: {
+                left: 0,
+                right: 0,
+                top: 60,
+                bottom: 0
+            }
         }
 
         this.onResize();
         this.bindEvents();
-        $timeout(()=>{ this.draw(); }, 1000 );
+        this.draw();
     }
 
     bindEvents(){
         this.$window.bind('resize', ()=>{
-            this.onResize();
-            this.redraw();
+            this.$timeout(()=>{
+                this.onResize();
+                this.redraw();
+            }, 300);
         });
     }
 
     drawTriangle(d,i,notZero){
-        let triangleWidth = this.triangleWidth;
-        let overlapx = this.overlapx;
-        let xStart = i * triangleWidth - overlapx;
-        let xMiddle = xStart + (triangleWidth/2)+overlapx/2;
-        let xEnd = xStart + triangleWidth + overlapx;
-        let yStart = this.height;
-        let yMax = this.scales.y(d.value)
-        if(!notZero){
-            yMax = this.height;
+        let triangleWidth = this.triangleWidth,
+            overlapx = this.overlapx,
+            x0 = i * triangleWidth - overlapx,
+            x1 = x0 + (triangleWidth/2)+overlapx/2,
+            x2 = x0 + triangleWidth + overlapx,
+            x3 = x0,
+            y0 = this.height,
+            y1 = this.scale(d.value),
+            y2 = y0,
+            y3 = y0;
+
+
+        if(this.isMobile()){
+            x0 = 0;
+            x1 = this.scale(d.value);
+            x2 = x0;
+            x3 = x0;
+            y0 = i * triangleWidth - overlapx;
+            y1 = y0 + triangleWidth/2 + overlapx/2;
+            y2 = y0 + triangleWidth + overlapx;
+
+            if(!notZero){
+                x1 = 0;
+            }
+        } else {
+            if(!notZero){
+                y1 = this.height;
+            }
         }
 
         return `
-        M ${xStart} ${yStart}
-        L ${xMiddle} ${yMax}
-        L ${xEnd} ${yStart}
-        L ${xStart} ${yStart}
+        M ${x0} ${y0}
+        L ${x1} ${y1}
+        L ${x2} ${y2}
+        L ${x3} ${y3}
         `;
     }
 
-    stepLeft(d,i){
-        return (this.triangleWidth * i) + this.overlapx + 30 + 'px';
+    steps($steps){
+        let size = this.triangleWidth - this.overlapx + 'px';
+        let windowWidth = this.$window.width();
+        // reset steps previous style
+        $steps.style('left', '');
+        $steps.style('top', '');
+        $steps.style('width', '');
+        $steps.style('height', '');
+        if(this.isMobile()){
+            let stepWidth = windowWidth - this.svgWidth - 30 + 'px';
+            $steps = $steps
+                .style('width', stepWidth)
+                .style('top',  (d,i)=>{
+                    return (this.triangleWidth * i) + this.overlapx/2 + 'px';
+                })
+                .style('height',  size);
+        }
+        else {
+            let reduced = windowWidth < 800;
+            let offset = this.overlapx + 25;
+            if(reduced){
+                size = (this.triangleWidth - this.overlapx/3) + 'px';
+                offset -= this.overlapx/4;
+            }
+            $steps
+                .style('left',  (d,i)=>{
+                    return (this.triangleWidth * i) + offset + 'px';
+                })
+                .style('width', size);
+        }
+        return $steps;
     }
 
-    stepWidth(){
-        return this.triangleWidth - this.overlapx + 'px';
-    }
+
 
     redraw(){
         this.$g.selectAll('.path')
-            .attr('d', (d,i)=>{ return this.drawTriangle(d,i); });
+            .attr('d', (d,i)=>{ return this.drawTriangle(d,i, true); });
 
-        this.$axis.selectAll('.step')
-            .style('left', (d,i)=>{ return this.setpLeft(d,i); })
-            .style('width', ()=>{ return this.setpWidth(); });
+        this.steps(this.$axis.selectAll('.step'));
+
     }
 
     draw(){
-        this.$g.selectAll('.path')
+        var paths = this.$g.selectAll('.path')
             .data(this.data)
             .enter()
                 .append('path')
                 .attr('class', 'path')
-                .attr('d', (d, i)=>{ return this.drawTriangle(d,i); })
-                .transition()
-                    .duration(2000)
-                    .attr('d', (d, i)=>{ return this.drawTriangle(d,i, true); });
+                .attr('d', (d, i)=>{ return this.drawTriangle(d,i); });
+        paths.transition()
+            .duration(2000)
+            .attr('d', (d, i)=>{ return this.drawTriangle(d,i, true); });
 
-        let steps = this.$axis
-            .selectAll('.step')
-            .data(this.data)
-            .enter()
-                .append('div')
-                .attr('class', 'step')
-                .style('left', (d,i)=>{ return this.stepLeft(d,i); })
-                .style('width', ()=>{ return this.stepWidth(); })
+        var steps = this.$axis
+                .selectAll('.step')
+                .data(this.data)
+                .enter()
+                    .append('div')
+                    .attr('class', 'step');
+
+        this.steps(steps);
+
+
+        steps.on('mouseover', function(d,i){
+            d3.selectAll('path').classed('hover', function(d,_i){ return i == _i; });
+            d3.select(this).classed('hover', true);
+        }).on('mouseout', function(d,i){
+            d3.selectAll('path').classed('hover', false);
+            d3.select(this).classed('hover', false);
+        });
+
+        paths.on('mouseover', function(d,i){
+            d3.selectAll('.step').classed('hover', function(d,_i){ return i == _i; });
+            d3.select(this).classed('hover', true);
+        }).on('mouseout', function(d,i){
+            d3.selectAll('.step').classed('hover', false);
+            d3.select(this).classed('hover', false);
+        });
 
         steps.append('h3').text(function(d){ return d.name });
         steps.append('p').text(function(d){ return d.description; });
     }
 
     onResize(){
-        this.width = this.getWidth() - this.margin.left - this.margin.right;
-        this.height = this.getHeight() - this.margin.top - this.margin.bottom;
-        this.triangleWidth = this.width / this.data.length;
+        this.width         = this.$window.width();
+        this.height        = this.$window.height() * 0.33;
+        this.triangleWidth = this.width / this.data.length - this.overlapx/3;
 
 
-        let yMax = d3.max(this.data, function(d){ return d.value; });
-        this.scales = {
-            y: d3.scaleLinear().domain([0, yMax]).range([this.height, 0]),
-            x: d3.scaleLinear().domain([0, this.data.length]).range([0, this.width])
+        let isMobile   = this.isMobile(),
+            margin     = isMobile ? this.margin.mobile : this.margin;
+
+        if(isMobile){
+            this.height = this.$window.height() * 0.7;
+            this.width = this.$window.width() * 0.4;
+            this.triangleWidth = this.height / this.data.length;
+
+        }
+
+        this.width  = this.width  - margin.left - margin.right;
+        this.height = this.height - margin.top -  margin.bottom;
+
+        this.svgHeight = this.height;
+        this.svgWidth = this.width + margin.left + margin.right;
+
+        this.scale = this.scale.range([this.height, 0]);
+        if(isMobile){
+            this.scale = this.scale.range([0, this.width]);
+            this.svgHeight += this.overlapx*2;
         }
 
         this.$svg
-            .attr('width', this.getWidth())
-            .attr('height', this.height);
+            .attr('width',  this.svgWidth)
+            .attr('height', this.svgHeight);
 
         if(!this.$svg.select('g').size()){
-            this.$g = this.$svg.append('g')
-                .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
+            this.$g = this.$svg.append('g');
         }
+
+        this.$g.attr('transform', `translate(${margin.left},${margin.top})`);
+
+        this.$element.classed('mobile', isMobile);
     }
 
-
-    getWidth(){
-        return this.$window.width();
+    isMobile(){
+        return this.$window.width() < 640;
     }
-
-    getHeight(){
-        return this.$window.height() * 0.33;
-    }
-
-
 
 
 }
