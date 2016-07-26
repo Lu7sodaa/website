@@ -26,6 +26,7 @@ import { CapitalizeFilter  } from '../app/components/filters/capitalize';
 import { EVENTS } from '../app/components/constants/events';
 
 var dependencies = [
+    'angular-scroll-animate',
     'duParallax',
     'ngAnimate',
     'ngCookies',
