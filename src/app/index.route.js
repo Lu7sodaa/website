@@ -37,6 +37,15 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             templateUrl: 'app/main/agency/agency.html',
             controller: 'AgencyController',
             controllerAs: 'agency'
+        })
+        .state('app.typography', {
+            data: { title: 'typo' },
+            url: 'typography',
+            templateUrl: 'app/main/typography-rules.html',
+            controller: function(){
+
+            },
+            controllerAs: 'ctrl'
         });
 
     $urlRouterProvider.otherwise('/');
