@@ -2,7 +2,7 @@
 
 export function runBlock ($log, $rootScope, $state, $stateParams) {
     'ngInject';
-    // 
+    //
     // function onStateChangeSucces(e,toState, fromState, fromParams, toParams, opts){
     //     $log.log(opts, toParams);
     //     if(!toParams || !toParams.scroll_top){ return; }
@@ -20,5 +20,18 @@ export function runBlock ($log, $rootScope, $state, $stateParams) {
 
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+
+    $rootScope.slideLeft = function($el){
+        $el.addClass('slide-left');
+    };
+
+    $rootScope.slideRight = function($el){
+        $el.addClass('slide-right');
+    };
+
+    $rootScope.fadeIn = function($el){
+        $el.addClass('fade-in');
+    }
+
     $log.debug('runBlock end');
 }
