@@ -9,26 +9,13 @@
 }
 
 .triangle-chart {
-    padding-top: 30px;
+    padding-top: 4em;
     &__axis {
         position: relative;
-        height: 200px;
-        font-size: 0.8em;
-        h3 {
-            font-size: 1.1em;
-            font-weight: bold;
-            position: relative;
-            &:after {
-                width: 30px;
-                height: 3px;
-                background: @blue-grey;
-                content: ' ';
-                position: absolute;
-                left: 0;
-                bottom: -7px;
-            }
-        }
+        min-height: 200px;
+        // font-size: 0.8em;
         p {
+            font-size: 0.8em;
             width: 100% !important;
         }
         .step {
@@ -36,7 +23,7 @@
             &.hover {
                 transition: color @hover-anim-duration ease;
                 color: @hover-color;
-                h3:after {
+                h4:after {
                     transition: background-color @hover-anim-duration ease;
                     background-color: @hover-color;
                 }
@@ -59,5 +46,8 @@
             display: table;
             content: "";
         }
+    }
+    @media screen and (max-width: @screen-xs){
+        padding-top: 0;
     }
 }

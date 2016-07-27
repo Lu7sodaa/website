@@ -113,12 +113,12 @@ class TriangleChartController {
             $steps = $steps
                 .style('width', stepWidth)
                 .style('top',  (d,i)=>{
-                    return (this.triangleWidth * i) + this.overlapx/2 + 'px';
+                    return (this.triangleWidth * i) + this.overlapx/2 + 15 + 'px';
                 })
                 .style('height',  size);
         }
         else {
-            let reduced = windowWidth < 800;
+            let reduced = windowWidth < 900;
             let offset = this.overlapx + 25;
             if(reduced){
                 size = (this.triangleWidth - this.overlapx/3) + 'px';
@@ -167,7 +167,7 @@ class TriangleChartController {
         steps.on('mouseover', function(d,i){
             d3.selectAll('path').classed('hover', function(d,_i){ return i == _i; });
             d3.select(this).classed('hover', true);
-        }).on('mouseout', function(d,i){
+        }).on('mouseout', function(){
             d3.selectAll('path').classed('hover', false);
             d3.select(this).classed('hover', false);
         });
@@ -175,12 +175,12 @@ class TriangleChartController {
         paths.on('mouseover', function(d,i){
             d3.selectAll('.step').classed('hover', function(d,_i){ return i == _i; });
             d3.select(this).classed('hover', true);
-        }).on('mouseout', function(d,i){
+        }).on('mouseout', function(){
             d3.selectAll('.step').classed('hover', false);
             d3.select(this).classed('hover', false);
         });
 
-        steps.append('h3').text(function(d){ return d.name });
+        steps.append('h4').text(function(d){ return d.name }).attr('class', 'small-underline');
         steps.append('p').text(function(d){ return d.description; });
     }
 
@@ -194,7 +194,7 @@ class TriangleChartController {
             margin     = isMobile ? this.margin.mobile : this.margin;
 
         if(isMobile){
-            this.height = this.$window.height() * 0.7;
+            this.height = this.data.length * 175;
             this.width = this.$window.width() * 0.4;
             this.triangleWidth = this.height / this.data.length;
 
@@ -226,7 +226,7 @@ class TriangleChartController {
     }
 
     isMobile(){
-        return this.$window.width() < 640;
+        return this.$window.width() < 720;
     }
 
 
