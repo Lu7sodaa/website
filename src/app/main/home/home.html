@@ -17,32 +17,38 @@
                         </p>
                     </div>
                 </section>
-                <section class="main__interval">
+                <section class="main__interval main__interval--parallax">
                     <img src="../assets/images/photos/yale_library.jpg" du-parallax y="background"/>
                 </section>
-                <section class="home__offer">
+                <section class="home__offer main__interval">
                     <div class="row">
-                        <div class="col-md-4 home__offer__chapter"
+                        <div class="col-xs-12 col-md-4 col-sm-4 home__offer__chapter"
                             ng-class="chapter.color_class"
                             ng-repeat="chapter in home.listChapters()"
                             ng-click="$state.go('app.offer', {'#': chapter.title.toLowerCase() })"
                             ng-attr-tabindex="{{$index + 1}}">
-                            <div class="col-md-10 col-md-offset-1">
-                                <h2 class="bold">{{ chapter.title }}</h2>
-                                <p class="col-md-offset-1 col-md-10"
+                            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                                <h2 class="bold small-underline">{{ chapter.title }}</h2>
+                                <p class="small-underline-offset"
                                    ng-bind-html="chapter.home_description">
                                 </p>
+                                <div class="clearfix"></div>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </section>
-                <section class="home__agency text-center triangle-background">
+                <section class="home__agency main__interval text-center triangle-background">
                     <div class="triangle-background__overlay row">
                         <h1>Notre agence</h1>
 
                         <div class="col-md-8 col-md-offset-2">
-                            <p>Donec placerat elit et venenatis mattis. Sed metus dolor, facilisis et pellentesque nec, viverra nec ante. Nunc fringilla porta iaculis. Maecenas sit amet tempor dolor, eu congue dolor. Duis nisi risus, vestibulum eget ex vitae, blandit tempor nulla.</p>
-                            <a ui-sref="app.agency({'#': 'top'})" class="btn btn-primary">Découvrez nous</a>
+                            <p>
+                                Skoli est un prestataire de services numériques et s’adresse à tous les producteurs de savoirs :
+                                chercheurs, auteurs, organismes de recherche, universités, institutions, think-tank, éditeurs, fondations, etc.
+                            </p>
+                            <a ui-sref="app.agency({'#': 'top'})" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 </section>

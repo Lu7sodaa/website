@@ -1,13 +1,17 @@
 .home {
-    .main__header {
-        padding-left: 15px;
-        padding-right: 15px;
+    section.main__header {
+        // padding-left: 15px;
+        // padding-right: 15px;
         background: @blue-grey;
         color: white;
         position: relative;
         border-bottom: 0;
         padding-bottom: 0;
+        padding-top: 0;
+
         h1 {
+            text-align: left;
+            padding: 0;
             margin-top: 0.5em;
             margin-bottom: 0;
             font-size: 10em;
@@ -27,18 +31,15 @@
             line-height: 2em;
             // width: 400px;
             position: absolute;
+            margin-bottom: 0;
             right: 0;
             bottom: 0;
             text-align: right;
         }
     }
 
-    .main__interval {
-        overflow: hidden;
+    .main__interval--parallax {
         height: 60vh;
-        img {
-            width: 100%;
-        }
     }
 
     &__offer {
@@ -53,27 +54,13 @@
         // height: 26vh;
         padding-top: 15px;
         // fix to have the same height for all chapters.
-        /// took from http://stackoverflow.com/a/19695851/885541 
+        /// took from http://stackoverflow.com/a/19695851/885541
         margin-bottom: -99999px;
         padding-bottom: 99999px;
         &, h2:after {
             transition: color .33s ease, background-color .33s ease;
         }
 
-        // h2, p {
-        //     line-height: normal;
-        // }
-        h2 {
-            position: relative;
-            &:after {
-                width: 40px;
-                height: 5px;
-                content: "";
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-            }
-        }
         p {
             padding-bottom: 30px;
         }
@@ -104,6 +91,14 @@
                 transform: none !important;
             }
         }
+        &__offer__chapter {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            p {
+                padding-bottom: 15px;
+            }
+        }
     }
 
     @media screen and (max-width: @screen-xs){
@@ -111,6 +106,10 @@
             &__chapter {
                 padding-top: 15px;
                 padding-bottom: 15px;
+                margin-bottom: 0;
+                p {
+                    padding-bottom: 0;
+                }
             }
         }
 
