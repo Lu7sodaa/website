@@ -1,0 +1,119 @@
+html body {
+    // font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+}
+
+
+.skoli-logo, .main__header h1 {
+    font-family: 'Josefin Slab', serif;
+}
+
+p + ul {
+    margin-top: -2em;
+}
+
+ul, p {
+    margin-bottom: 2em;
+}
+
+.main {
+    section&__header {
+        h1 {
+            font-size: 7em;
+        }
+        .lead {
+            font-size: 2em;
+            line-height: 2em;
+        }
+    }
+}
+
+section {
+    h1 {
+        text-align: center;
+        padding-top: 0.7em;
+        font-size: 3.5em;
+        margin-bottom: 0.7em;
+    }
+}
+
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.light {
+    font-weight: lighter;
+}
+.phone {
+    margin-left: -0.675em;
+}
+
+.step {
+    h3 {
+        // font-size: 1.1em;
+        font-weight: bold;
+        position: relative;
+        &:after {
+            width: 30px;
+            height: 3px;
+            background: @blue-grey;
+            content: ' ';
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+        }
+    }
+}
+
+.main {
+    h1, h2, h3, h4, h5 {
+        @underline-height: 0.185em;
+        &.small-underline {
+            position: relative;
+            margin-bottom: 0.8em;
+            &:after {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: -0.4em;
+                width: 1.5em;
+                height: 0.185em;
+                min-height: 2px;
+                background-color: @blue-grey;
+            }
+        }
+    }
+}
+
+.small-underline-offset {
+    padding-left: 3em;
+}
+
+
+@media screen and (max-width: @screen-xs){
+    .main.home {
+
+        p.small-underline-offset {
+            padding-left: 0;
+        }
+
+        .main__header {
+            h1 {
+                font-size: 6em;
+                margin-top: 20px;
+            }
+            h2.subtitle {
+                font-size: 1.25em;
+                margin-left: 45px;
+                margin-top: -0.5em;
+            }
+            p.lead {
+                font-size: 1.25em;
+                line-height: 2em;
+            }
+        }
+    }
+}

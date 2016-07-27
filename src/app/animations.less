@@ -1,0 +1,29 @@
+@slide-duration: 1s;
+
+.slide-left-not-visible, .slide-right-not-visible {
+    position: relative;
+}
+
+.slide-left-not-visible {
+    transition: left @slide-duration ease;
+    left: -9999px;
+    &.slide-left {
+        left: 0;
+    }
+}
+.slide-right-not-visible {
+    transition: right @slide-duration ease;
+    right: -9999px;
+    &.slide-right {
+        right: 0;
+    }
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-in {
+    opacity: 1;
+
+}

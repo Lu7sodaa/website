@@ -16,22 +16,13 @@
 
 @brand-primary: @bh-blue;
 
-html body {
-    // font-family: 'Lato', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.light {
-    font-weight: lighter;
-}
-
 .bh-label {
     padding: 0 0.2em;
+}
+
+.btn {
+    border-radius: 0;
+    border: 0;
 }
 
 .btn-primary {
@@ -39,72 +30,8 @@ html body {
     color: black;
 }
 
-.skoli-logo, .main__header h1 {
-    font-family: 'Josefin Slab', serif;
-}
-
-nav.navbar {
-    margin-bottom: 0;
-}
-
-// @nav-height: 50px;
-
 .img-rounded {
     border-radius: 50%;
-}
-
-.main {
-    padding-top: 50px;
-    pointer-events: none;
-    .inner {
-        pointer-events: all;
-        z-index: 1;
-        position: relative;
-    }
-
-    section&__interval {
-        overflow: hidden;
-        position: relative;
-        img {
-            width: 100%;
-            position: relative;
-        }
-    }
-
-    &__header {
-        background: white;
-        color: black;
-        background-color: white;
-        border-bottom: 5px solid black;
-        padding-bottom: 4em;
-        padding-top:10em;
-        h1 {
-            margin-top: 0;
-            font-size: 8em;
-            border-bottom: 1px solid black;
-            padding-bottom: 0.05em;
-            margin-bottom: 15px;
-        }
-        p {
-            width: 60%;
-            margin: auto;
-            // float: none;
-        }
-    }
-    section {
-        background: url('../assets/images/cream_dust.png') repeat;
-    }
-}
-
-@media screen and (max-width: @screen-sm) {
-    .main {
-        &__header {
-            padding-top: 6em;
-            h1 {
-                font-size: 6em;
-            }
-        }
-    }
 }
 
 /**
