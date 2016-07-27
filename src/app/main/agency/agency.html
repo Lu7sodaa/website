@@ -5,18 +5,48 @@
         <div class="main agency">
             <div class="inner">
                 <section class="main__header">
-                    <h1 class="text-center">Notre agence</h1>
-                    <p>Skoli est un prestataire de services numériques et s’adresse
-                        à tous les “producteurs de savoirs” : chercheurs, auteurs,
-                        organismes de recherche, universités, institutions, think-
-                        tank, éditeurs, fondations, etc.<br><br>
-                        Nous voulons aider la recherche à capturer et analyser des
-                        données numériques, désormais incontournables pour comprendre
-                        le monde.<br><br>
-                        Nous voulons réhabiliter la dimension universelle du savoir
-                        en créant des formats de restitution percutants et innovants,
-                        à la hauteur de l’intelligence mobilisée pour le produire.
-                    </p>
+                    <h1>Notre agence</h1>
+                    <hr>
+                    <div class="container">
+                        <p class="definition italic">
+                            <span class="bold">Synchroniser</span> : Faire se produire deux ou plusieurs choses
+                            dans le même temps ou dans une succession précise, les coordonner.
+                        </p>
+                        <p>
+                            L’ambition de Skoli, synchroniser les sciences et la société,
+                            repose sur trois convictions.
+                            <ul>
+                                <li>La Recherche est une priorité : elle doit être au coeur de la société, et non à la marge.</li>
+                                <li>Aucune information disponible, en particulier les mesures numériques du monde (data), ne doit rester inaccessible à la Recherche pour enrichir la connaissance.</li>
+                                <li>Le savoir issu de la Recherche doit être mieux diffusé et utilisé pour éclairer nos choix publics et accroître notre intelligence collective.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            Les données numériques sont devenues un matériau de recherche
+                            à part entière et indispensable pour décrypter le monde
+                            et les sociétés qui l’habitent.<br>
+                            Nous mettons notre savoir-faire à disposition des organisations
+                            de recherche pour leur aider à <span class="bold">capter, traiter et exploiter
+                                des données numériques</span>.
+                            </p>
+                            <p>
+                                Le format actuel de publication scientifique ne correspond
+                                pas au nouveau paradigme d’accès et de partage des connaissances,
+                                et les acquis de la Recherche restent le plus souvent confinés
+                                aux spécialistes d’un domaine.<br>
+                                Nous aidons les chercheurs à <span class="bold">réhabiliter le savoir en créant
+                                des formats de restitution numériques innovants</span> et à forte audience,
+                                à la hauteur de l’intelligence mobilisée pour les produire.
+                            </p>
+                            <p>
+                                <span class="bold">Nous ne sommes pas chercheurs.</span>
+                                Nous ne nous substituons pas à leur travail: notre mission
+                                consiste à les accompagner dans <span class="bold">la production
+                                et la transmission de leurs travaux</span>.
+                            </p>
+
+                    </div>
+
                     <triangle-chart data="agency.chartData"></triangle-chart>
                 </section>
                 <section class="main__interval"
@@ -47,7 +77,7 @@
                             </h3>
                             <p>{{ gauth.function }}</p>
                         </div>
-                        <div class="member member-overlay" ng-class="lucas.color" style="bottom:2%; left: 59%;">
+                        <div class="member member-overlay" ng-class="lucas.color" style="bottom:2%; left: 63%;">
                             <a rel="nofollow" ng-href="{{ lucas.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
                             <h3>
                                 {{ lucas.name }}<br>
@@ -59,22 +89,65 @@
                         </div>
                     </div>
                 </section>
-                <section class="agency__members visible-xs visible-sm">
+                <section class="agency__members main__interval visible-xs visible-sm">
                         <div class="member col-sm-4 col-xs-12" ng-class="member.color" ng-repeat="member in agency.listMembers()">
                             <div class="member__description">
                                 <a rel="nofollow" ng-href="{{ member.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-                                <h3>{{ member.name }}<br><span class="title" >{{ member.title }}</span></h3>
+                                <h4>{{ member.name }}<br><span class="title bold" >{{ member.title }}</span></h4>
                                 <p>
                                     {{ member.function }}
                                 </p>
                             </div>
                         </div>
                 </section>
+                <section class="agency__skills">
+                    <div class="container">
+                        <h1 class="bold">Nos compétences</h1>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3 class="small-underline"><span class="">Ingénierie</span></h3>
+                                <ul class="list-unstyled">
+                                    <li>Gestion de projet</li>
+                                    <li>Développement web</li>
+                                    <li>Data intelligence</li>
+                                    <li>Design d’interactions</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="small-underline"><span class="">Information</span></h3>
+                                <ul class="list-unstyled">
+                                    <li>Editorialisation</li>
+                                    <li>Journalisme</li>
+                                    <li>Design d’information</li>
+                                    <li>Architecture de l’information</li>
+                                    <li>Ludification</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h3 class="small-underline"><span class="">Communication</span></h3>
+                                <ul class="list-unstyled">
+                                    <li>Médiation scientifique</li>
+                                    <li>Stratégie digitale</li>
+                                    <li>Communication institutionnelle</li>
+                                    <li>Réseaux sociaux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="agency__previous-work">
                     <div class="container">
-                        <div class="row">
-                            <h2 class="bold col-md-12">Réalisations antérieurs auxquelles nous avons participé</h2>
-                        </div>
+                        <h1 class="bold text-center">Nos précédentes réalisations</h1>
+                        <p>
+                            Nous sommes issus du monde du web. Nos différents
+                            parcours au sein d'agences (web, design et data-journalisme)
+                            nous ont appris à cerner les enjeux et l'importance
+                            de la production d'une information de qualité. Nous
+                            avons sélectionné quelques réalisations auxquelles
+                            nous avons participé à titre individuel ou collectif
+                            afin de mieux illustrer nos savoir-faire.
+                        </p>
                         <div class="row">
                             <div class="col-md-4 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
                                 <a href="{{ previousWork.link }}" rel="nofollow">
