@@ -1,4 +1,27 @@
 .offer {
+    .main__header {
+        .chapter {
+            cursor: pointer;
+            margin-bottom: 2em;
+            .small-underline:after {
+                transition: width .5s ease;
+            }
+            svg {
+                max-width: 200px;
+                width: 100%;
+                height: auto;
+            }
+            &:hover {
+                .small-underline:after {
+                    width: 100%;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__chapter {
         padding-top: 2em;
         padding-bottom: 1em;
@@ -10,13 +33,7 @@
             }
         }
 
-        h1 {
-            // font-family: 'Josefin Slab', serif;
-            // position: relative;
-            font-weight: 100;
-            font-size: 3.5em;
-            margin-bottom: 0.5em;
-        }
+
 
         .sep {
             width: 100px;

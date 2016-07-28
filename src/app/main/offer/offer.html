@@ -5,15 +5,28 @@
         <div class="main offer">
             <div class="inner">
                 <section class="main__header">
-                    <div class="text-center">
-                        <h1>Notre offre</h1>
-                        <hr>
-                        <div class="container">
-                            <p>
-                                Nous proposons d’accompagner les organisations de recherche dans la
-                                transition numérique de leurs activités, et en particulier dans l’usage des
-                                données numériques.
-                            </p>
+                    <h1>Notre offre</h1>
+                    <hr>
+                    <div class="container">
+                        <!-- <p>
+                            Nous proposons d’accompagner les organisations de recherche dans la
+                            transition numérique de leurs activités, et en particulier dans l’usage des
+                            données numériques.
+                        </p> -->
+                        <div class="row">
+                            <div class="col-md-4 chapter" ng-class="chapter.color_class"
+                                ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
+                                ng-click="offer.goToChapter(chapter)">
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-3 text-center" ng-bind-html="chapter.pictogram"></div>
+                                    <div class="col-md-12 col-xs-8">
+                                        <h3 class="bold small-underline">{{ chapter.title }}</h3>
+                                        <p class="small-underline-offset-h3">
+                                            {{ chapter.home_description}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -24,7 +37,7 @@
                     <div class="container">
                         <div class="offer__chapter__description">
                             <div class="text-center">
-                                <span class="pictogram"><img src="{{chapter.pictogram }}"/></span>
+                                <span class="pictogram" ng-bind-html="chapter.pictogram"></span>
                                 <!-- <span class="unicode-char">{{ chapter.unicode_char }}</span> -->
                                 <h1>{{ chapter.detailed_title }}</h1>
                             </div>

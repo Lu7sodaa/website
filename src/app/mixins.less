@@ -35,25 +35,14 @@
 
 .bh-color(@color){
     &.offer {
-        section.@{color} {
-            // .odd .offer__chapter__description {
-            //     color: white;
-            //     background-color: @@color;
-            // }
-            .offer__chapter{
-                &__description {
-                    // border: 1px solid @@color;
-                    h1:after, .sep {
-                        background-color: @@color;
-                    }
-                }
-                &__services {
-                    color: white;
-                    background-color: @@color;
-                }
+        section.@{color}, .chapter.@{color} {
+            .small-underline:after, .sep, .offer__chapter__services {
+                color: white;
+                background-color: @@color;
             }
         }
     }
+
     &.home {
         .home__offer__chapter {
             &.@{color} {
