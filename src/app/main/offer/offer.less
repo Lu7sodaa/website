@@ -1,5 +1,9 @@
 .offer {
-    .main__header {
+    section.main__header {
+        padding-bottom: 0;
+        hr {
+            margin-bottom: 0;
+        }
         .chapter {
             cursor: pointer;
             margin-bottom: 2em;
@@ -10,8 +14,10 @@
                 max-width: 200px;
                 width: 100%;
                 height: auto;
+                fill: #333;
             }
-            &:hover {
+            &:hover, &:focus, &:active   {
+                border: none;
                 .small-underline:after {
                     width: 100%;
                 }
@@ -22,77 +28,16 @@
         }
     }
 
-    &__chapter {
-        padding-top: 2em;
-        padding-bottom: 1em;
-
-        .pictogram {
-            img {
-                margin-bottom: -30px;
-                width: 200px;
-            }
-        }
-
-
-
-        .sep {
-            width: 100px;
-            height: 5px;
-            margin: auto;
-            margin-bottom: 3em;
-            background-color: black;
-        }
-
-        &__description {
-            margin-bottom: 1em;
-        }
-        &__description, &__services {
-            padding-top: 1em;
-            padding-bottom: 1em;
-        }
-
-
-        &__services {
-            padding-top: 1em;
-            padding-bottom: 0;
-            padding-left: 0;
-            padding-right: 0;
-            .service {
-                margin-bottom: 1em;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.33);
-                &:last-child {
-                    border-bottom: 0;
-                    margin-bottom: 0;
-                }
-                &__name {
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                    // text-align: right;
-                    font-size: 1.18em;
-                }
-                &__subservice {
-                    margin-bottom: 1em;
-                }
-            }
-            & > ul > li {
-                li {
-                    font-weight: normal;
-                }
-            }
-        }
-    }
-
     // responsive
     @media screen and (max-width: @screen-xs) {
         &__chapter {
-            padding-top: 1em;
             .pictogram {
                 img {
                     width: 100px;
                 }
             }
             h1 {
-                font-size: 2em;
+                font-size: 3em;
             }
         }
     }

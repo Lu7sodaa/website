@@ -7,7 +7,7 @@
                 <section class="main__header">
                     <h1>Notre offre</h1>
                     <hr>
-                    <div class="container">
+                    <div class="tile">
                         <!-- <p>
                             Nous proposons d’accompagner les organisations de recherche dans la
                             transition numérique de leurs activités, et en particulier dans l’usage des
@@ -30,37 +30,51 @@
                         </div>
                     </div>
                 </section>
-                <section class="offer__chapter" ng-class="chapter.color_class"
+                <section class="offer__chapter tiled" ng-class="chapter.color_class"
                     ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
                     id="{{chapter.title.toLowerCase() }}"
                     ng-init="even=($index % 2 === 0)">
-                    <div class="container">
-                        <div class="offer__chapter__description">
-                            <div class="text-center">
-                                <span class="pictogram" ng-bind-html="chapter.pictogram"></span>
-                                <!-- <span class="unicode-char">{{ chapter.unicode_char }}</span> -->
-                                <h1>{{ chapter.detailed_title }}</h1>
+                    <div class="tile-row">
+                        <div class="tile tile--half tile--vertical-auto tile--photo" style="background-image:url('{{chapter.background_image}}')">
+                            <!-- <span class="col-md-2 pictogram__holder" ng-bind-html="chapter.pictogram"></span> -->
+                            <div class="tile__vertical-holder">
+                                <h1>
+                                    <span class="bh-label-inverted"
+                                          ng-class="chapter.color_class">
+                                        {{ chapter.detailed_title }}
+                                    </span>
+                                </h1>
                             </div>
-                            <div class="sep"></div>
-                            <p ng-bind-html="chapter.description"></p>
                         </div>
-                        <div class="row" ng-init="appearFromLeft = $index % 2 === 0">
-                            <!-- ng-class="appearFromLeft ? 'slide-left-not-visible': 'slide-right-not-visible'" -->
-                            <div ng-if="chapter.services.length"
-                                 class=" fade offer__chapter__services slide col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"
-                                 when-visible="fadeIn"> <!--appearFromLeft ? slideLeft : slideRight -->
-                                <div class="service row" ng-repeat="service in chapter.services">
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="col-md-5 service__name">
-                                            {{ service.name }}
-                                        </div>
-                                        <div class="col-md-7" ng-if="service.sub_services.length">
-                                            <div class="service__subservice" ng-repeat="sub_service in service.sub_services">
-                                                {{ sub_service.name }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="tile tile--half tile--vertical-auto tile--colored">
+                            <div class="tile__vertical-holder">
+                                <p ng-bind-html="chapter.description"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="row" ng-if="chapter.services.length > 1">
+                            <div class="col-md-4 col-sm-4 category" ng-repeat="service in chapter.services">
+                                <h3 class="small-underline">
+                                    {{ service.name }}
+                                </h3>
+                                <ul class="list-unstyled">
+                                    <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
+                                        <span>{{ sub_service.name }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div ng-if="chapter.services.length === 1" class="category" ng-init="service = chapter.services[0]">
+                            <h3 class="small-underline">
+                                {{ service.name }}
+                            </h3>
+                            <div class="row">
+                                <ul class="list-unstyled col-md-6">
+                                    <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
+                                        <span>{{ sub_service.name }}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

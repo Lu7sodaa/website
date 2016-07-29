@@ -34,19 +34,17 @@
 }
 
 .bh-color(@color){
-    &.offer {
-        section.@{color}, .chapter.@{color} {
-            .small-underline:after, .sep, .offer__chapter__services {
-                color: white;
-                background-color: @@color;
-            }
+    .@{color} {
+        .tile--colored, .small-underline:after {
+            background-color: @@color;
+            color: white;
         }
     }
 
     &.home {
         .home__offer__chapter {
             &.@{color} {
-                &:hover, &:focus, &:active, h2:after {
+                &:hover, &:focus, &:active {
                     background-color: @@color;
                 }
             }
@@ -60,13 +58,18 @@
             }
         }
     }
-    .bh-label.bh-label-inverted.@{color}{
-        background-color: white;
-        color: @@color;
-    }
 
-    .bh-label.@{color} {
-        background-color: @@color;
+    .bh-label {
+        &-inverted {
+            &.@{color} {
+                background-color: white ;
+                color: @@color;
+            }
+        }
+
+        &.@{color}, .@{color} & {
+            background-color: @@color;
+        }
     }
 
     .member-overlay.@{color} {

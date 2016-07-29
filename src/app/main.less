@@ -1,6 +1,7 @@
 .main {
     padding-top: 50px;
     pointer-events: none;
+    overflow: hidden;
     .inner {
         pointer-events: all;
         z-index: 1;
@@ -17,11 +18,8 @@
         }
     }
 
-    section&__header {
-        padding-top: 4em !important;
-        background: white;
-        color: black;
-        background-color: white;
+    & section&__header {
+        padding-top: 4em;
         border-bottom: 5px solid black;
         padding-bottom: 4em;
         hr {
@@ -36,6 +34,110 @@
         background-image: url('../assets/images/cream_dust.png');
         background-repeat: repeat;
     }
+}
+// tile system
+.tile {
+    @tile-height: 500px;
+    @tile-height-xs: 640px;
+    @tile-padding: 90px;
+    @tile-padding-sm: 60px;
+    @tile-padding-xs: 30px;
+    padding: @tile-padding - 15;
+    min-height: @tile-height;
+    // section.tiled
+    h1 {
+        font-size: 3em;
+    }
+    section&d {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &--vertical-auto {
+        padding-top: 0;
+        padding-bottom: 0;
+        .tile__vertical-holder {
+            display: table;
+            height: @tile-height;
+            > * {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+    &--half {
+        width: 50%;
+        float: left;
+    }
+    &--photo {
+        background-size: cover;
+        background-repeat: no-repeat;
+        // font-size: 3em;
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            .bh-label {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    &-row {
+        .tile {
+            // display: inline-block;
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    @media screen and (max-width: @screen-sm) {
+        padding: @tile-padding-sm;
+    }
+
+    @media screen and (max-width: @screen-sm-max) {
+        // height: auto;
+        &--half {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: @screen-xs) {
+        padding: @tile-padding-xs;
+    }
+}
+
+.vertical-middle-holder {
+    display: table;
+    height: 100%;
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.category {
+    h3 {
+        font-weight: bold;
+    }
+
+    ul {
+        li {
+            line-height: 2em;
+            span {
+                line-height: 1.4em;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+svg.pictogram {
+    fill: #333;
 }
 
 .definition {

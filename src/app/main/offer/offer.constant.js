@@ -1,14 +1,13 @@
 export var CHAPTERS = [
     {
         title: 'Data',
-        detailed_title: 'Accompagner les usages numériques de la recherche',
-        icon_class: 'fa-bar-chart',
+        detailed_title: 'Utiliser les données numériques pour la Recherche',
+        background_image: '../assets/images/photos/library.jpg',
         color_class: 'bh-yellow',
         home_description: `Nous accompagnons les organisations de recherche dans
         'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
         description: `L’ère numérique transforme aussi la Recherche. Les données
-        numériques (issues du web, de capteurs, d’archives numérisées, etc.)
-        constituent un immense réservoir de connaissances et deviennent de plus
+        numériques constituent un immense réservoir de connaissances et deviennent de plus
         en plus incontournables à la Recherche pour comprendre le monde.<br><br>
 
         Nous accompagnons les organisations de recherche dans cette transformation
@@ -21,7 +20,7 @@ export var CHAPTERS = [
         votre objet de recherche, nous assurer de la validité scientifique des
         données, et respecter votre méthodologie de recherche.
         `,
-        pictogram: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200" version="1.1" x="0" y="0" viewBox="10 12 80 80" enable-background="new 0 0 100 100"
             xml:space="preserve"><g><path d="M49.6,48.3c7.6,0,13.8-6.2,13.8-13.8c0-7.6-6.2-13.8-13.8-13.8s-13.8,6.2-13.8,13.8C35.8,42.1,42,48.3,49.6,48.3z    M52.7,45.9l8.2-8.2C59.9,41.7,56.7,44.8,52.7,45.9z M61.4,34.5c0,0.2,0,0.4,0,0.6L50.2,46.3c-0.2,0-0.4,0-0.6,0   c-0.7,0-1.3-0.1-2-0.2l13.6-13.6C61.4,33.2,61.4,33.8,61.4,34.5z M60.1,29c0.3,0.6,0.6,1.2,0.8,1.8L45.9,45.7   c-0.6-0.2-1.2-0.5-1.8-0.8L60.1,29z M59.2,27.7L42.8,44.2c-0.5-0.3-0.9-0.7-1.3-1.1l16.7-16.7C58.6,26.8,58.9,27.3,59.2,27.7z    M45.5,23.5l-6.9,6.9C39.8,27.2,42.3,24.7,45.5,23.5z M37.8,34.5c0-0.5,0-0.9,0.1-1.4l10.4-10.4c0.4-0.1,0.9-0.1,1.4-0.1   c0.3,0,0.7,0,1,0.1L37.9,35.5C37.8,35.2,37.8,34.9,37.8,34.5z M38.2,37.4l14.3-14.3c0.6,0.1,1.2,0.3,1.7,0.6L38.7,39.1   C38.5,38.5,38.3,38,38.2,37.4z M55.6,24.4c0.5,0.3,1,0.7,1.5,1L40.5,42c-0.4-0.5-0.7-1-1-1.5L55.6,24.4z"/><path d="M31.5,68.2c-2.7,0-4.9,2.2-4.9,4.9c0,2.7,2.2,4.9,4.9,4.9s4.9-2.2,4.9-4.9C36.4,70.4,34.2,68.2,31.5,68.2z"/><path d="M70.3,38.2c2.7,0,4.9-2.2,4.9-4.9s-2.2-4.9-4.9-4.9c-2.7,0-4.9,2.2-4.9,4.9S67.6,38.2,70.3,38.2z M70.3,30.5   c1.6,0,2.9,1.3,2.9,2.9s-1.3,2.9-2.9,2.9c-1.6,0-2.9-1.3-2.9-2.9S68.7,30.5,70.3,30.5z"/><path d="M33.5,38.1c0-3.2-2.6-5.8-5.8-5.8s-5.8,2.6-5.8,5.8c0,3.2,2.6,5.8,5.8,5.8S33.5,41.3,33.5,38.1z"/><path d="M46.9,57.1c0,3.4,2.7,6.1,6.1,6.1s6.1-2.7,6.1-6.1S56.4,51,53,51S46.9,53.7,46.9,57.1z M57.1,57.1c0,2.3-1.8,4.1-4.1,4.1   s-4.1-1.8-4.1-4.1c0-2.2,1.8-4.1,4.1-4.1S57.1,54.8,57.1,57.1z"/><path d="M67.4,58c-4.8,0-8.7,3.9-8.7,8.7s3.9,8.7,8.7,8.7s8.7-3.9,8.7-8.7S72.3,58,67.4,58z"/><path d="M34,66.4c5.7,0,10.3-4.6,10.3-10.3S39.7,45.8,34,45.8c-5.7,0-10.3,4.6-10.3,10.3S28.3,66.4,34,66.4z M34,47.8   c4.6,0,8.3,3.7,8.3,8.3c0,4.6-3.7,8.3-8.3,8.3s-8.3-3.7-8.3-8.3C25.7,51.5,29.4,47.8,34,47.8z"/><path d="M48.2,64.9c-5.3,0-9.6,4.3-9.6,9.6s4.3,9.6,9.6,9.6s9.6-4.3,9.6-9.6S53.5,64.9,48.2,64.9z M47,81.9   c-0.8-0.1-1.5-0.4-2.2-0.7L55,71.1c0.3,0.7,0.6,1.4,0.7,2.2L47,81.9z M49.5,67c0.7,0.1,1.4,0.4,2,0.7L41.4,77.8   c-0.3-0.6-0.5-1.3-0.7-2L49.5,67z M47.4,66.9l-6.8,6.8C41,70.2,43.9,67.3,47.4,66.9z M42.2,79.1l10.6-10.6c0.5,0.4,0.9,0.8,1.3,1.3   L43.5,80.4C43,80.1,42.6,79.6,42.2,79.1z M49.1,82l6.6-6.6C55.3,78.8,52.5,81.6,49.1,82z"/><path d="M69.8,56.1c4.4,0,8-3.6,8-8s-3.6-8-8-8s-8,3.6-8,8S65.4,56.1,69.8,56.1z M72.7,53.4l2.5-2.5C74.6,52,73.7,52.8,72.7,53.4z    M75.5,46.1c0.2,0.6,0.3,1.3,0.3,2c0,0,0,0,0,0l-6,6c0,0,0,0,0,0c-0.7,0-1.4-0.1-2-0.3L75.5,46.1z M74.8,44.7l-8.4,8.4   c-0.6-0.4-1.1-0.9-1.5-1.5l8.4-8.4C73.9,43.6,74.4,44.1,74.8,44.7z M67.2,42.7l-2.8,2.8C65,44.3,66,43.3,67.2,42.7z M69.9,42.1   c0.7,0,1.3,0.1,2,0.4l-7.7,7.7c-0.2-0.6-0.4-1.3-0.4-2L69.9,42.1z"/></g>
         </svg>`,
@@ -29,35 +28,32 @@ export var CHAPTERS = [
             {
                 name: 'Collecte de données',
                 sub_services: [
+                    { name: 'Création de bases et jeux de données personnalisés' },
+                    { name: 'Création de corpus personnalisés' },
                     { name: 'Création de scrapers (ou crawlers) personnalisés' },
-                    { name: 'Création de dispositifs de crowdsourcing' },
-                    { name: 'Création de bases et jeux de données personnalisés' }
+                    { name: 'Création de dispositifs de crowdsourcing' }
                 ]
             },
             {
-                name: 'Exploration de données',
+                name: 'Traitement de donnés',
                 sub_services: [
-                    { name: 'Datavisualisations et cartographies de données exploratoires' },
-                    { name: 'Création d’interfaces d’utilisation de données' }
+                    { name: 'Production de données enrichies' },
+                    { name: 'Nettoyage de données' }
                 ]
             },
             {
                 name: 'Co-analyse de données',
                 sub_services: [
-                    { name: 'En utilisant les outils numériques disponibles et adaptés à votre méthodologie de recherche' }
-                ]
-            },
-            {
-                name: 'Formations',
-                sub_services: [
-                    { name: 'Afin de vous rendre autonome sur l’ensemble de ces usages numériques' }
+                    { name: 'Réalisation de visualisations de données exploratoires' },
+                    { name: 'Création d’interfaces personnalisées d’analyse de données' },
+                    { name: 'Identification et formations aux outils adaptés à votre méthodologie de recherche' }
                 ]
             }
         ]
     },{
         title: 'Design',
         detailed_title: 'Valoriser et diffuser les travaux de recherche',
-        icon_class: 'fa-desktop',
+        background_image: '../assets/images/photos/alexandrie.jpg',
         color_class: 'bh-orange',
         home_description: `Nous proposons aux organisations de recherche d’inventer
         ensemble de nouveaux formats de restitution afin de rendre le savoir scientifique
@@ -75,7 +71,7 @@ export var CHAPTERS = [
         Nous vous proposons un accompagnement de bout en bout, du design
         d’interfaces et d’informations jusqu’au suivi de diffusion et des mesures
         régulières d’audience des contenus produits ensemble.`,
-        pictogram: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200"
             version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
             enable-background="new 0 0 100 100" xml:space="preserve">
@@ -84,28 +80,27 @@ export var CHAPTERS = [
         `,
         services: [
             {
-                name: 'Co-design et développement d\'applications de restitution de travaux de recherche',
+                name: 'Création de plateformes de médiation',
                 sub_services: [
-                    { name:  'Application web de restitution'},
-                    { name:  'Formats longs et documentaires web'},
-                    { name:  'Visualisation de données'},
-                    { name:  'Serious game'}
+                    { name:  'Sites web'},
+                    { name:  'Applications'},
+                    { name:  'Web-documentaires'},
+                    { name:  'Serious Games'}
                 ]
             },
             {
                 name: 'Édition scientifique',
-                sub_services: [{name: 'Création d\'articles et publications "augmentés"'}]
-            },
-            {
-                name: 'Réseaux sociaux',
                 sub_services: [
-                    {name: 'Community management'},
-                    {name: 'Animation de médias sociaux'}
+                    {name: 'Création d\'articles et publications "augmentés"'},
+                    {name: 'Visualisation de données'},
+                    {name: 'Long-form'},
+                    {name: 'Vidéos, animation, etc.'}
                 ]
             },
             {
-                name: 'Communication digitale et institutionnelle scientifique',
+                name: 'Communication institutionnelle scientifique',
                 sub_services: [
+                    {name: 'Community Management'},
                     {name: 'Stratégies digitales des organisations de recherche'},
                     {name: 'Refonte de site internet'},
                     {name: 'Relations publiques et relations presse'}
@@ -115,7 +110,7 @@ export var CHAPTERS = [
     },{
         title: 'Interface',
         detailed_title: 'Interfacer la Recherche et la société',
-        icon_class: 'fa-users',
+        background_image: '../assets/images/photos/gare_de_lyon.jpg',
         color_class: 'bh-blue',
         home_description: `Nous voulons agir pour reconnecter recherche et
         démocratie afin de restituer le rôle des sciences dans le débat public
@@ -124,7 +119,7 @@ export var CHAPTERS = [
         projets de société (locaux, nationaux, européens) afin de tendre vers
         plus d’intelligence collective et donc un meilleur vivre ensemble. Nous
         souhaitons que la communauté scientifique participe à la démocratie, en
-        particulier dans l’éclairage et la construction des politiques publiques.
+        particulier dans l’éclairage et la construction des politiques publiques.<br><br>
 
         Nous voulons concevoir avec les chercheurs, les citoyens et les élus,
         les moyens de reconnecter la recherche avec le débat public afin de
@@ -132,7 +127,7 @@ export var CHAPTERS = [
         expliquer, et agir sur des problématiques sociales, sociétales,
         environnementales,
         `,
-        pictogram: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+        pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
             width="200" height="200" x="0px" y="0px" viewBox="0 0 100 100"
             enable-background="new 0 0 100 100" xml:space="preserve">
             <path d="M49.5,11c-21.5,0-39,17.5-39,39s17.5,39,39,39s39-17.5,39-39S71,11,49.5,11z M24.7,62c0-1.5,0.1-3,0.4-4.5l19.7-19.9  c1.5-0.3,3.1-0.4,4.7-0.4c0.2,0,0.5,0,0.7,0L24.8,62.7C24.7,62.5,24.7,62.2,24.7,62z M25.8,54.7c2.4-7.8,8.5-13.9,16.2-16.4  L25.8,54.7z M52.2,37.4c1.5,0.2,3,0.5,4.4,0.9L25.8,69.1c-0.4-1.4-0.7-2.9-0.9-4.4L52.2,37.4z M58.2,38.8c1.2,0.5,2.4,1,3.5,1.7  L47.3,54.9c-7.6,1-13.6,7.1-14.7,14.7L28,74.2c-0.6-1.1-1.2-2.3-1.7-3.5L58.2,38.8z M36.8,83.3c-0.2-0.1-0.3-0.2-0.5-0.3l0.1-0.1  C36.6,83,36.7,83.2,36.8,83.3z M66,76.6l7.3-7.3c-1.8,5.9-5.8,10.9-11,14C64,81.4,65.3,79.1,66,76.6z M74.3,62  c0,1.5-0.1,3.1-0.4,4.5l-7.4,7.4c0.1-0.7,0.1-1.4,0.1-2.1c0-1.1-0.1-2.1-0.3-3.2l7.9-7.9C74.3,61.2,74.3,61.6,74.3,62z M65.9,67  c-0.4-1.4-1-2.7-1.7-3.9l8.9-8.9c0.5,1.5,0.8,3,1,4.6L65.9,67z M63.4,61.8c-0.8-1.1-1.7-2.1-2.8-3l10-10c0.8,1.2,1.4,2.5,2,3.8  L63.4,61.8z M59.4,57.9c-1-0.7-2.2-1.4-3.4-1.9l11.3-11.3c0.9,0.9,1.7,1.8,2.4,2.9L59.4,57.9z M54.4,55.5c-1.6-0.5-3.2-0.7-4.9-0.7  L63,41.2c1.1,0.7,2.2,1.5,3.2,2.4L54.4,55.5z M32.4,71.9c0,1.7,0.3,3.3,0.7,4.9l-1.9,1.9c-0.9-1-1.7-2.1-2.4-3.2L32.4,71.9z   M33.7,78.3c0.5,1.2,1.1,2.3,1.9,3.4l-0.4,0.4c-1-0.7-2-1.5-2.9-2.4L33.7,78.3z M66.1,83c6.2-4.9,10.2-12.5,10.2-21  c0-14.8-12-26.8-26.8-26.8S22.7,47.2,22.7,62c0,8.5,4,16.1,10.2,21c-12.1-6.1-20.4-18.6-20.4-33c0-20.4,16.6-37,37-37s37,16.6,37,37  C86.5,64.4,78.2,76.9,66.1,83z"/>

@@ -15,7 +15,7 @@ export class OfferController {
 
     goToChapter(chapter){
         let id = `#${chapter.title.toLowerCase()}`;
-        let scroll_top = angular.element(id).offset().top;
-        angular.element('body').animate({scrollTop: scroll_top});
+        let scroll_top = angular.element(id).offset().top - 45;
+        angular.element('html,body').animate({scrollTop: scroll_top});
     }
 }
