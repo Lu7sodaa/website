@@ -1,7 +1,8 @@
-@hover-color: fade(@bh-orange, 80%);
 @hover-anim-duration: 500ms;
+@path-color: fade(@blue-grey, 10%);
+@hover-color: fade(@bh-orange, 80%);
 .path {
-    fill: fade(@blue-grey, 10%);
+    fill: @path-color;
     transition: fill @hover-anim-duration ease;
     &.hover {
         fill: @hover-color;
@@ -9,14 +10,22 @@
 }
 
 .triangle-chart {
+    margin-left: -90px;
     padding-top: 4em;
+    @media screen and (max-width: @screen-sm){
+        margin-left: -30px;
+    }
+    @media screen and (max-width: @screen-xs){
+        margin-left: -15px;
+    }
     &__axis {
         position: relative;
         min-height: 200px;
-        // font-size: 0.8em;
+        h4 {
+            font-size: 1em;
+        }
         p {
-            font-size: 0.8em;
-            width: 100% !important;
+            font-size: 0.7em;
         }
         .step {
             position: absolute;

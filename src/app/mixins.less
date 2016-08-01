@@ -35,12 +35,34 @@
 
 .bh-color(@color){
     .@{color} {
+        a {
+            color: @@color;
+            transition: color .5s ease;
+            &:hover {
+                color: darken(@@color, 50%);
+            }
+        }
         .tile--colored, .small-underline:after {
             background-color: @@color;
             color: white;
         }
     }
+    .tile--colored {
+        a {
+            i {
+                color: white;
+                opacity: .5;
+                transition: opacity .5s ease;
+            }
 
+            &:hover {
+                i { opacity: 1; }
+            }
+        }
+        .small-underline:after {
+            background-color: white;
+        }
+    }
     &.home {
         .home__offer__chapter {
             &.@{color} {
@@ -53,7 +75,6 @@
                 color: contrast(@@color, #AEAEAE, #333);
                 h2:after {
                     background-color: contrast(@@color, #AEAEAE, #333, 65%);
-
                 }
             }
         }
@@ -61,7 +82,7 @@
 
     .bh-label {
         &-inverted {
-            &.@{color} {
+            &.@{color}, .@{color} & {
                 background-color: white ;
                 color: @@color;
             }
@@ -83,12 +104,10 @@
 }
 
 
-@colors: bh-yellow, bh-blue, bh-orange;
+@colors: bh-yellow, bh-blue, bh-orange, black, light-grey, grey;
 
-.main {
-    .-(@i: length(@colors)) when (@i > 0) {
-        @name: extract(@colors, @i);
-        .bh-color(@name);
-        .-((@i - 1));
-    } .-;
-}
+.-(@i: length(@colors)) when (@i > 0) {
+    @name: extract(@colors, @i);
+    .bh-color(@name);
+    .-((@i - 1));
+} .-;
