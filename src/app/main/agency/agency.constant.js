@@ -15,7 +15,7 @@ export var MEMBERS = [
         linkedin: 'https://fr.linkedin.com/in/pierre-bellon-64b2ba3a',
         color: 'bh-blue',
         name: 'Pierre Bellon',
-        title: 'Développeur/Designer',
+        title: 'Développeur & Designer',
         photo: '../assets/images/photos/business2.jpeg',
         function: 'La conception et la réalisation d\'interface de données',
         description: `Ex-développeur chez J++ (agence de journalisme de données),
@@ -38,7 +38,8 @@ export var MEMBERS = [
 export var PREVIOUS_WORK = [
     {
         title: 'Jeu d\'Influences',
-        subtitle: 'Serious Game développé au sein de J++',
+        type: 'Serious Game',
+        subtitle: 'Développé au sein de J++',
         picture: '../assets/images/previous-work/jeu-d-influences.png'
     },
     // {
@@ -53,12 +54,14 @@ export var PREVIOUS_WORK = [
     // },
     {
         title: 'World of Work',
-        subtitle: 'Étude ludifiée développé au sein de J++',
+        type: 'Étude ludifiée',
+        subtitle: 'Développé au sein de J++',
         picture: '../assets/images/previous-work/world-of-work.png'
     },
     {
         title: 'Detective.io',
-        subtitle: 'Outil d\'investigation développé au sein de J++',
+        type: 'Outil d\'investigation',
+        subtitle: 'Développé au sein de J++',
         picture: '../assets/images/previous-work/detective-io.png'
     }
 ];

@@ -7,156 +7,129 @@
                 <section class="main__header">
                     <h1>Notre agence</h1>
                     <hr>
-                    <div class="container">
-                        <p class="definition italic">
-                            <span class="bold">Synchroniser</span> : Faire se produire deux ou plusieurs choses
-                            dans le même temps ou dans une succession précise, les coordonner.
-                        </p>
-                        <p>
-                            L’ambition de Skoli, synchroniser les sciences et la société,
-                            repose sur trois convictions.
-                            <ul>
-                                <li>La Recherche est une priorité : elle doit être au coeur de la société, et non à la marge.</li>
-                                <li>Aucune information disponible, en particulier les mesures numériques du monde (data), ne doit rester inaccessible à la Recherche pour enrichir la connaissance.</li>
-                                <li>Le savoir issu de la Recherche doit être mieux diffusé et utilisé pour éclairer nos choix publics et accroître notre intelligence collective.</li>
-                            </ul>
-                        </p>
-                        <p>
-                            Les données numériques sont devenues un matériau de recherche
-                            à part entière et indispensable pour décrypter le monde
-                            et les sociétés qui l’habitent.<br>
-                            Nous mettons notre savoir-faire à disposition des organisations
-                            de recherche pour leur aider à <span class="bold">capter, traiter et exploiter
-                                des données numériques</span>.
+                    <div class="tile">
+                        <div class="container">
+                            <p class="definition italic">
+                                <span class="bold">Synchroniser</span> : Faire se produire deux ou plusieurs choses
+                                dans le même temps ou dans une succession précise, les coordonner.
                             </p>
+                            <p>
+                                L’ambition de Skoli, synchroniser les sciences et la société,
+                                repose sur trois convictions.
+                                <ul>
+                                    <li>La Recherche est une priorité : elle doit être au coeur de la société, et non à la marge.</li>
+                                    <li>Aucune information disponible, en particulier les mesures numériques du monde (data), ne doit rester inaccessible à la Recherche pour enrichir la connaissance.</li>
+                                    <li>Le savoir issu de la Recherche doit être mieux diffusé et utilisé pour éclairer nos choix publics et accroître notre intelligence collective.</li>
+                                </ul>
+                            </p>
+                            <h2><span class="">Ce que nous faisons</span></h2>
+                            <p>
+                                Les données numériques sont devenues un matériau de recherche
+                                à part entière et indispensable pour décrypter le monde
+                                et les sociétés qui l’habitent.<br>
+                                Nous mettons notre savoir-faire à disposition des organisations
+                                de recherche pour leur aider à <span class="bh-label-inverted">capter, traiter et exploiter
+                                    des données numériques</span>.
+                                </p>
                             <p>
                                 Le format actuel de publication scientifique ne correspond
                                 pas au nouveau paradigme d’accès et de partage des connaissances,
                                 et les acquis de la Recherche restent le plus souvent confinés
                                 aux spécialistes d’un domaine.<br>
-                                Nous aidons les chercheurs à <span class="bold">réhabiliter le savoir en créant
+                                Nous aidons les chercheurs à <span class="bh-label-inverted">réhabiliter le savoir en créant
                                 des formats de restitution numériques innovants</span> et à forte audience,
                                 à la hauteur de l’intelligence mobilisée pour les produire.
                             </p>
                             <p>
-                                <span class="bold">Nous ne sommes pas chercheurs.</span>
+                                <span class="bh-label-inverted">Nous ne sommes pas chercheurs.
                                 Nous ne nous substituons pas à leur travail: notre mission
-                                consiste à les accompagner dans <span class="bold">la production
+                                consiste à les accompagner dans la production
                                 et la transmission de leurs travaux</span>.
                             </p>
-
-                    </div>
-
-                    <triangle-chart data="agency.chartData"></triangle-chart>
-                </section>
-                <section class="main__interval"
-                    ng-init="lucas = agency.getMember('lucas'); gauth = agency.getMember('gauthier'); pierre = agency.getMember('pierre')">
-                    <img src="../assets/images/photos/getty_prez_bw.jpg" alt="Photo de l'équipe Skoli - Pierre Gauthier Lucas" />
-                    <div class="overlay hidden-xs hidden-sm">
-                        <!-- <div class="elem bh-label" style="left:11%; top:8%">{{ pierre.name }}</div> -->
-                        <!-- <div class="elem bh-label" style="left:26%; top: 13%">{{ gauth.name }}</div> -->
-                        <!-- <div class="elem bh-label" style="left:56.5%; top: 17%">{{ lucas.name }}</div> -->
-
-                        <div class="member member-overlay" ng-class="pierre.color" style="bottom:2%; left: 1%;">
-                            <a rel="nofollow" ng-href="{{ pierre.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-                            <h3>
-                                {{ pierre.name }}<br>
-                                <span class="title">
-                                    {{ pierre.title }}
-                                </span>
-                            </h3>
-                            <p>{{ pierre.function }}</p>
                         </div>
-                        <div class="member member-overlay" ng-class="gauth.color" style="bottom:2%; left: 32%;">
-                            <a rel="nofollow" ng-href="{{ gauth.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-                            <h3>
-                                {{ gauth.name }}<br>
-                                <span class="title">
-                                    {{ gauth.title }}
-                                </span>
-                            </h3>
-                            <p>{{ gauth.function }}</p>
-                        </div>
-                        <div class="member member-overlay" ng-class="lucas.color" style="bottom:2%; left: 63%;">
-                            <a rel="nofollow" ng-href="{{ lucas.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-                            <h3>
-                                {{ lucas.name }}<br>
-                                <span class="title">
-                                    {{ lucas.title }}
-                                </span>
-                            </h3>
-                            <p>{{ lucas.function }}</p>
-                        </div>
+
+                        <triangle-chart data="agency.chartData"></triangle-chart>
                     </div>
                 </section>
-                <section class="agency__members main__interval visible-xs visible-sm">
-                        <div class="member col-sm-4 col-xs-12" ng-class="member.color" ng-repeat="member in agency.listMembers()">
-                            <div class="member__description">
-                                <a rel="nofollow" ng-href="{{ member.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
-                                <h4>{{ member.name }}<br><span class="title bold" >{{ member.title }}</span></h4>
-                                <p>
-                                    {{ member.function }}
-                                </p>
+                <section class="grey tiled">
+                    <div class="tile tile--colored">
+                        <div class="container">
+                            <h1><span class="bh-label-inverted">Qui sommes nous ?</span></h1><br>
+                            <img style="width:100%" src="../assets/images/photos/getty_prez_bw.jpg"/>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
+                                    <h4>
+                                        {{ member.name }}
+                                        <br>
+                                        <span class="title bold" >{{ member.title }}</span>&nbsp;&nbsp;<a rel="nofollow" ng-href="{{ member.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                                    </h4>
+                                    <p>
+                                        {{ member.function }}<br><br>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                </section>
-                <section class="agency__skills">
-                    <div class="container">
-                        <h1 class="bold">Nos compétences</h1>
-                        <div class="row">
-                            <div class="col-md-4 category">
-                                <h3 class="small-underline"><span class="">Ingénierie</span></h3>
-                                <ul class="list-unstyled">
-                                    <li><span>Gestion de projet</span></li>
-                                    <li><span>Développement web</span></li>
-                                    <li><span>Data intelligence</span></li>
-                                    <li><span>Design d’interactions</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 category">
-                                <h3 class="small-underline"><span class="">Information</span></h3>
-                                <ul class="list-unstyled">
-                                    <li><span>Editorialisation</span></li>
-                                    <li><span>Journalisme</span></li>
-                                    <li><span>Design d’information</span></li>
-                                    <li><span>Architecture de l’information</span></li>
-                                    <li><span>Ludification</span></li>
-                                </ul>
-                            </div>
+                            <h2><span class="bh-label-inverted">Nos compétences</span></h2>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                                    <h3 class="small-underline"><span class="">Ingénierie</span></h3>
+                                    <ul class="list-unstyled">
+                                        <li><span>Gestion de projet</span></li>
+                                        <li><span>Développement web</span></li>
+                                        <li><span>Data intelligence</span></li>
+                                        <li><span>Design d’interactions</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                                    <h3 class="small-underline"><span class="">Information</span></h3>
+                                    <ul class="list-unstyled">
+                                        <li><span>Editorialisation</span></li>
+                                        <li><span>Journalisme</span></li>
+                                        <li><span>Design d’information</span></li>
+                                        <li><span>Architecture de l’information</span></li>
+                                        <li><span>Ludification</span></li>
+                                    </ul>
+                                </div>
 
-                            <div class="col-md-4 category">
-                                <h3 class="small-underline"><span class="">Communication</span></h3>
-                                <ul class="list-unstyled">
-                                    <li><span>Médiation scientifique</span></li>
-                                    <li><span>Stratégie digitale</span></li>
-                                    <li><span>Communication institutionnelle</span></li>
-                                    <li><span>Réseaux sociaux</span></li>
-                                </ul>
+                                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                                    <h3 class="small-underline"><span class="">Communication</span></h3>
+                                    <ul class="list-unstyled">
+                                        <li><span>Médiation scientifique</span></li>
+                                        <li><span>Stratégie digitale</span></li>
+                                        <li><span>Communication institutionnelle</span></li>
+                                        <li><span>Réseaux sociaux</span></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </section>
-                <section class="agency__previous-work">
-                    <div class="container">
-                        <h1 class="bold text-center">Nos précédentes réalisations</h1>
-                        <p>
-                            Nous sommes issus du monde du web. Nos différents
-                            parcours au sein d'agences (web, design et data-journalisme)
-                            nous ont appris à cerner les enjeux et l'importance
-                            de la production d'une information de qualité. Nous
-                            avons sélectionné quelques réalisations auxquelles
-                            nous avons participé à titre individuel ou collectif
-                            afin de mieux illustrer nos savoir-faire.
-                        </p>
-                        <div class="row">
-                            <div class="col-md-4 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
-                                <a href="{{ previousWork.link }}" rel="nofollow">
-                                    <img src="{{ previousWork.picture }}"/>
-                                    <span>
-                                        <h3>{{ previousWork.title }}</h3>
-                                        <h5>{{ previousWork.subtitle }}</h5>
-                                    </span>
-                                </a>
+                <section class="agency__previous-work bh-orange">
+                    <div class="tile tile--colored">
+                        <div class="container">
+                            <h1>
+                                <span class="bh-label-inverted bh-orange">
+                                    Nos précédentes réalisations
+                                </span>
+                            </h1>
+                            <p>
+                                Nous sommes issus du monde du web. Nos différents
+                                parcours au sein d'agences (web, design et data-journalisme)
+                                nous ont appris à cerner les enjeux et l'importance
+                                de la production d'une information de qualité. Nous
+                                avons sélectionné quelques réalisations auxquelles
+                                nous avons participé à titre individuel ou collectif
+                                afin de mieux illustrer nos savoir-faire.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-4" ng-repeat="previousWork in agency.listPreviousWork()">
+                                    <!-- <div class="tile tile--half tile--photo"
+                                    style="background-image: url('{{ previousWork.picture }}')"
+                                    ng-class="{ 'pull-right': $index % 2 !== 0 }"> -->
+                                    <h4 class="bold">
+                                        {{ previousWork.title }} <a href="{{ previousWork.link }}" rel="nofollow"><i class="fa fa-external-link"></a></i>
+                                    </h4>
+                                    <h4><span class="bh-label-inverted">{{ previousWork.type }}</span></h4>
+                                    <h5>{{ previousWork.subtitle }}</h5>
+                                </div>
                             </div>
                         </div>
                     </div>

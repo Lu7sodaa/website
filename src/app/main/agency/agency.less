@@ -1,11 +1,15 @@
 .agency {
+    .container {
+        max-width: 800px;
+    }
     .main__header {
-        .container {
-            max-width: 800px;
+        .tile {
+            min-height: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
     }
     .main__interval {
-        padding: 0;
         .overlay {
             position: absolute;
             z-index: 1;
@@ -26,16 +30,17 @@
     }
 
     .member {
-        position: relative;
         a {
-            display: block;
-            position: absolute;
-            font-size: 1.4em;
             color: white;
             text-decoration: none;
+            opacity: 0.5;
+            transition: opacity .33s ease;
             &:hover {
-                color: @blue-grey;
+                opacity: 1;
             }
+        }
+        h4 {
+            line-height: 1.2em;
         }
         h3 {
             margin: 0;
@@ -48,37 +53,31 @@
         p {
             margin-bottom: 0;
         }
-        &__description {
-            padding: 5px;
-        }
     }
-
-    section&__members {
-        div.member {
-            padding-left: 15px;
-            &__description {
-                position: relative;
-                padding-left: 0;
-                padding-right: 0;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            a {
-                top: 5px;
-                right: 0;
-            }
-        }
-        &:after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-    }
+    //
+    // section&__members {
+    //     div.member {
+    //         padding-left: 15px;
+    //         &__description {
+    //             position: relative;
+    //             padding-left: 0;
+    //             padding-right: 0;
+    //             padding-top: 10px;
+    //             padding-bottom: 10px;
+    //         }
+    //         a {
+    //             top: 5px;
+    //             right: 0;
+    //         }
+    //     }
+    //     &:after {
+    //         content: '';
+    //         display: table;
+    //         clear: both;
+    //     }
+    // }
     &__previous-work {
-        padding-top: 15px;
         .previous-work {
-            margin-bottom: 30px;
-
             a {
                 h3, h5 {
                     margin-top: 0px;
@@ -107,7 +106,7 @@
             clear: both;
         }
     }
- 
+
 
     &.main section&__process {
         background: none;
