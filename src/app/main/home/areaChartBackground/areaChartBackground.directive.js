@@ -30,19 +30,21 @@ export function AreaChartBackgroundDirective(){
 
 
 class AreaChartBackgroundController {
-    constructor($window, $element, $timeout, $log){
+    constructor($window, $element, $scope, $timeout, $log){
         'ngInject';
         this.$log = $log;
         this.data = DATA;
-
+        this.$scope = $scope;
         this.$window = angular.element($window);
         this.$origin_el = angular.element($element[0]);
         this.$element = d3.select($element[0]);
         this.bindEvents();
-        $timeout(()=>{ this.draw(); }, 500 );
     }
 
     bindEvents(){
+        this.$scope.$on('$stateChangeSuccess', ()=>{
+            this.draw();
+        });
         this.$window.bind('resize', ()=>{ this.resize(); })
     }
 
