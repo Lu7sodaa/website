@@ -34,6 +34,7 @@
 }
 
 .bh-color(@color){
+    @opposite-color: contrast(@@color, @black, white, 20%);
     .@{color} {
         a {
             color: @@color;
@@ -42,32 +43,41 @@
                 color: darken(@@color, 50%);
             }
         }
-        .tile--colored, .small-underline:after {
-            background-color: @@color;
-            color: white;
-        }
-    }
-    .tile--colored {
-        a {
-            i {
-                color: white;
-                opacity: .5;
-                transition: opacity .5s ease;
-            }
 
-            &:hover {
-                i { opacity: 1; }
-            }
-        }
         .small-underline:after {
-            background-color: white;
+            background-color: @@color;
+        }
+
+        .tile--colored {
+            background-color: @@color;
+            color: @opposite-color;
+            .small-underline:after {
+                background-color: @opposite-color;
+            }
+            a {
+                i {
+                    color: @opposite-color;
+                    opacity: .5;
+                    transition: opacity .5s ease;
+                }
+
+                &:hover {
+                    i { opacity: 1; }
+                }
+            }
         }
     }
     &.home {
         .home__offer__chapter {
             &.@{color} {
+                .small-underline:after {
+                    background-color: @@color;
+                }
                 &:hover, &:focus, &:active {
                     background-color: @@color;
+                    .small-underline:after {
+                        background-color: @black;
+                    }
                 }
             }
             &:hover, &:focus, &:active       {
@@ -80,11 +90,16 @@
         }
     }
 
+
     .bh-label {
         &-inverted {
             &.@{color}, .@{color} & {
                 background-color: white ;
                 color: @@color;
+            }
+
+            .tile--photo & {
+                background-color: white;
             }
         }
 
@@ -93,18 +108,19 @@
         }
     }
 
-    .member-overlay.@{color} {
-        color: white;
-        background-color: fade(@@color, 75%);
+    .palette {
+        li.@{color} {
+            background-color: @@color;
+        }
     }
-    .member.@{color} {
-        color: white;
-        background-color: @@color;
+
+    .text-@{color} {
+        color: @@color;
     }
 }
 
 
-@colors: bh-yellow, bh-blue, bh-orange, black, light-grey, grey;
+@colors: bh-yellow, bh-blue, bh-orange, black, blue-grey, light-grey, white, grey ;
 
 .-(@i: length(@colors)) when (@i > 0) {
     @name: extract(@colors, @i);

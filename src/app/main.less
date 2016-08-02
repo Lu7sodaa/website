@@ -19,7 +19,7 @@
     }
 
     & section&__header {
-        padding-top: 4em;
+        padding-top: 3em;
         border-bottom: 5px solid black;
         padding-bottom: 4em;
         hr {
@@ -35,10 +35,17 @@
         background-repeat: repeat;
     }
 }
+.socials {
+    margin-bottom: 0;
+    li a {
+        font-size: 2em;
+    }
+}
+
 // tile system
 .tile {
     @tile-height: 500px;
-    @tile-height-xs: 640px;
+    @tile-height-sm: 640px;
     @tile-padding: 90px;
     @tile-padding-sm: 30px;
     @tile-padding-xs: 15px;
@@ -47,6 +54,7 @@
     // section.tiled
     h1 {
         font-size: 3em;
+        line-height: 1.4em;
     }
     section&d {
         padding-top: 0;
@@ -83,6 +91,9 @@
             }
         }
     }
+    // section.bh-orange &--colored {
+    //     color: @white;
+    // }
     &-row {
         .tile {
             // display: inline-block;
@@ -145,6 +156,12 @@ svg.pictogram {
     border-left: 7px solid @light-grey;
     padding-left: 1em;
     color: @blue-grey;
+}
+
+.palette {
+    li {
+        border-radius: 5px;
+    }
 }
 
 
