@@ -1,12 +1,13 @@
 .triangle-background {
+    @background-color: @black;
     position: relative;
     color: white;
     // padding-top: 2em;
     // padding-bottom: 2em;
     color: white;
     // background-color: #1a232c;
-    padding-top:30px;
-    padding-bottom:45px;
+    padding-top:60px;
+    padding-bottom:75px;
 
     text-shadow: 1px 1px @blue-grey;
     .btn {
@@ -28,10 +29,10 @@
         left: 0;
         right: 0;
         // z-index: -1;
-        background-color: #1a232c;
+        background-color: @background-color;
         path {
           fill: none;
-          stroke: fade(#CCC, 50%);
+          stroke: fade(#CCC, 20%);
           stroke-width: .5px;
         }
     }

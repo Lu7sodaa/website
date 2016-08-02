@@ -22,13 +22,12 @@
                                     <li>Le savoir issu de la Recherche doit être mieux diffusé et utilisé pour éclairer nos choix publics et accroître notre intelligence collective.</li>
                                 </ul>
                             </p>
-                            <h2><span class="">Ce que nous faisons</span></h2>
                             <p>
                                 Les données numériques sont devenues un matériau de recherche
                                 à part entière et indispensable pour décrypter le monde
                                 et les sociétés qui l’habitent.<br>
                                 Nous mettons notre savoir-faire à disposition des organisations
-                                de recherche pour leur aider à <span class="bh-label-inverted">capter, traiter et exploiter
+                                de recherche pour leur aider à <span class="bh-label">capter, traiter et exploiter
                                     des données numériques</span>.
                                 </p>
                             <p>
@@ -36,7 +35,7 @@
                                 pas au nouveau paradigme d’accès et de partage des connaissances,
                                 et les acquis de la Recherche restent le plus souvent confinés
                                 aux spécialistes d’un domaine.<br>
-                                Nous aidons les chercheurs à <span class="bh-label-inverted">réhabiliter le savoir en créant
+                                Nous aidons les chercheurs à <span class="bh-label">réhabiliter le savoir en créant
                                 des formats de restitution numériques innovants</span> et à forte audience,
                                 à la hauteur de l’intelligence mobilisée pour les produire.
                             </p>
@@ -51,11 +50,12 @@
                         <triangle-chart data="agency.chartData"></triangle-chart>
                     </div>
                 </section>
-                <section class="grey tiled">
+                <section class="white tiled">
+                    <img class="" style="width:100%" src="../assets/images/photos/getty_prez_bw.jpg"/>
                     <div class="tile tile--colored">
                         <div class="container">
-                            <h1><span class="bh-label-inverted">Qui sommes nous ?</span></h1><br>
-                            <img style="width:100%" src="../assets/images/photos/getty_prez_bw.jpg"/>
+                            <h1><span class="">Qui sommes nous ?</span></h1>
+                            <!-- <img class="visible-md visible-lg" style="width:100%" src="../assets/images/photos/getty_prez_bw.jpg"/> -->
                             <div class="row">
                                 <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
                                     <h4>
@@ -68,10 +68,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <h2><span class="bh-label-inverted">Nos compétences</span></h2>
+                            <h2><span class="">Nos compétences</span></h2>
                             <div class="row">
                                 <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                    <h3 class="small-underline"><span class="">Ingénierie</span></h3>
+                                    <h4 class="small-underline"><span class="bold">Ingénierie</span></h4>
                                     <ul class="list-unstyled">
                                         <li><span>Gestion de projet</span></li>
                                         <li><span>Développement web</span></li>
@@ -80,7 +80,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                    <h3 class="small-underline"><span class="">Information</span></h3>
+                                    <h4 class="small-underline"><span class="bold">Information</span></h4>
                                     <ul class="list-unstyled">
                                         <li><span>Editorialisation</span></li>
                                         <li><span>Journalisme</span></li>
@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                    <h3 class="small-underline"><span class="">Communication</span></h3>
+                                    <h4 class="small-underline"><span class="bold">Communication</span></h4>
                                     <ul class="list-unstyled">
                                         <li><span>Médiation scientifique</span></li>
                                         <li><span>Stratégie digitale</span></li>
@@ -100,16 +100,11 @@
                                     </ul>
                                 </div>
                             </div>
-                    </div>
-                </section>
-                <section class="agency__previous-work bh-orange">
-                    <div class="tile tile--colored">
-                        <div class="container">
-                            <h1>
-                                <span class="bh-label-inverted bh-orange">
+                            <h2>
+                                <span class="">
                                     Nos précédentes réalisations
                                 </span>
-                            </h1>
+                            </h2>
                             <p>
                                 Nous sommes issus du monde du web. Nos différents
                                 parcours au sein d'agences (web, design et data-journalisme)
@@ -127,8 +122,8 @@
                                     <h4 class="bold">
                                         {{ previousWork.title }} <a href="{{ previousWork.link }}" rel="nofollow"><i class="fa fa-external-link"></a></i>
                                     </h4>
-                                    <h4><span class="bh-label-inverted">{{ previousWork.type }}</span></h4>
-                                    <h5>{{ previousWork.subtitle }}</h5>
+                                    <h5><span class="bh-label black">{{ previousWork.type }}</span></h5>
+                                    <h6>{{ previousWork.subtitle }}</h6>
                                 </div>
                             </div>
                         </div>

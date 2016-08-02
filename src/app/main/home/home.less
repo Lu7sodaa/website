@@ -24,7 +24,7 @@
             margin-bottom: 2em;
             margin-top: -1.2em;
             color: @bh-yellow;
-            margin-left: 75px;
+            margin-left: 90px;
         }
         p.lead {
             font-size: 2em;
@@ -48,25 +48,32 @@
         .row {
             overflow: hidden;
         }
+        .btn {
+            position: relative;
+            z-index: 1;
+            top: -1em;
+        }
+        &__chapter {
+            z-index: 0;
+            position: relative;
+            // height: 26vh;
+            padding-top: 15px;
+            // fix to have the same height for all chapters.
+            /// took from http://stackoverflow.com/a/19695851/885541
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+            &, h2:after {
+                transition: color .33s ease, background-color .33s ease;
+            }
+
+            p {
+                padding-bottom: 30px;
+            }
+
+            div&:hover h2:after { background-color: white; }
+        }
     }
 
-    &__offer__chapter {
-        // height: 26vh;
-        padding-top: 15px;
-        // fix to have the same height for all chapters.
-        /// took from http://stackoverflow.com/a/19695851/885541
-        margin-bottom: -99999px;
-        padding-bottom: 99999px;
-        &, h2:after {
-            transition: color .33s ease, background-color .33s ease;
-        }
-
-        p {
-            padding-bottom: 30px;
-        }
-
-        div&:hover h2:after { background-color: white; }
-    }
 
     &__agency {
         .btn {

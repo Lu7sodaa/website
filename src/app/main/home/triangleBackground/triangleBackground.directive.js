@@ -26,7 +26,7 @@ class TriangleBackgroundController {
         this.vertices = [];
         let $el = d3.select(this.$element[0]);
         this.width =  this.$element.width();
-        this.height = this.$element.height() + 75;
+        this.height = this.$element.height() + 135;
 
         if(this.$svg){
             this.$svg.select('g').remove();
@@ -66,11 +66,7 @@ class TriangleBackgroundController {
             }
         }
 
-        this.vertices = this.vertices.map((d)=>{
-            d[0] = d[0] + this.config.velocity;
-            d[1] = d[1] + this.config.velocity;
-            return d;
-        }).filter((d)=>{
+        this.vertices = this.vertices.filter((d)=>{
             return d[0] < this.width + margin && d[1] < this.height + margin;
         });
 
@@ -84,7 +80,6 @@ class TriangleBackgroundController {
 
         path
             .attr("d", d3.line());
-
 
         path.exit().remove();
     }
