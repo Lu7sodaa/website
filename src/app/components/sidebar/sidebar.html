@@ -9,6 +9,10 @@
         <li><a ui-sref="app.agency({'#': 'top'})">
             {{ sidebar.$state.get('app.agency').data.title | capitalize }}
         </a></li>
-        <li ng-click="sidebar.scrollToBottom()">Contact</li>
+        <li><span ng-click="sidebar.scrollToBottom()">Contact</span></li>
     </ul>
+    <!-- <ul class="list-inline socials">
+        <li><a href="https://github.com/skoli-code"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://twitter.com/agenceskoli"><i class="fa fa-twitter"></i></a></li>
+    </ul> -->
 </div>
