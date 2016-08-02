@@ -10,24 +10,33 @@
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap/less/variables.less
  */
-@navbar-inverse-link-color: #5AADBB;
 @icon-font-path: '../../bower_components/bootstrap/fonts/';
 @fa-font-path: '../assets/font-awesome/fonts/';
-@font-size-base: 18px;
-@brand-primary: @bh-blue;
-
-.bh-label {
-    padding: 0 0.2em;
-}
+@font-size-base: 15px;
 
 .btn {
     border-radius: 0;
     border: 0;
 }
 
+.btn-default {
+    background-color: @white;
+    color: @black;
+}
+
 .btn-primary {
-    background-color: @btn-primary;
-    color: black;
+    background-color: @black;
+    color: @white;
+    border: 1px solid @black;
+    &:hover {
+        background-color: @white;
+        color: @black;
+    }
+}
+
+section {
+    padding: 0;
+    margin: 0;
 }
 
 /**
