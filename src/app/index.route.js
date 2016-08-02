@@ -7,7 +7,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             url: '/'
         })
         .state('app.home', {
-            data: { title: 'acceuil' },
+            data: { title: 'accueil' },
             url: '',
             templateUrl: 'app/main/home/home.html',
             controller: 'HomeController',
