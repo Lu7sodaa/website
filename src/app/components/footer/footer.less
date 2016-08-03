@@ -1,14 +1,13 @@
 footer {
-    @background-color: @black;
+    @background-color: @white;
     pointer-events: all;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 0;
-    padding-bottom: 1em;
     background-color: @background-color;
-    color: white;
+    color: @black;
     iframe {
         position: relative;
         z-index: 0;
@@ -16,15 +15,26 @@ footer {
         pointer-events: none;
     }
     .footer__content {
+        h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            padding: 0;
+        }
         background-color: @background-color;
         z-index: 1;
         position: relative;
         top: -37px;
         margin-bottom: -37px;
-        padding-top: 1em;
         .credits {
             margin-bottom: 0;
             font-size: 0.8em;
+        }
+        .tile {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            min-height: auto;
         }
     }
     .contact {
