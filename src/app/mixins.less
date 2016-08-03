@@ -50,13 +50,13 @@
 
         .tile--colored {
             background-color: @@color;
-            color: @opposite-color;
+            color: white;
             .small-underline:after {
-                background-color: @opposite-color;
+                background-color: white;
             }
             a {
                 i {
-                    color: @opposite-color;
+                    color: white;
                     opacity: .5;
                     transition: opacity .5s ease;
                 }
@@ -119,11 +119,24 @@
     }
 }
 
+.margin-top(@margin) {
+    .margin-top-@{margin} {
+        margin-top: ~`"@{margin}px"`;
+    }
+}
 
-@colors: bh-yellow, bh-blue, bh-orange, black, blue-grey, light-grey, white, grey ;
+@margins: 5, 10, 15, 20, 25, 30;
+
+@colors: light-grey, black, data-color, interfaces-color, design-color;
 
 .-(@i: length(@colors)) when (@i > 0) {
     @name: extract(@colors, @i);
     .bh-color(@name);
+    .-((@i - 1));
+} .-;
+
+.-(@i: length(@margins)) when (@i > 0) {
+    @margin: extract(@margins, @i);
+    .margin-top(@margin);
     .-((@i - 1));
 } .-;

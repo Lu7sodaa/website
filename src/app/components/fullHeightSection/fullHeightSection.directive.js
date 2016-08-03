@@ -38,8 +38,8 @@ class FullHeightSectionController {
     }
 
     resize(){
-        let h = this.$window[0].innerHeight - 50;
-        this.$element.windowHeight = h;
+        let h = this.$window[0].innerHeight;
+        this.$element.windowHeight = h - 50;
         this.$element.height(h);
     }
 }

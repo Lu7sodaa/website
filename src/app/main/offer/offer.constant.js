@@ -3,7 +3,7 @@ export var CHAPTERS = [
         title: 'Data',
         detailed_title: 'Utiliser les données numériques pour la Recherche',
         background_image: '../assets/images/photos/library.jpg',
-        color_class: 'bh-yellow',
+        color_class: 'data-color',
         home_description: `Nous accompagnons les organisations de recherche dans
         'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
         description: `L’ère numérique transforme aussi la Recherche. Les données
@@ -54,7 +54,7 @@ export var CHAPTERS = [
         title: 'Design',
         detailed_title: 'Valoriser et diffuser les travaux de recherche',
         background_image: '../assets/images/photos/alexandrie.jpg',
-        color_class: 'bh-orange',
+        color_class: 'design-color',
         home_description: `Nous proposons aux organisations de recherche d’inventer
         ensemble de nouveaux formats de restitution afin de rendre le savoir scientifique
         accessible au plus grand nombre.`,
@@ -108,10 +108,10 @@ export var CHAPTERS = [
             }
         ]
     },{
-        title: 'Interface',
+        title: 'Interfaces',
         detailed_title: 'Interfacer la Recherche et la société',
         background_image: '../assets/images/photos/gare_de_lyon.jpg',
-        color_class: 'bh-blue',
+        color_class: 'interfaces-color',
         home_description: `Nous voulons agir pour reconnecter recherche et
         démocratie afin de restituer le rôle des sciences dans le débat public
         et l’éclairage des politiques publiques.`,
