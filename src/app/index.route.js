@@ -38,6 +38,11 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             controller: 'AgencyController',
             controllerAs: 'agency'
         })
+        .state('app.about', {
+            data: { title: 'À propos' },
+            url: 'a-propos',
+            templateUrl: 'app/main/about/about.html'
+        })
         .state('app.typography', {
             data: { title: 'typo' },
             url: 'typography',
