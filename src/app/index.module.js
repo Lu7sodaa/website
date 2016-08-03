@@ -11,7 +11,7 @@ import { AgencyController } from './main/agency/agency.controller';
 import { MEMBERS, PREVIOUS_WORK  } from './main/agency/agency.constant';
 
 // directives
-import { AreaChartBackgroundDirective } from './main/home/areaChartBackground/areaChartBackground.directive';
+import { LineChartBackgroundDirective } from './main/home/lineChartBackground/lineChartBackground.directive';
 import { TriangleBackgroundDirective  } from './main/home/triangleBackground/triangleBackground.directive';
 import { TriangleChartDirective       } from '../app/components/triangleChart/triangleChart.directive';
 import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
@@ -49,7 +49,7 @@ angular.module('siteWebV0', dependencies )
   .controller('OfferController', OfferController)
   .controller('AgencyController', AgencyController)
   .filter('capitalize', CapitalizeFilter)
-  .directive('areaChartBackground', AreaChartBackgroundDirective)
+  .directive('lineChartBackground', LineChartBackgroundDirective)
   .directive('triangleBackground', TriangleBackgroundDirective)
   .directive('triangleChart', TriangleChartDirective)
   .directive('fullHeightSection', FullHeightSectionDirective)
