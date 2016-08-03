@@ -1,12 +1,8 @@
-.area-chart-background {
+.line-chart-background {
     position: relative;
-    color: white;
-    // padding-top: 2em;
-    // padding-bottom: 2em;
     color: white;
     width: 100%;
     overflow: hidden;
-    // background-color: #1a232c;
     section& {
         padding: 0 !important;
         border: none;
@@ -28,7 +24,6 @@
         display: inline-block;
         vertical-align: bottom;
         bottom: 0;
-
     }
 
     svg {
@@ -41,17 +36,23 @@
         left: 0;
         display: inline-block;
 
-        .area {
-            fill: url('/#linearFadeinGradient');
-            // stroke-width: 2px;
-            // stroke: white;
-            // stroke-opacity: 0.2;
-            // fill: white;
-            // opacity: 0.8;
 
-            &.even {
-                opacity: 0.7;
-                // fill: rgba(100, 100, 100, 0.4);
+        .path {
+            stroke-width: 3px;
+            fill: none;
+            &.data-color {
+                stroke: @data-color;
+            }
+            &.design-color {
+                stroke: @design-color;
+            }
+            &.interfaces-color {
+                stroke: @interfaces-color;
+            }
+            &.light-grey {
+                // opacity: .5;
+                stroke-width:1px;
+                stroke: #002954;
             }
         }
     }
