@@ -1,10 +1,8 @@
 export var MEMBERS = [
     {
         linkedin: 'https://fr.linkedin.com/in/lucaspiessat',
-        color: 'bh-yellow',
         name: 'Lucas Piessat',
         title: 'Datajournaliste',
-        photo: '../assets/images/photos/business.jpeg',
         function: 'L\'information, son architecture et sa mise en récit',
         description: `Ex-Sciences Po Grenoble et Grenoble EM.
         J’ai été datajournaliste chez WeDoData et stagiaire
@@ -13,10 +11,8 @@ export var MEMBERS = [
     },
     {
         linkedin: 'https://fr.linkedin.com/in/pierre-bellon-64b2ba3a',
-        color: 'bh-blue',
         name: 'Pierre Bellon',
         title: 'Développeur & Designer',
-        photo: '../assets/images/photos/business2.jpeg',
         function: 'La conception et la réalisation d\'interface de données',
         description: `Ex-développeur chez J++ (agence de journalisme de données),
         ex-consultant au HCR. Je conçois et développe des outils
@@ -24,10 +20,8 @@ export var MEMBERS = [
     },
     {
         linkedin: 'https://fr.linkedin.com/in/gauthier-bravais-16815055',
-        color: 'bh-orange',
         name: 'Gauthier Bravais',
         title: 'Chef de projet',
-        photo: '../assets/images/photos/business3.jpeg',
         function: 'La communication, la stratégie et la gestion de projet',
         description: `Ex-Sciences Po Grenoble, j’ai trois ans d’expérience en
         agence de communication et relations publiques, en charge d’un
@@ -40,28 +34,36 @@ export var PREVIOUS_WORK = [
         title: 'Jeu d\'Influences',
         type: 'Serious Game',
         subtitle: 'Développé au sein de J++',
-        picture: '../assets/images/previous-work/jeu-d-influences.png'
+        link: ''
     },
-    // {
-    //     title: 'Municipaly',
-    //     subtitle: 'Serious Game éditorialisé au sein de WeDoData',
-    //     picture: '../assets/images/previous-work/jeu-d-influences.png'
-    // },
-    // {
-    //     title: 'The Global Carbon Atlas',
-    //     subtitle: 'Visualisation de données interactive éditée au sein de WeDoData',
-    //     picture: '../assets/images/previous-work/jeu-d-influences.png'
-    // },
+    {
+        title: 'Municipaly',
+        subtitle: 'Éditorialisé au sein de WeDoData',
+        type: 'Serious Game',
+        link: ''
+    },
+    {
+        title: 'The Global Carbon Story',
+        subtitle: 'Visualisation de données',
+        type: 'Éditorialisé au sein de WeDoData',
+        link: ''
+    },
     {
         title: 'World of Work',
         type: 'Étude ludifiée',
         subtitle: 'Développé au sein de J++',
-        picture: '../assets/images/previous-work/world-of-work.png'
+        link: ''
     },
     {
         title: 'Detective.io',
         type: 'Outil d\'investigation',
         subtitle: 'Développé au sein de J++',
-        picture: '../assets/images/previous-work/detective-io.png'
+        link: ''
+    },
+    {
+        title: 'Dérangeons la Chambre',
+        type: 'Prototype',
+        subtitle: 'Développé au sein de Datagraphit',
+        link: ''
     }
 ];
