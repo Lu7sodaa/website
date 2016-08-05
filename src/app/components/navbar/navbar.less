@@ -1,7 +1,7 @@
 .navbar {
-    background-color: @black;
+    background-color: @midnight-blue;
     &-inverse &-brand {
-        background-color: @black;
+        background-color: @midnight-blue;
         color: white;
         font-family: 'Josefin Slab', serif;
         font-size: 1.2em;
@@ -17,7 +17,13 @@
     }
     nav& {
         margin-bottom: 0;
+        top: -100px;
+        .transition(right .33s, left .33s, top .50s);
+        &.revealed {
+            top: 0;
+        }
     }
+
     .menu:hover {
         color: @brand-primary;
     }
