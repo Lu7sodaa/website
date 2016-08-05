@@ -12,7 +12,6 @@
  */
 @icon-font-path: '../../bower_components/bootstrap/fonts/';
 @fa-font-path: '../assets/font-awesome/fonts/';
-@font-size-base: 15px;
 
 .btn {
     border-radius: 0;
@@ -20,9 +19,9 @@
 }
 
 .btn-default {
+    .transition(background-color .33s ease-in, color .33s ease);
     background-color: @white;
     color: @black;
-    border: 1px solid @brand-primary;
     &:hover {
         background-color: @brand-primary;
         color: @white;
