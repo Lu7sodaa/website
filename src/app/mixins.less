@@ -28,11 +28,6 @@
     transition: @value;
 }
 
-.bh-label {
-    background-color: @blue-grey;
-    color: white;
-}
-
 .bh-color(@color){
     @opposite-color: contrast(@@color, @black, white, 20%);
     .@{color} {
@@ -73,8 +68,14 @@
                 .small-underline:after {
                     background-color: @@color;
                 }
+                .more:before {
+                    color: @@color;
+                }
                 &:hover, &:focus, &:active {
                     background-color: @@color;
+                    .more:before {
+                        color: @black;
+                    }
                     .small-underline:after {
                         background-color: @black;
                     }

@@ -1,6 +1,7 @@
 @hover-anim-duration: 500ms;
 @path-color: fade(@blue-grey, 10%);
 @hover-color: fade(@brand-primary, 80%);
+@text-hover-color: @brand-primary;
 .path {
     fill: @path-color;
     transition: fill @hover-anim-duration ease;
@@ -22,17 +23,17 @@
         }
         .step {
             position: absolute;
+            p {
+                font-weight: normal;
+            }
+            h4:after {
+                transition: background-color @hover-anim-duration ease;
+            }
             &.hover {
                 transition: color @hover-anim-duration ease;
-                color: @hover-color;
-                h4:after {
-                    transition: background-color @hover-anim-duration ease;
-                    background-color: @hover-color;
-                }
+                color: @text-hover-color;
+                h4:after { background-color: @text-hover-color; }
             }
-            // text-align: center;
-            // padding-left: 15px;
-            // padding-right: 15px;
         }
     }
     &.mobile {

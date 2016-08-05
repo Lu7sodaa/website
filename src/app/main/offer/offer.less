@@ -7,20 +7,11 @@
         .chapter {
             cursor: pointer;
             margin-bottom: 2em;
-            .small-underline:after {
-                transition: width .5s ease;
-            }
             svg {
                 max-width: 175px;
                 width: 100%;
                 height: auto;
-                fill: #333;
-            }
-            &:hover, &:focus, &:active   {
-                border: none;
-                .small-underline:after {
-                    width: 100%;
-                }
+                fill: @text-color;
             }
             p {
                 margin-bottom: 0;

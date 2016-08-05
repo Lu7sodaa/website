@@ -20,8 +20,7 @@
 
     & section&__header {
         padding-top: 3em;
-        border-bottom: 5px solid black;
-        padding-bottom: 4em;
+        // border-bottom: 5px solid black;
         hr {
             height: 1px;
             background-color: @blue-grey;
@@ -52,10 +51,6 @@
     padding: @tile-padding - 15;
     min-height: @tile-height;
     // section.tiled
-    h1 {
-        font-size: 3em;
-        line-height: 1.4em;
-    }
     section&d {
         padding-top: 0;
         padding-bottom: 0;
@@ -164,6 +159,18 @@ svg.pictogram {
     }
 }
 
+[ng-click] {
+    .small-underline:after {
+        transition: width .5s ease;
+    }
+
+    &:hover, &:focus, &:active   {
+        border: none;
+        .small-underline:after {
+            width: 100%;
+        }
+    }
+}
 
 @media screen and (max-width: @screen-sm) {
     .main {
