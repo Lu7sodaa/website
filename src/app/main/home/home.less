@@ -6,7 +6,7 @@
         position: relative;
         border-bottom: 0;
         // background: @blue-grey;
-        background: #001123;
+        background: @midnight-blue;
         padding-bottom: 0;
 
         h1 {
@@ -55,7 +55,7 @@
             top: -1em;
         }
         &__chapter {
-            z-index: 0;
+            // z-index: 0;
             position: relative;
             // height: 26vh;
             padding-top: 15px;
@@ -63,15 +63,27 @@
             /// took from http://stackoverflow.com/a/19695851/885541
             margin-bottom: -99999px;
             padding-bottom: 99999px;
-            &, h2:after {
+            &, h2:after, .more:before {
                 transition: color .33s ease, background-color .33s ease;
             }
-
+            &:hover {
+                a { color: @black }
+            }
             p {
+                margin-bottom: 0;
+            }
+            .more {
+                &:before {
+                    content: '►\a';
+                }
+                color: @black;
+                // text-decoration: underline;
+                display: block;
+                font-weight: bold;
                 padding-bottom: 30px;
             }
 
-            div&:hover h2:after { background-color: white; }
+            // div&:hover h2:after { background-color: white; }
         }
     }
 
@@ -103,7 +115,7 @@
             padding-top: 0;
             padding-bottom: 0;
             margin-bottom: 0;
-            p {
+            a {
                 padding-bottom: 15px;
             }
         }

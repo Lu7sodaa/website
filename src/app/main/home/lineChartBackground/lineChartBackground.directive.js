@@ -1,26 +1,37 @@
 var DATA = [
     {
+        animated: false,
         color_class: 'light-grey',
         values: [ 12, 10, 5, 8, 11, 13, 15, 16 ]
     },{
+        animated: false,
         color_class: 'light-grey',
         values: [ 13, 14, 16, 16, 17, 18, 20, 21 ]
     },{
+        animated: false,
         color_class: 'light-grey',
         values: [ 20, 19, 19, 21, 19, 17, 15, 14 ]
     },{
+        animated: false,
         color_class: 'light-grey',
         values: [ 15, 12, 17, 13, 12, 14, 12, 11 ]
     },{
+        animated: false,
         color_class: 'light-grey',
         values: [ 11, 12, 9, 7, 8, 10, 10, 11 ]
     },{
+        animated: true,
+        animation_delay: 1500,
         color_class: 'interfaces-color',
         values: [ 8, 12, 10.5, 16, 21, 18, 19, 18 ]
     },{
+        animated: true,
+        animation_delay: 1000,
         color_class: 'design-color',
         values: [ 13, 18, 16.5, 13, 14, 11, 15, 17 ]
     },{
+        animated: true,
+        animation_delay: 700,
         color_class: 'data-color',
         values: [ 10, 9, 8, 10, 15, 17, 17, 18 ]
     }
@@ -58,7 +69,7 @@ class LineChartBackgroundController {
     draw(){
         this.setUpSVG();
         this.resize();
-        this.drawArea();
+        this.drawLines();
     }
 
     setUpSVG(){
@@ -66,24 +77,59 @@ class LineChartBackgroundController {
         this.$g = this.$svg.append('g');
     }
 
-    line(not_zero_val){
+    line(){
         return d3.line().curve(d3.curveCatmullRom)
             .x((d,i)=>{
                 return this.scales.x(i);
             })
             .y((d)=>{
-                return this.scales.y(not_zero_val ? d : 0);
+                return this.scales.y(d);
             });
     }
 
-    drawArea(){
-        this.data.forEach((dataset)=>{
-            let klass = 'path ' + dataset.color_class;
-            this.$g.append('path')
-                .attr('class', klass)
-                .datum(dataset.values)
-                .attr('d', this.line(true));
-        });
+    drawLines(){
+        this.$g.selectAll('.path')
+            .data(this.data)
+            .enter()
+                .append('path')
+                .attr('class', function(d){
+                    return 'path ' + d.color_class;
+                })
+                .classed('animated', function(d){
+                    return d.animated;
+                })
+                .datum(function(d){
+                    return d.values;
+                })
+                .attr('d', this.line())
+                .style('opacity', function(){
+                    if(d3.select(this).classed('animated')){
+                        return 0;
+                    } else {
+                        return 1;
+                    }
+                })
+                .each((d,i,l)=>{
+                    this.animateLine(d3.select(l[i]), this.data[i]);
+                });
+    }
+
+    animateLine(path, dataset){
+        if(path.classed('animated')){
+            path.transition()
+                .delay(200)
+                .style('opacity', 1)
+                .duration(()=>{
+                    return 3000 + dataset.animation_delay;
+                })
+                .attrTween("stroke-dasharray", function(){
+                    let l = path.node().getTotalLength();
+                    let _interpolate = d3.interpolateString("0,"+l, l + "," + l);
+                    return (t)=>{
+                        return _interpolate(t);
+                    };
+                });
+        }
     }
 
     resize(){
@@ -98,8 +144,12 @@ class LineChartBackgroundController {
         this.$svg.attr('width', this.width)
             .attr('height', this.height);
 
-        this.$svg.selectAll('.path')
-            .attr('d', this.line(true));
+        this.$g.selectAll('.path')
+            .attr('d', this.line())
+            .attr('stroke-dasharray', function(){
+                let l = d3.select(this).node().getTotalLength();
+                return `${l},${l}`;
+            });
     }
 
 

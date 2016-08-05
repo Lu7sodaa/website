@@ -10,10 +10,10 @@
 
     &__overlay {
         position: absolute;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
+        top: 30px;
+        left: 60px;
+        right: 60px;
+        bottom: 60px;
         z-index: 1;
     }
     .svg-wrapper {
@@ -40,6 +40,11 @@
         .path {
             stroke-width: 3px;
             fill: none;
+            &.hidden {
+                -webkit-opacity:0;
+                -moz-opacity:0;
+                opacity: 0;
+            }
             &.data-color {
                 stroke: @data-color;
             }
@@ -52,7 +57,7 @@
             &.light-grey {
                 // opacity: .5;
                 stroke-width:1px;
-                stroke: #002954;
+                stroke: @midnight-blue-light;
             }
         }
     }

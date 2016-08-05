@@ -1,7 +1,7 @@
 <div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
     <skoli-sidebar></skoli-sidebar>
     <div class="view">
-        <skoli-navbar></skoli-navbar>
+        <skoli-navbar hide='true'></skoli-navbar>
         <div class="main home">
             <div class="inner">
                 <section class="intro main__header full-height-section line-chart-background">
@@ -9,11 +9,7 @@
                         <h1 class="skoli-logo">Skoli</h1>
                         <h2 class="subtitle">Synchroniser Savoirs & Société</h2>
                         <p class="lead text-right">
-                            Notre agence accompagne <br class='visible-md visible-lg'>la
-                            <span class="data-color bh-label">construction</span>,
-                            la <span class="design-color bh-label">valorisation</span> et
-                            <br class='visible-md visible-lg'>la <span class="interfaces-color bh-label">médiation numérique</span>
-                            des savoirs.
+                            Notre agence accompagne <br class='visible-md visible-lg'>la <span class="data-color bh-label">construction</span>, la <span class="design-color bh-label">valorisation</span> et <br class='visible-md visible-lg'>la <span class="interfaces-color bh-label">médiation numérique</span> des savoirs.
                         </p>
                     </div>
                 </section>
@@ -32,6 +28,7 @@
                                 <p class="small-underline-offset"
                                    ng-bind-html="chapter.home_description">
                                 </p>
+                                <span class="more small-underline-offset">En savoir plus</a>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="clearfix"></div>
