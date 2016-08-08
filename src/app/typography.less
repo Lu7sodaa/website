@@ -32,10 +32,6 @@ section h1 {
     font-family: @josefin;
 }
 
-.main__header h1 {
-    text-align: center;
-}
-
 .italic {
     font-style: italic;
 }
@@ -73,6 +69,13 @@ section h1 {
     }
 }
 
+.socials {
+    margin-bottom: 0;
+    li a {
+        font-size: 2em;
+    }
+}
+
 .small-underline {
     @underline-height: 0.185em;
     position: relative;
@@ -97,26 +100,40 @@ section h1 {
 }
 
 
-@media screen and (max-width: @screen-xs){
-    .main.home {
+@media screen and (max-width: @screen-sm-max){
+    h1.main-title {
+        font-size: 6em;
+    }
 
-        p.small-underline-offset {
+    .home {
+
+        .small-underline-offset {
             padding-left: 0;
         }
 
-        .main__header {
+        section.main__header {
             h1 {
                 font-size: 6em;
-                margin-top: 20px;
             }
+
             h2.subtitle {
                 font-size: 1.25em;
-                margin-left: 45px;
-                margin-top: -0.5em;
             }
+
             p.lead {
-                font-size: 1.25em;
-                line-height: 2em;
+                font-size: 1.7em;
+                line-height: 1.7em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @screen-xs){
+    .main.home {
+        section.main__header {
+            p.lead {
+                font-size: 1.5em;
+                // line-height: 1.5em;
             }
         }
     }

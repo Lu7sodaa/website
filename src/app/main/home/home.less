@@ -1,6 +1,6 @@
 .home {
     padding-top: 0;
-    section.main__header {
+    .main__header {
         padding-top: 50px;
         color: white;
         position: relative;
@@ -18,7 +18,7 @@
             border-bottom: none;
             // margin-bottom: 0em;
         }
-        h2.subtitle {
+        .subtitle {
             font-size: 2em;
             margin-top: 0;
             margin-bottom: 2em;
@@ -27,7 +27,7 @@
             margin-left: 75px;
             font-weight: lighter;
         }
-        p.lead {
+        .lead {
             font-size: 2em;
             line-height: 2em;
             // width: 400px;
@@ -121,7 +121,7 @@
         }
     }
 
-    @media screen and (max-width: @screen-xs){
+    @media screen and (max-width: @screen-xs-max){
         &__offer {
             &__chapter {
                 padding-top: 15px;
@@ -132,20 +132,16 @@
                 }
             }
         }
+    }
 
+    @media screen and (max-width: @screen-sm-max){
         .main__header {
             h1 {
-                font-size: 6em;
                 margin-top: 20px;
             }
             h2.subtitle {
-                font-size: 1.25em;
                 margin-left: 45px;
                 margin-top: -0.5em;
-            }
-            p.lead {
-                font-size: 1.25em;
-                line-height: 2em;
             }
         }
     }
