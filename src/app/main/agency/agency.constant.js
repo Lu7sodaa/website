@@ -44,8 +44,8 @@ export var PREVIOUS_WORK = [
     },
     {
         title: 'The Global Carbon Story',
-        subtitle: 'Visualisation de données',
-        type: 'Éditorialisé au sein de WeDoData',
+        subtitle: 'Éditorialisé au sein de WeDoData',
+        type: 'Visualisation de données',
         link: ''
     },
     {
@@ -65,5 +65,44 @@ export var PREVIOUS_WORK = [
         type: 'Prototype',
         subtitle: 'Développé au sein de Datagraphit',
         link: ''
+    }
+];
+
+export var PROCESS = [
+    {
+        name: 'Appropriation',
+        value: 19,
+        color_class: 'interfaces-color',
+        description: `Nous venons à votre rencontre et nous impliquons
+        fortement pour apprivoiser au mieux votre objet de recherche,
+        vos méthodes de travail et vos enjeux.`
+    },{
+        name: 'Clarification',
+        value: 17,
+        color_class: 'interfaces-color',
+        description: `À partir des travaux de recherche, nous élaborons
+        un discours accessible à tous. Sans le déformer, nous mettons en
+        récit le savoir pour le rendre universel.`
+    },{
+        name: 'Co-design',
+        value: 15,
+        color_class: 'design-color',
+        description: `En associant notre savoir-faire et votre expertise,
+        nous travaillons ensemble à la conception et au design d’une interface
+        de restitution sur-mesure.`
+    },{
+        name: 'Réalisation',
+        value: 25,
+        color_class: 'data-color',
+        description: `Nous mettons en oeuvre notre expertise technique
+        pour développer et maintenir des interfaces et des outils fiables
+        et performants.`
+    },{
+        name: 'Diffusion',
+        value: 20,
+        color_class: 'design-color',
+        description: `Nous mettons en oeuvre des stratégies de
+        communication (réseaux sociaux, relations publiques et presse)
+        pour optimiser la diffusion de nos réalisations.`
     }
 ];

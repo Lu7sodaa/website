@@ -8,7 +8,7 @@ import { HomeController   } from './main/home/home.controller';
 import { OfferController  } from './main/offer/offer.controller';
 import { CHAPTERS         } from './main/offer/offer.constant';
 import { AgencyController } from './main/agency/agency.controller';
-import { MEMBERS, PREVIOUS_WORK  } from './main/agency/agency.constant';
+import { MEMBERS, PREVIOUS_WORK, PROCESS  } from './main/agency/agency.constant';
 
 // directives
 import { LineChartBackgroundDirective } from './main/home/lineChartBackground/lineChartBackground.directive';
@@ -41,6 +41,7 @@ angular.module('siteWebV0', dependencies )
   .config(config)
   .config(routerConfig)
   .run(runBlock)
+  .constant('PROCESS', PROCESS)
   .constant('MEMBERS', MEMBERS)
   .constant('PREVIOUS_WORK', PREVIOUS_WORK)
   .constant('CHAPTERS', CHAPTERS)

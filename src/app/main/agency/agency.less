@@ -9,6 +9,11 @@
             padding-bottom: 30px;
         }
     }
+    section:not(.main__header) {
+        h1 {
+            margin-top: @tile-padding;
+        }
+    }
     .member {
         h3 {
             margin: 0;
@@ -23,55 +28,26 @@
         }
     }
 
-    // section&__members {
-    //     div.member {
-    //         padding-left: 15px;
-    //         &__description {
-    //             position: relative;
-    //             padding-left: 0;
-    //             padding-right: 0;
-    //             padding-top: 10px;
-    //             padding-bottom: 10px;
-    //         }
-    //         a {
-    //             top: 5px;
-    //             right: 0;
-    //         }
-    //     }
-    //     &:after {
-    //         content: '';
-    //         display: table;
-    //         clear: both;
-    //     }
-    // }
-    &__previous-work {
-        .previous-work {
-            a {
-                h3, h5 {
-                    margin-top: 0px;
-                    margin-bottom: 0;
-                }
-                text-decoration: none;
-                color: inherit;
-                display: block;
-                img {
-                    display: block;
-                    width: 100%;
-                }
-                span {
-                    display: block;
-                    padding: 15px;
-                }
-                &:hover {
-                    background-color: @brand-primary;
-                    color: white;
-                }
-            }
+    .previous-work {
+        h4, h5 {
+            margin-top: 0px;
+            margin-bottom: 0;
         }
-        &:after {
-            content: '';
-            display: table;
-            clear: both;
+        .bh-label {
+            padding: 0 0.2em ;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            img {
+                display: block;
+                width: 100%;
+            }
+            span {
+                display: block;
+                padding: 15px;
+            }
         }
     }
 

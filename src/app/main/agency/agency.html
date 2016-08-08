@@ -8,6 +8,7 @@
                     <h1 class="main-title">Notre agence</h1>
                     <hr>
                     <div class="tile">
+                        <h1>Métier</h1>
                         <div class="row">
                             <p class="col-md-4">
                                 Les données numériques sont devenues un matériau de recherche à part entière et indispensable pour décrypter le monde, ainsi que les sociétés qui l’habitent et le construisent.<br>
@@ -28,7 +29,7 @@
                 </section>
                 <section class="tiled">
                     <div class="tile tile--colored">
-                        <h1>Qui sommes nous ?</h1>
+                        <h1>Équipe</h1>
                         <div class="row margin-top-15">
                             <div class="col-md-4">
                                 <p class="definition italic">
@@ -64,9 +65,9 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
                                         <h4>
-                                            {{ member.name }}
+                                            <a rel="nofollow" target="_blank" title="Profil linkedIn de {{ member.name }}" ng-href="{{ member.linkedin }}">{{ member.name }}</a>
                                             <br>
-                                            <span class="title bold" >{{ member.title }}</span>&nbsp;&nbsp;<a rel="nofollow" ng-href="{{ member.linkedin }}"><i class="fa fa-linkedin-square"></i></a>
+                                            <span class="title bold">{{ member.title }}</span>
                                         </h4>
                                         <p>
                                             {{ member.function }}<br><br>
@@ -106,28 +107,30 @@
                                 </ul>
                             </div>
                         </div>
-                        <h1 class="margin-top-30">
-                            Nos précédentes réalisations
-                        </h1>
-                        <p>
-                            Nous sommes issus du monde du web. Nos différents
-                            parcours au sein d'agences (web, design et data-journalisme)
-                            nous ont appris à cerner les enjeux et l'importance
-                            de la production d'une information de qualité. Nous
-                            avons sélectionné quelques réalisations auxquelles
-                            nous avons participé à titre individuel ou collectif
-                            afin de mieux illustrer nos savoir-faire.
-                        </p>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="previousWork in agency.listPreviousWork()">
-                                <!-- <div class="tile tile--half tile--photo"
-                                style="background-image: url('{{ previousWork.picture }}')"
-                                ng-class="{ 'pull-right': $index % 2 !== 0 }"> -->
-                                <h4 class="bold">
-                                    {{ previousWork.title }} <a href="{{ previousWork.link }}" rel="nofollow"><i class="fa fa-external-link"></a></i>
-                                </h4>
-                                <h5><span class="bh-label">{{ previousWork.type }}</span></h5>
-                                <h6>{{ previousWork.subtitle }}</h6>
+                        <div class="margin-top-30">
+                            <h1 class="margin-top-30">
+                                Expériences
+                            </h1>
+                            <p>
+                                Nous sommes issus du monde du web. Nos différents
+                                parcours au sein d'agences (web, design et data-journalisme)
+                                nous ont appris à cerner les enjeux et l'importance
+                                de la production d'une information de qualité. Nous
+                                avons sélectionné quelques réalisations auxquelles
+                                nous avons participé à titre individuel ou collectif
+                                afin de mieux illustrer nos savoir-faire.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-6 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
+                                    <h4 class="bold">
+                                        <a title="Aller sur le site de {{ previousWord.title }}"
+                                           target="_blank"
+                                           ng-href="{{ previousWork.link }}"
+                                           rel="nofollow">{{ previousWork.title }}</a>
+                                    </h4>
+                                    <h5><span class="bh-label">{{ previousWork.type }}</span></h5>
+                                    <h6>{{ previousWork.subtitle }}</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
