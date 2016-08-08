@@ -33,7 +33,8 @@ var dependencies = [
     'ngTouch',
     'ngSanitize',
     'ngAria',
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap'
 ];
 
 angular.module('siteWebV0', dependencies )
