@@ -2,16 +2,14 @@
 @path-color: fade(@blue-grey, 10%);
 @hover-color: fade(@brand-primary, 80%);
 @text-hover-color: @brand-primary;
-.path {
-    fill: @path-color;
-    transition: fill @hover-anim-duration ease;
-    &.hover {
-        fill: @hover-color;
-    }
-}
+
 
 .triangle-chart {
     padding-top: 4em;
+    .path {
+        fill: @path-color;
+        transition: fill @hover-anim-duration ease;
+    }
     &__axis {
         position: relative;
         min-height: 200px;
@@ -25,14 +23,10 @@
             position: absolute;
             p {
                 font-weight: normal;
+                transition: color @hover-anim-duration ease;
             }
             h4:after {
                 transition: background-color @hover-anim-duration ease;
-            }
-            &.hover {
-                transition: color @hover-anim-duration ease;
-                color: @text-hover-color;
-                h4:after { background-color: @text-hover-color; }
             }
         }
     }

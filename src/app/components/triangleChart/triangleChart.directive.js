@@ -162,11 +162,16 @@ class TriangleChartController {
         this.animated = true;
     }
     draw(){
+        let color = function(base_class){
+            return function(d){
+                return base_class+ ' ' + d.color_class;
+            };
+        };
         this.paths = this.$g.selectAll('.path')
             .data(this.data)
             .enter()
                 .append('path')
-                .attr('class', 'path')
+                .attr('class', color('path'))
                 .attr('d', (d, i)=>{ return this.drawTriangle(d,i); });
 
         var steps = this.$axis
@@ -174,7 +179,7 @@ class TriangleChartController {
                 .data(this.data)
                 .enter()
                     .append('div')
-                    .attr('class', 'step');
+                    .attr('class', color('step'));
 
         this.steps(steps);
 

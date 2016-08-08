@@ -118,6 +118,19 @@
     .text-@{color} {
         color: @@color;
     }
+
+    .triangle-chart {
+        .@{color} {
+            &.hover {
+                &.path {
+                    fill: fade(@@color, 80%);
+                }
+                &.step {
+                    color: @@color;
+                }
+            }
+        }
+    }
 }
 
 .margin-top(@margin) {
