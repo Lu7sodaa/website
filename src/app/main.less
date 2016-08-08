@@ -19,8 +19,10 @@
     }
 
     & section&__header {
+        .main-title {
+            text-align: center;
+        }
         padding-top: 3em;
-        // border-bottom: 5px solid black;
         hr {
             height: 1px;
             background-color: @blue-grey;
@@ -34,20 +36,14 @@
         background-repeat: repeat;
     }
 }
-.socials {
-    margin-bottom: 0;
-    li a {
-        font-size: 2em;
-    }
+
+[uib-tooltip]{
+    border-bottom: 1px dashed @light-grey;
+    cursor:help;
 }
 
 // tile system
 .tile {
-    @tile-height: 500px;
-    @tile-height-sm: 640px;
-    @tile-padding: 90px;
-    @tile-padding-sm: 30px;
-    @tile-padding-xs: 15px;
     padding: @tile-padding - 15;
     min-height: @tile-height;
     // section.tiled
@@ -172,9 +168,6 @@ svg.pictogram {
     .main {
         &__header {
             padding-top: 6em;
-            h1 {
-                font-size: 6em;
-            }
         }
     }
 }
