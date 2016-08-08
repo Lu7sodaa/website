@@ -23,15 +23,17 @@ export function TriangleChartDirective() {
 }
 
 class TriangleChartController {
-    constructor($element, $log, $window, $timeout){
+    constructor($element, $document, $log, $window, $timeout){
         'ngInject';
+        this.axis_selector = '.triangle-chart__axis';
         this.$timeout = $timeout;
+        this.$document = $document;
+        this.$log = $log;
         this.$window = angular.element($window);
         this._element = angular.element($element[0]);
         this.$element = d3.select($element[0]);
-        this.$axis = this.$element.select('.triangle-chart__axis');
+        this.$axis = this.$element.select(this.axis_selector);
         this.$svg = this.$element.select('svg');
-
         this.scale = d3.scaleLinear().domain([0, d3.max(this.data, function(d){ return d.value; }) ]),
         this.overlapx = 60;
         this.margin = {
@@ -46,13 +48,24 @@ class TriangleChartController {
                 bottom: 0
             }
         }
-
         this.onResize();
-        this.bindEvents();
         this.draw();
+        this.bindEvents();
     }
 
     bindEvents(){
+        let trigger_top = angular.element(this.axis_selector).offset().top;
+        let wh = this.$window.height();
+        this.$document.bind('scroll', ()=>{
+            // short return if animation has started / was already run
+            if(this.animated){ return; }
+            let scroll_pos = wh + this.$document.scrollTop();
+            // console.log('scroll_pos: ', scroll_pos);
+            if(scroll_pos > trigger_top){
+                this.animate();
+            }
+        });
+
         this.$window.bind('resize', ()=>{
             this.$timeout(()=>{
                 this.onResize();
@@ -142,17 +155,19 @@ class TriangleChartController {
         this.steps(this.$axis.selectAll('.step'));
 
     }
-
+    animate(){
+        this.paths.transition()
+            .duration(2000)
+            .attr('d', (d, i)=>{ return this.drawTriangle(d,i, true); });
+        this.animated = true;
+    }
     draw(){
-        var paths = this.$g.selectAll('.path')
+        this.paths = this.$g.selectAll('.path')
             .data(this.data)
             .enter()
                 .append('path')
                 .attr('class', 'path')
                 .attr('d', (d, i)=>{ return this.drawTriangle(d,i); });
-        paths.transition()
-            .duration(2000)
-            .attr('d', (d, i)=>{ return this.drawTriangle(d,i, true); });
 
         var steps = this.$axis
                 .selectAll('.step')
@@ -172,7 +187,7 @@ class TriangleChartController {
             d3.select(this).classed('hover', false);
         });
 
-        paths.on('mouseover', function(d,i){
+        this.paths.on('mouseover', function(d,i){
             d3.selectAll('.step').classed('hover', function(d,_i){ return i == _i; });
             d3.select(this).classed('hover', true);
         }).on('mouseout', function(){
@@ -182,6 +197,8 @@ class TriangleChartController {
 
         steps.append('h4').text(function(d){ return d.name }).attr('class', 'small-underline');
         steps.append('p').text(function(d){ return d.description; });
+
+        this.drawn = true;
     }
 
     onResize(){
