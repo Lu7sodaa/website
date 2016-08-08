@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <ul class="list-unstyled">
+    <ul class="list-unstyled sidebar__menu">
         <li><a ui-sref="app.home({'#': 'top'})">
             {{ sidebar.$state.get('app.home').data.title | capitalize }}
         </a></li>
@@ -14,8 +14,8 @@
         </a></li>
         <li><span ng-click="sidebar.scrollToBottom()">Contact</span></li>
     </ul>
-    <!-- <ul class="list-inline socials">
+    <ul class="list-inline socials">
         <li><a href="https://github.com/skoli-code"><i class="fa fa-github"></i></a></li>
         <li><a href="https://twitter.com/agenceskoli"><i class="fa fa-twitter"></i></a></li>
-    </ul> -->
+    </ul>
 </div>
