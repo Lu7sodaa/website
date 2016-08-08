@@ -30,7 +30,6 @@ class NavbarController {
         if(this.hide){
             let scroll_top_trigger = w.height() - 60;
             // console.log('scroll_top_trigger', scroll_top_trigger);
-            this.$scrollContainer = angular.element('body');
             $document.bind('scroll', ()=>{
                 let scroll_top = $document.scrollTop();
                 let trigger = scroll_top >= scroll_top_trigger - 60;
