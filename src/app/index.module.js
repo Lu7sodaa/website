@@ -4,7 +4,6 @@ import { runBlock } from './index.run';
 
 // controllers
 import { HomeController   } from './main/home/home.controller';
-
 import { OfferController  } from './main/offer/offer.controller';
 import { CHAPTERS         } from './main/offer/offer.constant';
 import { AgencyController } from './main/agency/agency.controller';
@@ -12,6 +11,7 @@ import { MEMBERS, PREVIOUS_WORK, PROCESS  } from './main/agency/agency.constant'
 
 // directives
 import { LineChartBackgroundDirective } from './main/home/lineChartBackground/lineChartBackground.directive';
+import { LINE_CHART_DATA }              from './main/home/lineChartBackground/data.constant';
 import { TriangleBackgroundDirective  } from './main/home/triangleBackground/triangleBackground.directive';
 import { TriangleChartDirective       } from '../app/components/triangleChart/triangleChart.directive';
 import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
@@ -21,6 +21,9 @@ import { FullHeightSectionDirective   } from '../app/components/fullHeightSectio
 
 // filters
 import { CapitalizeFilter  } from '../app/components/filters/capitalize';
+
+// services
+import { PlatformService } from '../app/components/platform.service';
 
 // constants
 import { EVENTS } from '../app/components/constants/events';
@@ -44,9 +47,10 @@ angular.module('siteWebV0', dependencies )
   .constant('PROCESS', PROCESS)
   .constant('MEMBERS', MEMBERS)
   .constant('PREVIOUS_WORK', PREVIOUS_WORK)
+  .constant('LINE_CHART_DATA', LINE_CHART_DATA)
   .constant('CHAPTERS', CHAPTERS)
   .constant('EVENTS', EVENTS)
-  // .service('ChaptersService', ChaptersService)
+  .service('platformService', PlatformService)
   .controller('HomeController', HomeController)
   .controller('OfferController', OfferController)
   .controller('AgencyController', AgencyController)
