@@ -1,12 +1,12 @@
-footer {
-    @background-color: @midnight-blue;
+.footer {
+    @cartodb-hack-h: 37px;
     pointer-events: all;
     position: fixed;
-    bottom: 0;
+    bottom: -@cartodb-hack-h;
     right: 0;
     left: 0;
     z-index: 0;
-    background-color: @background-color;
+    background-color: @dark-background-color;
     color: @white;
     iframe {
         position: relative;
@@ -14,7 +14,7 @@ footer {
         cursor: default;
         pointer-events: none;
     }
-    .footer__content {
+    &__content {
         h2 {
             margin-top: 0;
         }
@@ -22,33 +22,43 @@ footer {
         .btn {
             padding: 0;
         }
-        background-color: @background-color;
+        background-color: @dark-background-color;
         z-index: 1;
         position: relative;
-        top: -37px;
-        margin-bottom: -37px;
+        top: -@cartodb-hack-h;
+        margin-bottom: -@cartodb-hack-h;
         .credits {
             margin-bottom: 0;
             font-size: 0.8em;
         }
         .tile {
             padding-top: 30px;
-            padding-bottom: 30px;
+            padding-bottom: 15px + @cartodb-hack-h;
             min-height: auto;
         }
     }
-    .contact {
-        &__title {
-            margin-top: 0;
+    &__links {
+        margin-bottom: 0;
+        li {
+            margin-right: 5px;
+        }
+        .fa {
+            font-size: 1.7em;
+        }
+    }
+    &__address {
+        p {
+            padding-top: 15px;
         }
     }
 }
+
 
 @media screen and (max-width: @screen-xs){
     div.inner {
         margin-bottom: 0px !important;
     }
-    footer {
+    .footer {
         position: static;
     }
 }

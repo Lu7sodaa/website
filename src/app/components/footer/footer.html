@@ -5,7 +5,7 @@
     <div class="footer__content">
         <div class="tile">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-sm-9 col-xs-12">
                     <h2>Contactez nous</h2>
                     <div class="row">
                         <div class="col-md-8 col-sm-8 col-xs-12">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-5 col-md-offset-1 col-sm-3 col-xs-12 footer__address">
                     <p>
                         <span class="bold">Skoli</span><br>
                         9 rue de la Martinière<br>
@@ -27,12 +27,16 @@
                         <span class="phone"><a href="tel:+33472457937">+334 7245 7937</a></span>
                     </p>
                 </div>
-                <div class="col-md-2">
-                    <ul class="list-inline socials">
-                        <li><a href="https://github.com/skoli-code"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://twitter.com/agenceskoli"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="row">
+                <ul class="footer__links list-inline col-md-12 col-sm-12 col-xs-12">
+                    <li><a href="https://github.com/skoli-code"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/agenceskoli"><i class="fa fa-twitter"></i></a></li>
+                    <li><a ui-sref="app.about({'#':'about'})">À propos</a></li>
+                    <li><a ui-sref="app.about({'#':'legals'})">Mentions Légales</a></li>
+                    <li><a ui-sref="app.about({'#':'credits'})">Crédits</a></li>
+                </ul>
+
             </div>
         </div>
     </div>
