@@ -1,24 +1,26 @@
-// main colors
-// primary color
+// COLORS DEFINITIONS
+// primary collors
 @bh-yellow: #FDB50A;
-@brand-primary: @bh-yellow;
-// 3 chapters colors
+@bh-blue: #007FD2;
 @red: #D24829;
-@green: #43A047;
-@bh-blue:   #007FD2;
-
-// adds an abstraction to easily adjust the chapter colors
-@data-color: @red;
-@design-color: @bh-blue;
-@interfaces-color: @green;
+@blue-grey: #78909C;
+@light-blue-grey: #ECEFF1;
 
 // complementary colors
 @light-grey: #C2C2C2;
 @midnight-blue: #001123;
 @midnight-blue-light: #002954;
-
-@dark-background-color: @midnight-blue;
-@dark-background-shapes-color: @midnight-blue-light;
-
 @black: #333;
 @white: white;
+
+// THEMING
+// 3 chapters colors
+@data-color: @bh-yellow;
+@design-color: @red;
+@interfaces-color: @bh-blue;
+// primary color override (bootstrap)
+@brand-primary: @blue-grey;
+@brand-primary-complement: @light-blue-grey;
+// background colors
+@dark-background-color: @midnight-blue;
+@dark-background-shapes-color: @midnight-blue-light;

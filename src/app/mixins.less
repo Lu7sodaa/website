@@ -1,3 +1,5 @@
+@import "./colors.less";
+
 .fbx(@direction: row){
     display: -moz-box;
     display: -webkit-box;
@@ -28,7 +30,7 @@
     transition: @value;
 }
 
-.bh-color(@color){
+.color-mixin(@color){
     @opposite-color: contrast(@@color, @black, white, 20%);
     .@{color} {
         a {
@@ -90,9 +92,16 @@
             }
         }
     }
+    .agency {
+        .step.@{color}.hover {
+            .small-underline:after {
+                background-color: @@color;
+            }
+        }
+    }
 
 
-    .bh-label {
+    .sk-label {
         &-inverted {
             &.@{color}, .@{color} & {
                 background-color: white ;
@@ -131,6 +140,7 @@
             }
         }
     }
+
     .line-chart-background {
         .path.@{color} {
             stroke: @@color;
@@ -145,18 +155,14 @@
     }
 }
 
-@margins: 5, 10, 15, 20, 25, 30;
+.color-mixin(data-color);
+.color-mixin(interfaces-color);
+.color-mixin(design-color);
 
-@colors: light-grey, black, data-color, interfaces-color, design-color;
+@margins: 5, 10, 15, 20, 25, 30, 45, 60;
 
-.-(@i: length(@colors)) when (@i > 0) {
-    @name: extract(@colors, @i);
-    .bh-color(@name);
-    .-((@i - 1));
-} .-;
-
-.-(@i: length(@margins)) when (@i > 0) {
-    @margin: extract(@margins, @i);
+.-(@j: length(@margins)) when (@j > 0) {
+    @margin: extract(@margins, @j);
     .margin-top(@margin);
-    .-((@i - 1));
+    .-((@j - 1));
 } .-;
