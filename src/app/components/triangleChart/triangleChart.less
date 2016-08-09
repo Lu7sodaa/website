@@ -1,5 +1,5 @@
 @hover-anim-duration: 500ms;
-@path-color: fade(@blue-grey, 10%);
+@path-color: fade(@black, 10%);
 @hover-color: fade(@brand-primary, 80%);
 @text-hover-color: @brand-primary;
 
@@ -23,13 +23,20 @@
             position: absolute;
             p {
                 font-weight: normal;
+            }
+            p, h4 {
                 transition: color @hover-anim-duration ease;
             }
+            .small-underline:after {
+                background-color: @black;
+            }
+
             h4:after {
                 transition: background-color @hover-anim-duration ease;
             }
         }
     }
+
     &.mobile {
         .triangle-chart__axis {
             height: auto;

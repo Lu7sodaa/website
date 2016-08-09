@@ -38,27 +38,9 @@
 
 
         .path {
-            stroke-width: 3px;
+            stroke-width:1px;
             fill: none;
-            &.hidden {
-                -webkit-opacity:0;
-                -moz-opacity:0;
-                opacity: 0;
-            }
-            &.data-color {
-                stroke: @data-color;
-            }
-            &.design-color {
-                stroke: @design-color;
-            }
-            &.interfaces-color {
-                stroke: @interfaces-color;
-            }
-            &.light-grey {
-                // opacity: .5;
-                stroke-width:1px;
-                stroke: @midnight-blue-light;
-            }
+            stroke: @dark-background-shapes-color;
         }
     }
     @media screen and (max-width: @screen-sm-max){
