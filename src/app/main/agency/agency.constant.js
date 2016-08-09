@@ -33,38 +33,38 @@ export var PREVIOUS_WORK = [
     {
         title: 'Jeu d\'Influences',
         type: 'Serious Game',
-        subtitle: 'Développé au sein de J++',
-        link: ''
+        subtitle: 'Développé au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
+        link: 'https://jeu-d-influences.france5.fr'
     },
     {
         title: 'Municipaly',
-        subtitle: 'Éditorialisé au sein de WeDoData',
         type: 'Serious Game',
-        link: ''
+        subtitle: 'Éditorialisé au sein de <a href="http://jplusplus.org" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
+        link: 'http://municipaly.francetvinfo.fr/#/pari'
     },
     {
         title: 'The Global Carbon Story',
-        subtitle: 'Éditorialisé au sein de WeDoData',
         type: 'Visualisation de données',
-        link: ''
+        subtitle: 'Éditorialisée au sein de <a href="http://jplusplus.org" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
+        link: 'http://www.globalcarbonatlas.org/?q=outreach'
     },
     {
         title: 'World of Work',
         type: 'Étude ludifiée',
-        subtitle: 'Développé au sein de J++',
-        link: ''
+        subtitle: 'Développée au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
+        link: 'http://europe.arte.tv/fr/evenements/world-of-work/'
     },
     {
         title: 'Detective.io',
         type: 'Outil d\'investigation',
-        subtitle: 'Développé au sein de J++',
-        link: ''
+        subtitle: 'Développé au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
+        link: 'http://detective.io/'
     },
     {
         title: 'Dérangeons la Chambre',
         type: 'Prototype',
-        subtitle: 'Développé au sein de Datagraphit',
-        link: ''
+        subtitle: 'Développé au sein de <a href="http://datagraphit.fr/" title="Visitez le site de Datagraphit" rel="nofollow" target="_blank">Datagraphit</a>',
+        link: 'http://datagraphit.fr/pages/an/index.html'
     }
 ];
 

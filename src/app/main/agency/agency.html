@@ -12,15 +12,15 @@
                         <div class="row">
                             <p class="col-md-4">
                                 Les données numériques sont devenues un matériau de recherche à part entière et indispensable pour décrypter le monde, ainsi que les sociétés qui l’habitent et le construisent.<br>
-                                Nous mettons notre savoir-faire à disposition des organisations de recherche pour les aider à <span class="bh-label">capter, traiter et exploiter des données numériques</span>.
+                                Nous mettons notre savoir-faire à disposition des organisations de recherche pour les aider à <span class="sk-label">capter, traiter et exploiter des données numériques</span>.
                             </p>
                             <p class="col-md-4">
                                 Le format actuel de publication scientifique ne correspond pas au nouveau paradigme d’accès et de partage des connaissances, et les acquis de la Recherche restent le plus souvent confinés aux spécialistes d’un domaine.<br>
-                                Nous aidons les chercheurs à réhabiliter le savoir en créant <span class="bh-label">des formats de restitution numériques innovants</span> et à forte audience, à la hauteur de l’intelligence mobilisée pour les produire.
+                                Nous aidons les chercheurs à réhabiliter le savoir en créant <span class="sk-label">des formats de restitution numériques innovants</span> et à forte audience, à la hauteur de l’intelligence mobilisée pour les produire.
 
                             </p>
                             <p class="col-md-4">
-                                <span class="bh-label">Nous ne sommes pas chercheurs.</span><br>
+                                <span class="sk-label">Nous ne sommes pas chercheurs.</span><br>
                                 Nous ne nous substituons pas à leur travail. Notre mission consiste à les accompagner dans la production et la transmission de leurs travaux.
                             </p>
                         </div>
@@ -28,7 +28,7 @@
                     <triangle-chart data="agency.chartData"></triangle-chart>
                 </section>
                 <section class="tiled">
-                    <div class="tile tile--colored">
+                    <div class="tile">
                         <h1>Équipe</h1>
                         <div class="row margin-top-15">
                             <div class="col-md-4">
@@ -70,13 +70,13 @@
                                             <span class="title bold">{{ member.title }}</span>
                                         </h4>
                                         <p>
-                                            {{ member.function }}<br><br>
+                                            {{ member.function }}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row margin-top-30">
                             <div class="col-md-4 col-sm-4 col-sm-12 category">
                                 <h3 class="small-underline"><span class="bold">Ingénierie</span></h3>
                                 <ul class="list-unstyled">
@@ -107,30 +107,30 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="margin-top-30">
-                            <h1 class="margin-top-30">
-                                Expériences
-                            </h1>
-                            <p>
-                                Nous sommes issus du monde du web. Nos différents
-                                parcours au sein d'agences (web, design et data-journalisme)
-                                nous ont appris à cerner les enjeux et l'importance
-                                de la production d'une information de qualité. Nous
-                                avons sélectionné quelques réalisations auxquelles
-                                nous avons participé à titre individuel ou collectif
-                                afin de mieux illustrer nos savoir-faire.
-                            </p>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-6 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
-                                    <h4 class="bold">
-                                        <a title="Aller sur le site de {{ previousWord.title }}"
-                                           target="_blank"
-                                           ng-href="{{ previousWork.link }}"
-                                           rel="nofollow">{{ previousWork.title }}</a>
-                                    </h4>
-                                    <h5><span class="bh-label">{{ previousWork.type }}</span></h5>
-                                    <h6>{{ previousWork.subtitle }}</h6>
-                                </div>
+                    </div>
+                    <div class="tile">
+                        <h1>
+                            Expériences
+                        </h1>
+                        <p>
+                            Nous sommes issus du monde du web. Nos différents
+                            parcours au sein d'agences (web, design et data-journalisme)
+                            nous ont appris à cerner les enjeux et l'importance
+                            de la production d'une information de qualité. Nous
+                            avons sélectionné quelques réalisations auxquelles
+                            nous avons participé à titre individuel ou collectif
+                            afin de mieux illustrer nos savoir-faire.
+                        </p>
+                        <div class="row margin-top-30">
+                            <div class="col-md-4 col-sm-4 col-xs-6 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
+                                <h4 class="">
+                                    <a title="Aller sur le site de {{ previousWord.title }}"
+                                       target="_blank"
+                                       ng-href="{{ previousWork.link }}"
+                                       rel="nofollow">{{ previousWork.title }}</a>
+                                </h4>
+                                <h5><span class="sk-label">{{ previousWork.type }}</span></h5>
+                                <p ng-bind-html="previousWork.subtitle"></p>
                             </div>
                         </div>
                     </div>
