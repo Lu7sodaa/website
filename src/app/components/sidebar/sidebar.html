@@ -1,4 +1,7 @@
 <div class="sidebar">
+    <div class="sidebar__close">
+        <a ng-click="sidebar.close()"><i class="fa fa-close"></i></a>
+    </div>
     <ul class="list-unstyled sidebar__menu">
         <li><a ui-sref="app.home({'#': 'top'})">
             {{ sidebar.$state.get('app.home').data.title | capitalize }}

@@ -2,12 +2,27 @@
 
 .sidebar {
     z-index: 10;
-    padding-top: 51px;
     top: 0;
     bottom: 0;
     background: white;
     position: fixed;
     height: 100vh;
+    &__close {
+        height: 51px;
+        display: block;
+        text-align: right;
+        width: 100%;
+        padding-right: 15px;
+        font-size: 1.5em;
+        line-height: 50px;
+        a {
+            cursor: pointer;
+            color: @black;
+            &:hover {
+                color: @brand-primary;
+            }
+        }
+    }
     ul {
         width: @sidebar-width;
         li {

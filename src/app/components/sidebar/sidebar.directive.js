@@ -36,4 +36,8 @@ class SidebarController {
         });
     }
 
+    close(){
+        this.$scope.sidebar_opened = false;
+    }
+
 }
