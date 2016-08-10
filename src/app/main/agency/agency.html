@@ -66,8 +66,9 @@
                                     <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
                                         <h4>
                                             <a rel="nofollow" target="_blank" title="Profil linkedIn de {{ member.name }}" ng-href="{{ member.linkedin }}">{{ member.name }}</a>
-                                            <br>
-                                            <span class="title bold">{{ member.title }}</span>
+                                        </h4>
+                                        <h4 class="margin-top-5">
+                                            <span class="sk-label">{{ member.title }}</span>
                                         </h4>
                                         <p>
                                             {{ member.function }}
@@ -129,7 +130,7 @@
                                        ng-href="{{ previousWork.link }}"
                                        rel="nofollow">{{ previousWork.title }}</a>
                                 </h4>
-                                <h5><span class="sk-label">{{ previousWork.type }}</span></h5>
+                                <h4 class="margin-top-5"><span class="sk-label">{{ previousWork.type }}</span></h4>
                                 <p ng-bind-html="previousWork.subtitle"></p>
                             </div>
                         </div>

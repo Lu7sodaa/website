@@ -16,7 +16,7 @@
     }
     .member {
         margin-bottom: @font-size-base;
-        h4 {
+        h4:first-child {
             margin-bottom: 0;
         }
         p {
@@ -24,17 +24,19 @@
             // margin-top: 0;
         }
     }
-
-    .previous-work {
-        margin-bottom: 15px;
+    .member, .previous-work {
         h4 {
-            margin-bottom: 2px;
+            font-size: 16px;
         }
-        h4, h5 {
-            margin-top: 0px;
-        }
+
         .sk-label {
             padding: 0 0.2em ;
+        }
+    }
+    .previous-work {
+        margin-bottom: 15px;
+        h4:first-child {
+            margin-bottom: 0px;
         }
 
         a {
