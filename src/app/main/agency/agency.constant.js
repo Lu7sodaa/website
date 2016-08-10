@@ -1,5 +1,14 @@
 export var MEMBERS = [
     {
+        linkedin: 'https://fr.linkedin.com/in/gauthier-bravais-16815055',
+        name: 'Gauthier Bravais',
+        title: 'Chef de projet',
+        function: 'La communication, la stratégie et la gestion de projet',
+        description: `Ex-Sciences Po Grenoble, j’ai trois ans d’expérience en
+        agence de communication et relations publiques, en charge d’un
+        portefeuille de 5 clients dans le numérique et l’innovation.`
+    },
+    {
         linkedin: 'https://fr.linkedin.com/in/lucaspiessat',
         name: 'Lucas Piessat',
         title: 'Datajournaliste',
@@ -17,15 +26,6 @@ export var MEMBERS = [
         description: `Ex-développeur chez J++ (agence de journalisme de données),
         ex-consultant au HCR. Je conçois et développe des outils
         et services web à forte valeur démocratique ajoutée.`
-    },
-    {
-        linkedin: 'https://fr.linkedin.com/in/gauthier-bravais-16815055',
-        name: 'Gauthier Bravais',
-        title: 'Chef de projet',
-        function: 'La communication, la stratégie et la gestion de projet',
-        description: `Ex-Sciences Po Grenoble, j’ai trois ans d’expérience en
-        agence de communication et relations publiques, en charge d’un
-        portefeuille de 5 clients dans le numérique et l’innovation.`
     }
 ];
 
