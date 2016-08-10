@@ -2,7 +2,7 @@ export var CHAPTERS = [
     {
         title: 'Data',
         detailed_title: 'Utiliser les données numériques pour la Recherche',
-        background_image: '../assets/images/photos/library.jpg',
+        background_image: '../assets/images/photos/yale_library.jpg',
         color_class: 'data-color',
         home_description: `Nous accompagnons les organisations de recherche dans
         'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
