@@ -1,7 +1,14 @@
 .about {
-    .tile {
-        min-height: auto;
-        padding-top: 30px;
-        padding-bottom: 1px;
+    .inner {
+        .tile {
+            padding-top: 30px;
+            padding-bottom: 1px;
+            &:last-child {
+                padding-bottom: 30px;
+            }
+        }
+        .main__header .tile {
+            min-height: auto;
+        }
     }
 }
