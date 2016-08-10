@@ -28,6 +28,6 @@ export var LINE_CHART_DATA = [
         animated: true,
         animation_delay: 700,
         color_class: 'data-color',
-        values: [ 10, 9, 8, 10, 15, 17, 17, 18 ]
+        values: [ 10, 10, 11, 10, 15, 17, 17, 18 ]
     }
 ];

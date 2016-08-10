@@ -54,11 +54,28 @@
 }
 
 
-@media screen and (max-width: @screen-xs){
+@media screen and (max-width: @screen-xs-max){
     div.inner {
         margin-bottom: 0px !important;
     }
     .footer {
         position: static;
+        iframe {
+            height: 50vh !important;
+        }
+        .tile {
+            padding-bottom: 15px;
+        }
+        &__links {
+            li {
+                margin-right: 0;
+                padding: 2px;
+            }
+        }
+        .breakline {
+            &:after {
+                content: '\a';
+            }
+        }
     }
 }

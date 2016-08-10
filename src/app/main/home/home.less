@@ -36,6 +36,9 @@
             bottom: 0;
             text-align: right;
         }
+        .sk-label {
+            color: @dark-background-color;
+        }
     }
 
     .main__interval--parallax {
@@ -120,19 +123,6 @@
         }
     }
 
-    @media screen and (max-width: @screen-xs-max){
-        &__offer {
-            &__chapter {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                margin-bottom: 0;
-                p {
-                    padding-bottom: 0;
-                }
-            }
-        }
-    }
-
     @media screen and (max-width: @screen-sm-max){
         .main__header {
             h1 {
@@ -145,4 +135,16 @@
         }
     }
 
+    @media screen and (max-width: @screen-xs-max){
+        &__offer {
+            &__chapter {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-bottom: 0;
+                p {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }

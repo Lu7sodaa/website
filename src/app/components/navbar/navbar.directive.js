@@ -17,7 +17,7 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-    constructor ($log, $rootScope,$element,$document,$window, EVENTS) {
+    constructor ($log, $rootScope,$element,$document,$window, platformService, EVENTS) {
         'ngInject';
         this.$log = $log;
         this.sidebar_opened = false;
@@ -25,9 +25,9 @@ class NavbarController {
         this.$rootScope = $rootScope;
         this.$state = $rootScope.$state;
         this.$nav = angular.element($element[0]);
-        this.revealed_class = 'revealed';
+        this.revealed_class = 'navbar--revealed';
         let w = angular.element($window);
-        if(this.hide){
+        if(this.hide && !platformService.isMobile()){
             let scroll_top_trigger = w.height() - 60;
             // console.log('scroll_top_trigger', scroll_top_trigger);
             $document.bind('scroll', ()=>{

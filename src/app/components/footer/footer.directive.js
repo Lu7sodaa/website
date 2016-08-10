@@ -15,11 +15,12 @@ export function FooterDirective() {
 }
 
 class FooterController {
-    constructor ($element) {
+    constructor ($element, platformService) {
         'ngInject';
         $element = angular.element($element[0]);
         let $main = angular.element('.inner');
         let h = $element.height();
-        $main.css('margin-bottom', h);
+        let property = (platformService.isSafari() ? 'padding' : 'margin') + '-bottom';
+        $main.css(property, h - 37);
     }
 }

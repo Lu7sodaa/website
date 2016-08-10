@@ -24,7 +24,7 @@
         }
     }
     ul {
-        width: @sidebar-width;
+        width: 100%;
         li {
             padding-left: 15px;
             line-height: 50px;
@@ -93,6 +93,21 @@
             left: @sidebar-width;
             right: -@sidebar-width;
         }
+    }
 
+    @media screen and (max-width: @screen-xs-max){
+        .sidebar {
+            width: 100%;
+            left: -100%;
+        }
+        &--sidebar-opened {
+            .sidebar {
+                left: 0;
+            }
+            .view, nav, footer {
+                left: 100%;
+                right: -100%;
+            }
+        }
     }
 }
