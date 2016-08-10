@@ -48,28 +48,14 @@
         .tile--colored {
             background-color: @@color;
             color: white;
-            .small-underline:after {
-                background-color: white;
-            }
-            a {
-                i {
-                    color: white;
-                    opacity: .5;
-                    transition: opacity .5s ease;
-                }
-
-                &:hover {
-                    i { opacity: 1; }
-                }
-            }
         }
     }
-    &.home {
-        .home__offer__chapter {
+    .home {
+        &__offer__chapter {
             &.@{color} {
-                .small-underline:after {
-                    background-color: @@color;
-                }
+                // .small-underline:after {
+                //     background-color: @@color;
+                // }
                 .more:before {
                     color: @@color;
                 }
