@@ -92,7 +92,7 @@
         }
     }
 
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: @screen-sm-max) {
         padding: @tile-padding-sm;
     }
 
@@ -104,8 +104,9 @@
         }
     }
 
-    @media screen and (max-width: @screen-xs) {
+    @media screen and (max-width: @screen-xs-max) {
         padding: @tile-padding-xs;
+        min-height: auto;
     }
 }
 
@@ -125,7 +126,7 @@
 
     ul {
         li {
-            font-size: 17px;
+            // font-size: 17px;
             line-height: 2em;
             span {
                 line-height: 1.4em;
@@ -149,6 +150,16 @@ svg.pictogram {
 .palette {
     li {
         border-radius: 5px;
+    }
+}
+
+.list-ndash {
+    list-style: none;
+    padding-left: 5px;
+    li:before {
+        display: inline-block;
+        content: "–";
+        margin-right: 5px;
     }
 }
 
