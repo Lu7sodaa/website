@@ -16,11 +16,14 @@
     }
     &__content {
         h2 {
-            margin-top: 0;
+            margin-bottom: 22px;;
         }
-
+        p {
+            margin-bottom: 0;
+        }
         .btn {
-            padding: 0;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         background-color: @dark-background-color;
         z-index: 1;
@@ -39,16 +42,14 @@
     }
     &__links {
         margin-bottom: 0;
+        .socials {
+            margin-bottom: @font-size-base;
+        }
         li {
             margin-right: 5px;
         }
         .fa {
             font-size: 1.7em;
-        }
-    }
-    &__address {
-        p {
-            padding-top: 15px;
         }
     }
 }
@@ -62,6 +63,10 @@
         position: static;
         iframe {
             height: 50vh !important;
+        }
+
+        .col-xs-12 {
+            margin-bottom: @font-size-base * 2;
         }
         .tile {
             padding-bottom: 15px;
