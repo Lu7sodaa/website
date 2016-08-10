@@ -27,7 +27,7 @@ class NavbarController {
         this.$nav = angular.element($element[0]);
         this.revealed_class = 'navbar--revealed';
         let w = angular.element($window);
-        if(this.hide && !platformService.isMobile()){
+        if(this.hide && !platformService.isMobileOrTablet()){
             let scroll_top_trigger = w.height() - 60;
             // console.log('scroll_top_trigger', scroll_top_trigger);
             $document.bind('scroll', ()=>{

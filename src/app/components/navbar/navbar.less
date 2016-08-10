@@ -3,9 +3,11 @@
     margin-bottom: 0;
     top: -100px;
     .transition(right .33s, left .33s, top .50s);
+
     &&--revealed {
         top: 0;
     }
+
     &-inverse &-brand {
         background-color: @dark-background-color;
         color: white;
@@ -25,6 +27,7 @@
     .menu:hover {
         color: @brand-primary;
     }
+
     @media screen and (max-width: @screen-xs-max){
         position: static;
         top: 0;
