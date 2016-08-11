@@ -4,21 +4,12 @@ export var CHAPTERS = [
         detailed_title: 'Utiliser les données numériques pour la Recherche',
         background_image: '../assets/images/photos/yale_library.jpg',
         color_class: 'data-color',
-        home_description: `Nous accompagnons les organisations de recherche dans
-        'la transition numérique de leurs activités, et dans leurs usages des données numériques.`,
-        description: `L’ère numérique transforme aussi la Recherche. Les données
-        numériques constituent un immense réservoir de connaissances et deviennent de plus
-        en plus incontournables à la Recherche pour comprendre le monde.<br><br>
+        home_description: `Les données numériques sont devenues un matériau de recherche incontournable. Nous aidons les organisations de recherche à se les approprier et à les utiliser.`,
+        description: `L’ère numérique transforme aussi la Recherche. Les données numériques (issues du web, de capteurs, d’archives numérisées, etc.) constituent un immense réservoir de connaissances capable d’enrichir la Recherche et d’améliorer la connaissance du monde. <br><br>
 
-        Nous accompagnons les organisations de recherche dans cette transformation
-        en mettant à disposition notre savoir-faire en matière d’intelligence
-        des données pour des missions de sous-traitance, d’accompagnement ou de formation.
-        Nous réalisons des missions de services et/ou développons des outils
-        sur-mesure pour collecter, analyser et visualiser des données numériques
-        au profit de la recherche.
-        Nous travaillons en étroite collaboration avec vous pour maîtriser
-        votre objet de recherche, nous assurer de la validité scientifique des
-        données, et respecter votre méthodologie de recherche.
+        Nous accompagnons les organisations de recherche dans cette transformation en mettant à disposition notre savoir-faire en matière d’intelligence des données.
+        Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques au profit de la Recherche.
+        Nous travaillons en étroite collaboration avec vous pour maîtriser votre objet de recherche, nous assurer de la validité scientifique des données, et respecter votre méthodologie de recherche.
         `,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200" version="1.1" x="0" y="0" viewBox="10 12 80 80" enable-background="new 0 0 100 100"
@@ -28,10 +19,10 @@ export var CHAPTERS = [
             {
                 name: 'Collecte de données',
                 sub_services: [
-                    { name: 'Création de bases et jeux de données personnalisés' },
-                    { name: 'Création de corpus personnalisés' },
-                    { name: 'Création de scrapers (ou crawlers) personnalisés' },
-                    { name: 'Création de dispositifs de crowdsourcing' }
+                    { name: 'Création de bases et jeux de données' },
+                    { name: 'Création de corpus de sources numériques' },
+                    { name: 'Création de scrapers et crawlers' },
+                    { name: 'Création d’outils de crowdsourcing' }
                 ]
             },
             {
@@ -45,8 +36,8 @@ export var CHAPTERS = [
                 name: 'Co-analyse de données',
                 sub_services: [
                     { name: 'Réalisation de visualisations de données exploratoires' },
-                    { name: 'Création d’interfaces personnalisées d’analyse de données' },
-                    { name: 'Identification et formations aux outils adaptés à votre méthodologie de recherche' }
+                    { name: 'Identification des outils adaptés à votre méthodologie de recherche' },
+                    { name: 'Conseil, formation et accompagnement sur-mesure' }
                 ]
             }
         ]
@@ -55,22 +46,12 @@ export var CHAPTERS = [
         detailed_title: 'Valoriser et diffuser les travaux de recherche',
         background_image: '../assets/images/photos/alexandrie.jpg',
         color_class: 'design-color',
-        home_description: `Nous proposons aux organisations de recherche d’inventer
-        ensemble de nouveaux formats de restitution afin de rendre le savoir scientifique
-        accessible au plus grand nombre.`,
-        description: `Dans un contexte de profusion d’informations, la parole
-        des chercheurs et les acquis de la Recherche ont de plus en plus de mal
-        à être valorisés par les formats traditionnels de publication scientifique.<br><br>
+        home_description: `Pour redonner au savoir l’écho qu’il mérite, nous inventons avec vous des formats digitaux de restitution scientifique, innovants et capables de toucher un large public.`,
+        description: `Dans un contexte de profusion d’informations, la parole des chercheurs et les acquis de la Recherche ont de plus en plus de mal à être mis en valeur par les formats traditionnels de publication scientifique.<br><br>
 
-        Nous aidons les organisations de recherche à mieux communiquer et diffuser
-        leurs travaux, afin de réhabiliter le savoir scientifique et le rendre
-        accessible au plus grand nombre.
-        Nous concevons avec vous du contenu et des supports de médiation
-        scientifique à haute valeur ajoutée, innovants, adaptés au web et aux
-        nouvelles manières de “consommer” de l’information.
-        Nous vous proposons un accompagnement de bout en bout, du design
-        d’interfaces et d’informations jusqu’au suivi de diffusion et des mesures
-        régulières d’audience des contenus produits ensemble.`,
+        Nous aidons les organisations de recherche à mieux communiquer et diffuser leurs travaux, afin de réhabiliter le savoir scientifique et le rendre accessible au plus grand nombre.
+        Nous concevons avec vous du contenu et des supports de médiation scientifique à haute valeur ajoutée, innovants, adaptés au web et aux nouvelles manières de recevoir l’information.
+        Nous vous proposons un accompagnement de bout en bout, de la conception jusqu’au suivi de diffusion (mesures régulières d’audience des contenus produits ensemble). `,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
             width="200" height="200" x="0px" y="0px" viewBox="0 0 100 100"
             enable-background="new 0 0 100 100" xml:space="preserve">
@@ -81,14 +62,12 @@ export var CHAPTERS = [
             {
                 name: 'Création de plateformes de médiation',
                 sub_services: [
-                    {name:  'Sites web'},
+                    { name:  'Sites web' },
                     {
                         name:  'Applications',
                         definition: 'Nous créons des applications web centrées sur l’exploration de données et l’expérience utilisateur. Dans un environnement interactif et didactique, l’utilisateur a la possibilité de découvrir les données par lui-même.'
                     },
-                    {
-                        name:  'Web-documentaires'
-                    },
+                    { name:  'Web-documentaires' },
                     {
                         name:  'Serious Games',
                         definition: 'Application web combinant des aspects pédagogiques ou d’information et un scénario ludique. Ce dernier favorise la rétention et l’implication de l’utilisateur.'
@@ -96,7 +75,7 @@ export var CHAPTERS = [
                 ]
             },
             {
-                name: 'Édition scientifique',
+                name: 'Édition scientifique augmentée',
                 sub_services: [
                     {name: 'Création d\'articles et publications "augmentés"'},
                     {name: 'Visualisation de données'},
@@ -107,11 +86,11 @@ export var CHAPTERS = [
                 ]
             },
             {
-                name: 'Communication institutionnelle scientifique',
+                name: 'Communication digitale et institutionnelle scientifique',
                 sub_services: [
-                    {name: 'Community Management'},
                     {name: 'Stratégies digitales des organisations de recherche'},
-                    {name: 'Refonte de site internet'},
+                    {name: 'Community Management'},
+                    {name: 'Refonte de sites internet'},
                     {name: 'Relations publiques et relations presse'}
                 ]
             }
@@ -121,21 +100,10 @@ export var CHAPTERS = [
         detailed_title: 'Interfacer la Recherche et la société',
         background_image: '../assets/images/photos/gare_de_lyon.jpg',
         color_class: 'interfaces-color',
-        home_description: `Nous voulons agir pour reconnecter recherche et
-        démocratie afin de restituer le rôle des sciences dans le débat public
-        et l’éclairage des politiques publiques.`,
-        description: `Il est urgent de remettre la Recherche au coeur de nos
-        projets de société (locaux, nationaux, européens) afin de tendre vers
-        plus d’intelligence collective et donc un meilleur vivre ensemble. Nous
-        souhaitons que la communauté scientifique participe à la démocratie, en
-        particulier dans l’éclairage et la construction des politiques publiques.<br><br>
+        home_description: `Et si on remettait la science au coeur de notre société ? Nous voulons agir pour réhabiliter le rôle de la recherche dans le débat public et l’éclairage des politiques publiques.`,
+        description: `Il est urgent de remettre les acquis de la Recherche au coeur de nos projets de société (locaux, nationaux, européens) afin de tendre vers plus d’intelligence collective et donc un meilleur vivre ensemble. Nous souhaitons que la communauté scientifique participe à la démocratie, en particulier dans l’éclairage et la construction des politiques publiques.<br><br>
 
-        Nous voulons concevoir avec les chercheurs, les citoyens et les élus,
-        les moyens de reconnecter la recherche avec le débat public afin de
-        tenir compte des travaux de recherche capables de mieux prévenir,
-        expliquer, et agir sur des problématiques sociales, sociétales,
-        environnementales,
-        `,
+        Nous voulons concevoir avec les chercheurs, les citoyens et les élus, les moyens de reconnecter la Recherche avec le débat public afin de tenir compte des enseignements capables de mieux prévenir, expliquer, et agir sur des problématiques sociales, sociétales, environnementales, économiques, etc.`,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200"
             version="1.1" x="0px" y="0px" viewBox="0 0 100 100"

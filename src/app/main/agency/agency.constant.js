@@ -3,29 +3,19 @@ export var MEMBERS = [
         linkedin: 'https://fr.linkedin.com/in/gauthier-bravais-16815055',
         name: 'Gauthier Bravais',
         title: 'Chef de projet',
-        function: 'La communication, la stratégie et la gestion de projet',
-        description: `Ex-Sciences Po Grenoble, j’ai trois ans d’expérience en
-        agence de communication et relations publiques, en charge d’un
-        portefeuille de 5 clients dans le numérique et l’innovation.`
+        function: 'La communication, la stratégie et la gestion de projet'
     },
     {
         linkedin: 'https://fr.linkedin.com/in/lucaspiessat',
         name: 'Lucas Piessat',
-        title: 'Datajournaliste',
-        function: 'L\'information, son architecture et sa mise en récit',
-        description: `Ex-Sciences Po Grenoble et Grenoble EM.
-        J’ai été datajournaliste chez WeDoData et stagiaire
-        au Monde Diplomatique. Je cherche à “rendre intéressant
-        ce qui est important”, non l’inverse.`
+        title: 'Datajournaliste & Architecte de l\'information',
+        function: 'L\'information, son architecture et sa mise en récit'
     },
     {
         linkedin: 'https://fr.linkedin.com/in/pierre-bellon-64b2ba3a',
         name: 'Pierre Bellon',
         title: 'Développeur & Designer',
-        function: 'La conception et la réalisation d\'interface de données',
-        description: `Ex-développeur chez J++ (agence de journalisme de données),
-        ex-consultant au HCR. Je conçois et développe des outils
-        et services web à forte valeur démocratique ajoutée.`
+        function: 'La conception et la réalisation d\'interface de données'
     }
 ];
 
@@ -80,29 +70,21 @@ export var PROCESS = [
         name: 'Clarification',
         value: 17,
         color_class: 'interfaces-color',
-        description: `À partir des travaux de recherche, nous élaborons
-        un discours accessible à tous. Sans le déformer, nous mettons en
-        récit le savoir pour le rendre universel.`
+        description: 'À partir des travaux de recherche, nous élaborons un discours accessible à tous. Sans le déformer, nous mettons en récit le savoir pour le rendre assimilable.'
     },{
         name: 'Co-design',
         value: 15,
         color_class: 'design-color',
-        description: `En associant notre savoir-faire et votre expertise,
-        nous travaillons ensemble à la conception et au design d’une interface
-        de restitution sur-mesure.`
+        description: 'En associant notre savoir-faire et votre expertise, nous travaillons ensemble à la conception et au design d’une interface de restitution sur-mesure.'
     },{
-        name: 'Réalisation',
+        name: 'Développement',
         value: 25,
         color_class: 'data-color',
-        description: `Nous mettons en oeuvre notre expertise technique
-        pour développer et maintenir des interfaces et des outils fiables
-        et performants.`
+        description: 'Nous mettons en oeuvre notre expertise technique pour développer et maintenir des interfaces et des outils fiables et performants.'
     },{
         name: 'Diffusion',
         value: 20,
         color_class: 'design-color',
-        description: `Nous mettons en oeuvre des stratégies de
-        communication (réseaux sociaux, relations publiques et presse)
-        pour optimiser la diffusion de nos réalisations.`
+        description: 'Nous mettons en oeuvre des stratégies de communication (réseaux sociaux, relations publiques et presse) pour optimiser la diffusion de nos réalisations.'
     }
 ];
