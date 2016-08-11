@@ -18,20 +18,15 @@
                 </section>
                 <section class="home__offer main__interval">
                     <div class="row">
-                        <div class="col-xs-12 col-md-4 col-sm-4 home__offer__chapter"
+                        <div class="col-xs-12 col-md-4 col-sm-4 home__offer__chapter tile"
                             ng-class="chapter.color_class"
                             ng-repeat="chapter in home.listChapters()"
                             ng-click="$state.go('app.offer', {'#': chapter.title.toLowerCase() })"
                             ng-attr-tabindex="{{$index + 1}}">
-                            <div class="col-md-10 col-md-offset-1 col-xs-12">
-                                <h2 class="bold small-underline">{{ chapter.title }}</h2>
-                                <p class="small-underline-offset"
-                                   ng-bind-html="chapter.home_description">
-                                </p>
-                                <span class="more small-underline-offset">En savoir plus</a>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="clearfix"></div>
+                            <h2 class="bold small-underline">{{ chapter.title }}</h2>
+                            <p class="small-underline-offset"
+                            ng-bind-html="chapter.home_description"></p>
+                            <span class="more small-underline-offset">En savoir plus</a>
                         </div>
                     </div>
                 </section>
