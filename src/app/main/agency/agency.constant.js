@@ -15,7 +15,7 @@ export var MEMBERS = [
         linkedin: 'https://fr.linkedin.com/in/pierre-bellon-64b2ba3a',
         name: 'Pierre Bellon',
         title: 'Développeur & Designer',
-        function: 'La conception et la réalisation d\'interface de données'
+        function: 'La conception et la réalisation d\'interfaces de données'
     }
 ];
 
