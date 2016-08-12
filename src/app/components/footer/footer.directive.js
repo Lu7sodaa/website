@@ -18,9 +18,11 @@ class FooterController {
     constructor ($element, platformService) {
         'ngInject';
         $element = angular.element($element[0]);
-        let $main = angular.element('.inner');
-        let h = $element.height();
-        let property = (platformService.isSafari() ? 'padding' : 'margin') + '-bottom';
-        $main.css(property, h - 37);
+        let h = $element.height() - 37;
+        if(platformService.isSafari()){
+            angular.element('.main').css('padding-bottom', h);
+        } else {
+            angular.element('.main .inner').css('margin-bottom', h);
+        }
     }
 }
