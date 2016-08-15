@@ -29,13 +29,13 @@ export var PREVIOUS_WORK = [
     {
         title: 'Municipaly',
         type: 'Serious Game',
-        subtitle: 'Éditorialisé au sein de <a href="http://jplusplus.org" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
+        subtitle: 'Éditorialisé au sein de <a href="http://wedodata.fr/" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
         link: 'http://municipaly.francetvinfo.fr/#/pari'
     },
     {
         title: 'The Global Carbon Story',
         type: 'Visualisation de données',
-        subtitle: 'Éditorialisée au sein de <a href="http://jplusplus.org" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
+        subtitle: 'Éditorialisée au sein de <a href="http://wedodata.fr/" title="Visitez le site de WeDoData" rel="nofollow" target="_blank">WeDoData</a>',
         link: 'http://www.globalcarbonatlas.org/?q=outreach'
     },
     {
