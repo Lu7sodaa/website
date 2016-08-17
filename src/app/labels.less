@@ -7,7 +7,11 @@
     box-shadow: @label-padding 0 0 @brand-primary, -@label-padding 0 0 @brand-primary;
     margin-left: @label-padding;
     margin-right: @label-padding;
+    // necessary for firefox
+    box-decoration-break: clone;
     &-inverted {
+        // necessary for firefox
+        box-decoration-break: clone;
         // multi-line padded text (method took from https://css-tricks.com/multi-line-padded-text/)
         box-shadow: @label-padding 0 0 @white, -0.2em 0 0 @white;
         color: @black;
