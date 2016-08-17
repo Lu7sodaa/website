@@ -4,10 +4,12 @@
     background-color: @brand-primary;
     color: white;
     // multi-line padded text (method took from https://css-tricks.com/multi-line-padded-text/)
-    box-shadow: 0.2em 0 0 @brand-primary, -0.2em 0 0 @brand-primary;
+    box-shadow: @label-padding 0 0 @brand-primary, -@label-padding 0 0 @brand-primary;
+    margin-left: @label-padding;
+    margin-right: @label-padding;
     &-inverted {
         // multi-line padded text (method took from https://css-tricks.com/multi-line-padded-text/)
-        box-shadow: 0.2em 0 0 @white, -0.2em 0 0 @white;
+        box-shadow: @label-padding 0 0 @white, -0.2em 0 0 @white;
         color: @black;
         background-color: @white;
     }
@@ -17,5 +19,9 @@
 .tile--photo {
     h1 {
         padding-left: @label-padding;
+        .sk-label-inverted {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
