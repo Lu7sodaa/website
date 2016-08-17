@@ -8,13 +8,13 @@ export var MEMBERS = [
     {
         linkedin: 'https://fr.linkedin.com/in/lucaspiessat',
         name: 'Lucas Piessat',
-        title: 'Datajournaliste & Architecte de l\'information',
+        title: 'Datajournaliste',
         function: 'L\'information, son architecture et sa mise en récit'
     },
     {
         linkedin: 'https://fr.linkedin.com/in/pierre-bellon-64b2ba3a',
         name: 'Pierre Bellon',
-        title: 'Développeur & Designer',
+        title: 'Ingénieur Web & Designer',
         function: 'La conception et la réalisation d\'interfaces de données'
     }
 ];
