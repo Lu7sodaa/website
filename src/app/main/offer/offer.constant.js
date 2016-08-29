@@ -1,14 +1,14 @@
 export var CHAPTERS = [
     {
         title: 'Data',
-        detailed_title: 'Utiliser les données numériques pour la Recherche',
+        detailed_title: 'Utiliser les données numériques pour la recherche',
         background_image: '../assets/images/photos/yale_library.jpg',
         color_class: 'data-color',
         home_description: `Les données numériques sont devenues un matériau de recherche incontournable. Nous aidons les organisations de recherche à se les approprier et à les utiliser.`,
-        description: `L’ère numérique transforme aussi la Recherche. Les données numériques (issues du web, de capteurs, d’archives numérisées, etc.) constituent un immense réservoir de connaissances capable d’enrichir la Recherche et d’améliorer la connaissance du monde. <br><br>
+        description: `L’ère numérique transforme aussi la recherche. Les données numériques (issues du web, de capteurs, d’archives numérisées, etc.) constituent un immense réservoir de connaissances capable d’enrichir la recherche et d’améliorer la connaissance du monde. <br><br>
 
         Nous accompagnons les organisations de recherche dans cette transformation en mettant à disposition notre savoir-faire en matière d’intelligence des données.
-        Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques au profit de la Recherche.
+        Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques au profit de la recherche.
         Nous travaillons en étroite collaboration avec vous pour maîtriser votre objet de recherche, nous assurer de la validité scientifique des données, et respecter votre méthodologie de recherche.
         `,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +47,7 @@ export var CHAPTERS = [
         background_image: '../assets/images/photos/alexandrie.jpg',
         color_class: 'design-color',
         home_description: `Pour redonner au savoir l’écho qu’il mérite, nous inventons avec vous des formats digitaux de restitution scientifique, innovants et capables de toucher un large public.`,
-        description: `Dans un contexte de profusion d’informations, la parole des chercheurs et les acquis de la Recherche ont de plus en plus de mal à être mis en valeur par les formats traditionnels de publication scientifique.<br><br>
+        description: `Dans un contexte de profusion d’informations, la parole des chercheurs et les acquis de la recherche ont de plus en plus de mal à être mis en valeur par les formats traditionnels de publication scientifique.<br><br>
 
         Nous aidons les organisations de recherche à mieux communiquer et diffuser leurs travaux, afin de réhabiliter le savoir scientifique et le rendre accessible au plus grand nombre.
         Nous concevons avec vous du contenu et des supports de médiation scientifique à haute valeur ajoutée, innovants, adaptés au web et aux nouvelles manières de recevoir l’information.
@@ -97,13 +97,13 @@ export var CHAPTERS = [
         ]
     },{
         title: 'Interfaces',
-        detailed_title: 'Interfacer la Recherche et la société',
+        detailed_title: 'Interfacer la recherche et la société',
         background_image: '../assets/images/photos/gare_de_lyon.jpg',
         color_class: 'interfaces-color',
         home_description: `Et si on remettait la science au coeur de notre société ? Nous voulons agir pour réhabiliter le rôle de la recherche dans le débat public et l’éclairage des politiques publiques.`,
-        description: `Il est urgent de remettre les acquis de la Recherche au coeur de nos projets de société (locaux, nationaux, européens) afin de tendre vers plus d’intelligence collective et donc un meilleur vivre ensemble. Nous souhaitons que la communauté scientifique participe à la démocratie, en particulier dans l’éclairage et la construction des politiques publiques.<br><br>
+        description: `Il est urgent de remettre les acquis de la recherche au coeur de nos projets de société (locaux, nationaux, européens) afin de tendre vers plus d’intelligence collective et donc un meilleur vivre ensemble. Nous souhaitons que la communauté scientifique participe à la démocratie, en particulier dans l’éclairage et la construction des politiques publiques.<br><br>
 
-        Nous voulons concevoir avec les chercheurs, les citoyens et les élus, les moyens de reconnecter la Recherche avec le débat public afin de tenir compte des enseignements capables de mieux prévenir, expliquer, et agir sur des problématiques sociales, sociétales, environnementales, économiques, etc.`,
+        Nous voulons concevoir avec les chercheurs, les citoyens et les élus, les moyens de reconnecter la recherche avec le débat public afin de tenir compte des enseignements capables de mieux prévenir, expliquer, et agir sur des problématiques sociales, sociétales, environnementales, économiques, etc.`,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200"
             version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
