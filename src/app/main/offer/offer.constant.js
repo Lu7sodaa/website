@@ -5,11 +5,11 @@ export var CHAPTERS = [
         background_image: '../assets/images/photos/yale_library.jpg',
         color_class: 'data-color',
         home_description: `Les données numériques sont devenues un matériau de recherche incontournable. Nous aidons les organisations de recherche à se les approprier et à les utiliser.`,
-        description: `L’ère numérique transforme aussi la recherche. Les données numériques (issues du web, de capteurs, d’archives numérisées, etc.) constituent un immense réservoir de connaissances capable d’enrichir la recherche et d’améliorer la connaissance du monde. <br><br>
+        description: `L’ère numérique transforme aussi la recherche. Les données issues du web, de capteurs, d’archives numérisées, etc. constituent un immense réservoir de connaissances capable d’améliorer la connaissance et la compréhension du monde. <br><br> 
 
-        Nous accompagnons les organisations de recherche dans cette transformation en mettant à disposition notre savoir-faire en matière d’intelligence des données.
-        Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques au profit de la recherche.
-        Nous travaillons en étroite collaboration avec vous pour maîtriser votre objet de recherche, nous assurer de la validité scientifique des données, et respecter votre méthodologie de recherche.
+        Nous accompagnons les chercheurs dans cette transformation en mettant à disposition notre savoir-faire en matière d’intelligence des données.
+        Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques.
+        Nous travaillons en étroite collaboration avec vous pour maîtriser votre objet de recherche, nous assurer de la validité scientifique des données, et respecter votre méthodologie.
         `,
         pictogram: `<svg class="pictogram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" height="200" version="1.1" x="0" y="0" viewBox="10 12 80 80" enable-background="new 0 0 100 100"
