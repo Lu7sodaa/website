@@ -19,25 +19,25 @@ export var CHAPTERS = [
             {
                 name: 'Collecte de données',
                 sub_services: [
-                    { name: 'Création de bases et jeux de données' },
-                    { name: 'Création de corpus de sources numériques' },
-                    { name: 'Création de scrapers et crawlers' },
-                    { name: 'Création d’outils de crowdsourcing' }
+                    'Création de bases et jeux de données',
+                    'Création de corpus de sources numériques',
+                    'Création de (scrapers)[Programme d\'extraction du contenu d\'un site internet, dans le but de permettre son utilisation dans un autre contexte] et (crawlers)[Programme d\'exploration d\'un site internet, dans le but d\'indexer les pages qu\'il contient]',
+                    'Création d’outils de (crowdsourcing)[Méthode de récolte ou de production de données, via une plateforme web, basée sur la participation d\'un grand nombre de personne]'
                 ]
             },
             {
                 name: 'Traitement de donnés',
                 sub_services: [
-                    { name: 'Production de données enrichies' },
-                    { name: 'Nettoyage de données' }
+                    'Production de données enrichies',
+                    'Nettoyage de données'
                 ]
             },
             {
                 name: 'Co-analyse de données',
                 sub_services: [
-                    { name: 'Réalisation de visualisations de données exploratoires' },
-                    { name: 'Identification des outils adaptés à votre méthodologie de recherche' },
-                    { name: 'Conseil, formation et accompagnement sur-mesure' }
+                    'Réalisation de visualisations de données exploratoires',
+                    'Identification des outils adaptés à votre méthodologie de recherche',
+                    'Conseil, formation et accompagnement sur-mesure'
                 ]
             }
         ]
@@ -62,36 +62,28 @@ export var CHAPTERS = [
             {
                 name: 'Création de plateformes de médiation',
                 sub_services: [
-                    { name:  'Sites web' },
-                    {
-                        name:  'Applications',
-                        definition: 'Nous créons des applications web centrées sur l’exploration de données et l’expérience utilisateur. Dans un environnement interactif et didactique, l’utilisateur a la possibilité de découvrir les données par lui-même.'
-                    },
-                    { name:  'Web-documentaires' },
-                    {
-                        name:  'Serious Games',
-                        definition: 'Application web combinant des aspects pédagogiques ou d’information et un scénario ludique. Ce dernier favorise la rétention et l’implication de l’utilisateur.'
-                    }
+                    'Sites web',
+                    '(Applications)[Nous créons des applications web centrées sur l’exploration de données et l’expérience utilisateur. Dans un environnement interactif et didactique, l’utilisateur a la possibilité de découvrir les données par lui-même.]',
+                    'Web-documentaires',
+                    '(Serious Games)[Application web combinant des aspects pédagogiques ou d’information et un scénario ludique. Ce dernier favorise la rétention et l’implication de l’utilisateur.]'
                 ]
             },
             {
                 name: 'Édition scientifique augmentée',
                 sub_services: [
-                    {name: 'Création d\'articles et publications "augmentés"'},
-                    {name: 'Visualisation de données'},
-                    {
-                        name: 'Long-form',
-                        definition: 'Scénarisation et édition web destiné à rendre intéressant et attrayant un contenu conséquent.' },
-                    {name: 'Vidéos, animation, etc.'}
+                    'Création d\'articles et publications "augmentés"',
+                    'Visualisation de données',
+                    '(Long-form)[Scénarisation et édition web destiné à rendre intéressant et attrayant un contenu conséquent.]',
+                    'Vidéos, animation, etc.'
                 ]
             },
             {
                 name: 'Communication digitale et institutionnelle scientifique',
                 sub_services: [
-                    {name: 'Stratégies digitales des organisations de recherche'},
-                    {name: 'Community Management'},
-                    {name: 'Refonte de sites internet'},
-                    {name: 'Relations publiques et relations presse'}
+                    'Stratégies digitales des organisations de recherche',
+                    '(Community Management)[Gestion de la présence d\'une organisation sur les réseaux sociaux et autres espaces communautaires]',
+                    'Refonte de sites internet',
+                    'Relations publiques et relations presse'
                 ]
             }
         ]
@@ -115,10 +107,10 @@ export var CHAPTERS = [
             {
                 name: 'Le LAB “Sciences et Société” de Skoli',
                 sub_services: [
-                    { name: "Interfaçage entre responsables publiques et organisations de recherche" },
-                    { name: "Développement de plateformes de dialogues entre sciences et société" },
-                    { name: "Développement de plateformes de co-construction du savoir" },
-                    { name: "Organisation de manifestations publiques et rencontres autour de la Science ou de la culture scientifique" }
+                    "Interfaçage entre responsables publiques et organisations de recherche",
+                    "Développement de plateformes de dialogues entre sciences et société",
+                    "Développement de plateformes de co-construction du savoir",
+                    "Organisation de manifestations publiques et rencontres autour de la Science ou de la culture scientifique"
                 ]
             }
         ]

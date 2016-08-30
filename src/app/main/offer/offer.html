@@ -60,14 +60,7 @@
                                 </h3>
                                 <ul class="list-unstyled">
                                     <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
-                                        <span ng-if="!sub_service.definition">{{ sub_service.name }}</span>
-                                        <span ng-if="sub_service.definition"
-                                              uib-tooltip="{{ sub_service.definition }}"
-                                              tooltip-append-to-body="true"
-                                              tooltip-placement="right"
-                                              data-placement="top">
-                                              {{ sub_service.name }}
-                                        </span>
+                                        <sub-service service="sub_service"></sub-service>
                                     </li>
                                 </ul>
                             </div>
@@ -79,7 +72,7 @@
                             <div class="row">
                                 <ul class="list-unstyled col-md-6">
                                     <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
-                                        <span>{{ sub_service.name }}</span>
+                                        <sub-service service="sub_service"></sub-service>
                                     </li>
                                 </ul>
                             </div>

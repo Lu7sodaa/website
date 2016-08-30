@@ -8,7 +8,7 @@ export var MEMBERS = [
     {
         linkedin: 'https://fr.linkedin.com/in/lucaspiessat',
         name: 'Lucas Piessat',
-        title: 'Datajournaliste',
+        title: 'Journaliste',
         function: 'L\'information, son architecture et sa mise en récit'
     },
     {

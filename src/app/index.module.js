@@ -10,6 +10,7 @@ import { AgencyController } from './main/agency/agency.controller';
 import { MEMBERS, PREVIOUS_WORK, PROCESS  } from './main/agency/agency.constant';
 
 // directives
+import { SubServiceDirective }          from './main/offer/subService.directive';
 import { LineChartBackgroundDirective } from './main/home/lineChartBackground/lineChartBackground.directive';
 import { LINE_CHART_DATA }              from './main/home/lineChartBackground/data.constant';
 import { TriangleBackgroundDirective  } from './main/home/triangleBackground/triangleBackground.directive';
@@ -55,6 +56,7 @@ angular.module('siteWebV0', dependencies )
   .controller('OfferController', OfferController)
   .controller('AgencyController', AgencyController)
   .filter('capitalize', CapitalizeFilter)
+  .directive('subService', SubServiceDirective)
   .directive('lineChartBackground', LineChartBackgroundDirective)
   .directive('triangleBackground', TriangleBackgroundDirective)
   .directive('triangleChart', TriangleChartDirective)
