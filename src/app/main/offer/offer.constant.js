@@ -107,7 +107,7 @@ export var CHAPTERS = [
             {
                 name: 'Le LAB “Sciences et Société” de Skoli',
                 sub_services: [
-                    "Interfaçage entre responsables publiques et organisations de recherche",
+                    "Mise en relation de responsables publiques et d'organisations de recherche",
                     "Développement de plateformes de dialogues entre sciences et société",
                     "Développement de plateformes de co-construction du savoir",
                     "Organisation de manifestations publiques et rencontres autour de la Science ou de la culture scientifique"
