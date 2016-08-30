@@ -17,7 +17,9 @@ gulp serve
 
 ## Thanks
 This project wouldn't have been possible without these great projects:
-- yeoman for bootstraping in a breeze
-- gulp
-- angularJS
-- last but not least, the great front-end framework
+- [Gulp](http://gulpjs.com/)
+- [Yeoman](http://yeoman.io/)
+- [Bootstrap](http://getbootstrap.com/)
+- [AngularJS](https://angularjs.org/)
+- [BabelJS](http://babeljs.io/)
+- [LessCSS](http://lesscss.org/)
