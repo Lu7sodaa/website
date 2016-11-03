@@ -1,6 +1,7 @@
 # Skoli website
 ## Prequisites
 - npm
+- bower
 
 ## Install
 All you need to install are npm & bower dependencies:
