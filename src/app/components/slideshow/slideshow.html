@@ -1,0 +1,21 @@
+<div class="slideshow text-center">
+    <div class="slideshow__holder" ng-style="{ left: slideshow.holderLeftStyle() + 'px' }">
+        <div class="slide"
+            ng-click="slideshow.openSlide(slide.url)"
+            ng-repeat="slide in slideshow.slides track by $index"
+            ng-style='{ left: slideshow.slideLeftStyle($index) + "px" }'
+            ng-class='{"slide--active": slideshow.activeIndex == $index }'>
+            <div class="slide__background" ng-style='{"background-image": "url(\""+ slide.background_picture +"\")"}'>
+            </div>
+            <div class="container content">
+                <h1 class="slide__title bold">{{ slide.title }}</h1>
+                <h4 class="bold">
+                  {{ slide.description }}
+              </h4>
+                <h2 class="bold slide__action">Visiter</h2 >
+                <a class="btn visible-xs visible-sm">Visiter</a>
+          </div>
+      </div>
+      <div ng-if="slideshow.hasManySlides()"></div>
+  </div>
+</div>

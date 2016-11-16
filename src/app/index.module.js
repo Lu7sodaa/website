@@ -16,6 +16,7 @@ import { LINE_CHART_DATA }              from './main/home/lineChartBackground/da
 import { TriangleBackgroundDirective  } from './main/home/triangleBackground/triangleBackground.directive';
 import { TriangleChartDirective       } from '../app/components/triangleChart/triangleChart.directive';
 import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
+import { SlideshowDirective              } from '../app/components/slideshow/slideshow.directive';
 import { SidebarDirective             } from '../app/components/sidebar/sidebar.directive';
 import { FooterDirective              } from '../app/components/footer/footer.directive';
 import { FullHeightSectionDirective   } from '../app/components/fullHeightSection/fullHeightSection.directive';
@@ -28,6 +29,7 @@ import { PlatformService } from '../app/components/platform.service';
 
 // constants
 import { EVENTS } from '../app/components/constants/events';
+import { PROJECTS } from '../app/components/constants/projects';
 
 var dependencies = [
     'angular-scroll-animate',
@@ -45,6 +47,7 @@ angular.module('siteWebV0', dependencies )
   .config(config)
   .config(routerConfig)
   .run(runBlock)
+  .constant('PROJECTS', PROJECTS)
   .constant('PROCESS', PROCESS)
   .constant('MEMBERS', MEMBERS)
   .constant('PREVIOUS_WORK', PREVIOUS_WORK)
@@ -62,5 +65,6 @@ angular.module('siteWebV0', dependencies )
   .directive('triangleChart', TriangleChartDirective)
   .directive('fullHeightSection', FullHeightSectionDirective)
   .directive('skoliFooter', FooterDirective)
+  .directive('skoliSlideshow', SlideshowDirective)
   .directive('skoliNavbar', NavbarDirective)
   .directive('skoliSidebar', SidebarDirective);
