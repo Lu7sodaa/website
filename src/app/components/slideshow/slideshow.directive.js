@@ -16,7 +16,7 @@ export function SlideshowDirective() {
 }
 
 class SlideshowController {
-    constructor ($log, $timeout, $scope, $rootScope,$element,$window) {
+    constructor ($log,$timeout,$scope, $element,$window, parallaxHelper) {
         'ngInject';
         this.$log = $log;
         this.$window = $window;
@@ -26,15 +26,18 @@ class SlideshowController {
         this.activeIndex = 0;
         this.$el = angular.element($element[0]);
         this.$w =  angular.element($window);
+        this.background =  parallaxHelper.createAnimator(-0.3);
         this.windowWidth = this.$w.width();
 
         this.$w.bind('resize', ()=>{
-            this.windowWidth = this.$w.width();
+            $scope.$apply(()=>{
+                this.windowWidth = this.$w.width();
+            });
         });
-
-        if(this.hasManySlides()){
-            this.startAnimation();
-        }
+        //
+        // if(this.hasManySlides()){
+        //     this.startAnimation();
+        // }
     }
     holderLeftStyle(){
         return -this.activeIndex * this.windowWidth;

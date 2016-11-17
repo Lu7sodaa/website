@@ -5,33 +5,32 @@
     &__holder {
         height: 70vh;
         max-height: 500px;
-        position: absolute;
-        top: 0;
-        left:0;
-        right: 0;
-        width: 100%;
-        bottom: 0;
+        position: relative;
+        // top: 0;
+        // left:0;
+        // right: 0;
+        // bottom: 0;
+        width: 5000%;
         transition: left 1s ease;
+        &:after {
+            content: " ";
+            clear: both;
+        }
         .slide {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            height: 70vh;
+            max-height: 500px;
+            float: left;
+            position: relative;
             width: 100%;
             color: white;
             text-shadow: 1px 0px #333;
-            cursor: pointer;
-            z-index: 0;
-            &--active {
-                z-index: 10;
+            .btn {
+                margin-top: 10px;
+                text-shadow: none;
             }
             &:hover {
-                .slide__background {
-                    &:before {
-                        background-color: rgba(0,0,0,.3);
-                    }
-                    filter: blur(4px);
+                img {
+                    filter: grayscale(0%) ;
                 }
                 .content  {
                     .slide__action {
@@ -42,27 +41,9 @@
             h1 {
                 font-size: @font-size-h1 * 1.1;
             }
-            &__background {
-                &:before {
-                    content: ' ';
-                    transition: background-color .800s ease;
-                    background-color: rgba(0, 0, 0, 0);
-                    position: absolute;
-                    top:0;
-                    bottom:0;
-                    right: 0;
-                    left: 0;
-                }
+            img {
+                filter: grayscale(100%) brightness(80%);
                 transition: filter .800s ease;
-                position: absolute;
-                background-repeat: no-repeat;
-                top: -10px;
-                bottom: -10px;
-                left: -10px;
-                right: -10px;
-                // width: 100%;
-                background-size: cover;
-                background-position: 50% 50%;
             }
             .content {
                 position: absolute;
@@ -75,8 +56,17 @@
                 margin-top: @font-size-h2 * 2;
                 transition: 500ms opacity ease-out;
                 opacity: .2;
-                color: @light-grey;
+                color: @black;
                 text-shadow: 0;
+            }
+        }
+    }
+    @media screen and (max-width: @screen-sm){
+        &__holder, .slide {
+            height: auto;
+            max-height: auto;
+            .slide .content {
+                width: 100%;
             }
         }
     }
