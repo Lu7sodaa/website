@@ -5,7 +5,7 @@ export var CHAPTERS = [
         background_image: '../assets/images/photos/yale_library.jpg',
         color_class: 'data-color',
         home_description: `Les données numériques sont devenues un matériau de recherche incontournable. Nous aidons les organisations de recherche à se les approprier et à les utiliser.`,
-        description: `L’ère numérique transforme aussi la recherche. Les données issues du web, de capteurs, d’archives numérisées, etc. constituent un immense réservoir de connaissances capable d’améliorer la connaissance et la compréhension du monde. <br><br> 
+        description: `L’ère numérique transforme aussi la recherche. Les données issues du web, de capteurs, d’archives numérisées, etc. constituent un immense réservoir de connaissances capable d’améliorer la connaissance et la compréhension du monde. <br><br>
 
         Nous accompagnons les chercheurs dans cette transformation en mettant à disposition notre savoir-faire en matière d’intelligence des données.
         Nous réalisons des missions de services et/ou développons des outils sur-mesure pour collecter, analyser et visualiser des données numériques.
@@ -26,7 +26,7 @@ export var CHAPTERS = [
                 ]
             },
             {
-                name: 'Traitement de donnés',
+                name: 'Traitement de données',
                 sub_services: [
                     'Production de données enrichies',
                     'Nettoyage de données'
