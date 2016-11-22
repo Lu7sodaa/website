@@ -29,7 +29,7 @@
                 text-shadow: none;
             }
             &:hover {
-                img {
+                .img-holder {
                     filter: grayscale(0%) ;
                 }
                 .content  {
@@ -41,7 +41,8 @@
             h1 {
                 font-size: @font-size-h1 * 1.1;
             }
-            img {
+            .img-holder {
+                position:relative;
                 filter: grayscale(100%) brightness(80%);
                 transition: filter .800s ease;
             }
@@ -64,7 +65,15 @@
     @media screen and (max-width: @screen-sm){
         &__holder, .slide {
             height: auto;
-            max-height: auto;
+            min-height: 400px;
+            img {
+                min-width: 100%;
+                max-height: 400px;
+                width: auto !important;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
             .slide .content {
                 width: 100%;
             }

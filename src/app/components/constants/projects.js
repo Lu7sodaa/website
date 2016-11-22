@@ -5,10 +5,4 @@ export var PROJECTS = [
         description: "Etude sur le traitement médiatique de l'islam dans la presse française (1997-2015), basée sur l'analyse des archives numériques de Libération, Le Monde et le Figaro",
         background_picture: 'assets/images/projects/idlm.jpg'
     }
-    ,{
-        title: 'Islam, objet médiatique',
-        url: 'http://islam-objet-mediatique.fr',
-        description: "L'islam, objet médiatique est une étude sur la perception de l'islam dans les médias",
-        background_picture: 'assets/images/projects/idlm.jpg'
-    }
 ];

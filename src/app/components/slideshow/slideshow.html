@@ -3,8 +3,10 @@
         <div class="slide"
             ng-repeat="slide in slideshow.slides track by $index"
             ng-style='{ width: slideshow.windowWidth + "px" }'>
-            <img src="{{ slide.background_picture }}" class="hidden-xs hidden-sm" du-parallax y="slideshow.background"/>
-            <img src="{{ slide.background_picture }}" class="visible-xs visible-sm"/>
+            <div class="img-holder">
+                <img src="{{ slide.background_picture }}" class="hidden-xs hidden-sm" du-parallax y="slideshow.background"/>
+                <img src="{{ slide.background_picture }}" class="visible-xs visible-sm"/>
+            </div>
             <div class="container content">
                 <h1 class="slide__title bold">{{ slide.title }}</h1>
                 <h4 class="bold">
