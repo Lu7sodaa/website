@@ -1,11 +1,9 @@
 <div class="slideshow text-center">
     <div class="slideshow__holder" ng-style="{ left: slideshow.holderLeftStyle() + 'px' }">
-        <div class="slide"
-            ng-repeat="slide in slideshow.slides track by $index"
-            ng-style='{ width: slideshow.windowWidth + "px" }'>
+        <div class="slide" ng-repeat="slide in slideshow.slides track by $index" ng-style='{ width: slideshow.windowWidth + "px" }'>
             <div class="img-holder">
-                <img src="{{ slide.background_picture }}" class="hidden-xs hidden-sm" du-parallax y="slideshow.background"/>
-                <img src="{{ slide.background_picture }}" class="visible-xs visible-sm"/>
+                <img src="{{ slide.background_picture }}" class="hidden-xs hidden-sm" du-parallax y="slideshow.background" />
+                <img src="{{ slide.background_picture }}" class="visible-xs visible-sm" />
             </div>
             <div class="container content">
                 <h1 class="slide__title bold">{{ slide.title }}</h1>
@@ -13,8 +11,12 @@
                   {{ slide.description }}
               </h4>
                 <a class="btn btn-default" target="_blank" rel="nofollow" ng-href="{{slide.url}}">Visiter</a>
-          </div>
-      </div>
-      <div ng-if="slideshow.hasManySlides()"></div>
-  </div>
+            </div>
+        </div>
+    </div>
+    <ul class="slideshow__indicators" ng-if="slideshow.hasManySlides()">
+        <li ng-repeat="slide in slideshow.slides track by $index" class="indicator"
+            ng-class="{ 'indicator--active': slideshow.isActive($index) }"
+            ng-click="slideshow.setSlide($index)"></li>
+    </ul>
 </div>

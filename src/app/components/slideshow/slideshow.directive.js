@@ -22,7 +22,7 @@ class SlideshowController {
         this.$window = $window;
         this.$timeout = $timeout;
         $log.log('slides', this.slides)
-        this.animationTimeout = 4000;
+        this.animationTimeout = 7000;
         this.activeIndex = 0;
         this.$el = angular.element($element[0]);
         this.$w =  angular.element($window);
@@ -34,11 +34,11 @@ class SlideshowController {
                 this.windowWidth = this.$w.width();
             });
         });
-        //
-        // if(this.hasManySlides()){
-        //     this.startAnimation();
-        // }
+        if(this.hasManySlides()){
+            this.startAnimation();
+        }
     }
+
     holderLeftStyle(){
         return -this.activeIndex * this.windowWidth;
     }
@@ -50,6 +50,13 @@ class SlideshowController {
         this.$window.open(url);
     }
 
+    isActive(index){
+        return this.activeIndex == index;
+    }
+
+    setSlide(index){
+        this.activeIndex = index;
+    }
 
     hasManySlides(){ return this.slides.length > 1 }
     startAnimation(){

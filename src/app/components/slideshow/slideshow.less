@@ -2,6 +2,29 @@
 .slideshow {
     overflow: hidden;
     box-sizing: border-box;
+    &__indicators {
+        position: absolute;
+        bottom: 1em;
+        text-align: center;
+        width: 100%;
+        list-style: none;
+        margin:0;
+        padding:0;
+        .indicator {
+            padding: 0;
+            margin: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            display: inline-block;
+            margin-right: 10px;
+            background-color: white;
+            transition: background-color 350ms ease;
+            &--active {
+                background-color: @blue-grey;
+            }
+        }
+    }
     &__holder {
         height: 70vh;
         max-height: 500px;
@@ -16,6 +39,7 @@
             content: " ";
             clear: both;
         }
+
         .slide {
             height: 70vh;
             max-height: 500px;
