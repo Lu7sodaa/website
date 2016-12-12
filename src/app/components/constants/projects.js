@@ -7,7 +7,7 @@ export var PROJECTS = [
     },
     {
         title: 'Dérangeons la Chambre',
-        url: 'http://islam-objet-mediatique.fr',
+        url: 'http://www.derangeonslachambre.fr',
         description: "Application web de science politique - A quoi ressemblerait l’Assemblée Nationale si l’on changeait le mode de scrutin aux élections législatives ? Avec R. Magni-Berton (Sciences Po Grenoble).",
         background_picture: 'assets/images/projects/dlc.jpg'
     }
