@@ -49,12 +49,6 @@ export var PREVIOUS_WORK = [
         type: 'Outil d\'investigation',
         subtitle: 'Développé au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
         link: 'http://detective.io/'
-    },
-    {
-        title: 'Dérangeons la Chambre',
-        type: 'Prototype',
-        subtitle: 'Développé au sein de <a href="http://datagraphit.fr/" title="Visitez le site de Datagraphit" rel="nofollow" target="_blank">Datagraphit</a>',
-        link: 'http://datagraphit.fr/pages/an/index.html'
     }
 ];
 
