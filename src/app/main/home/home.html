@@ -13,11 +13,15 @@
                         </p>
                     </div>
                 </section>
-                <section class="main__interval">
-                    <skoli-slideshow slides="home.projectsSlide"></skoli-slideshow>
-
-                    <!-- <img class="hidden-xs hidden-sm" src="../assets/images/photos/library.jpg" du-parallax y="background"/>
-                    <img class="visible-xs visible-sm" src="../assets/images/photos/library.jpg"/> -->
+                <section class="main__interval section section--with-background">
+                    <!-- <skoli-slideshow slides="home.projectsSlide"></skoli-slideshow> -->
+                    <div class="section__overlay text-center">
+                        <h1 class="bold">Portfolio</h1>
+                        <p>Découvrez nos projets et notre actualité</p>
+                        <a ui-sref="app.portfolio({'#': 'top'})" class="btn btn-default">Notre portfolio</a>
+                    </div>
+                    <img class="hidden-xs hidden-sm section__background" src="../assets/images/photos/library.jpg" du-parallax y="background"/>
+                    <img class="visible-xs visible-sm section__background" src="../assets/images/photos/library.jpg"/>
                 </section>
                 <section class="home__offer main__interval">
                     <div class="row">
@@ -33,10 +37,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="home__agency text-center triangle-background">
-                    <div class="triangle-background__overlay">
+                <section class="section home__agency text-center triangle-background">
+                    <div class="triangle-background__overlay section__overlay">
                         <div class="container">
-
                             <h1 class="bold">Notre agence</h1>
                             <h4>
                                 Notre action s'inscrit dans la transformation digitale de la recherche. Nous aidons nos clients à créer ou utiliser les bons outils numériques pour innover en matière de construction, d'accès et de diffusion des savoirs.<br><br>

@@ -38,6 +38,25 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             controller: 'AgencyController',
             controllerAs: 'agency'
         })
+        .state('app.portfolio', {
+            data: { title: 'portfolio' },
+            url: 'portfolio',
+            templateUrl: 'app/main/portfolio/portfolio.html',
+            controller: 'PortfolioController',
+            controllerAs: 'portfolio'
+        })
+        .state('app.portfolio.details', {
+            controller: 'DetailsController',
+            controllerAs: 'details',
+            url: 'portfolio/:slug',
+            templateUrl: 'app/main/portfolio/details/details.html',
+            resolve: {
+                project: (slug, PROJECTS, $stateParams, $log)=>{
+                    $log.log('slug = ', slug, $stateParams);
+                    return PROJECTS.find((project)=>project.slug == slug);
+                }
+            }
+        })
         .state('app.about', {
             data: { title: 'À propos' },
             url: 'a-propos',
