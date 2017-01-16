@@ -1,0 +1,45 @@
+<div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
+    <skoli-sidebar></skoli-sidebar>
+    <div class="view">
+        <skoli-navbar></skoli-navbar>
+        <div class="main">
+            <div class="inner">
+                <section class="main__header">
+                    <h1 class="main-title">Portfolio</h1>
+                    <hr>
+                    <div class="tile">
+                        <ul class="grid dynamic-grid"
+                            gutter-size="30"
+                            grid-width="300"
+                            angular-grid-id="projects"
+                            angular-grid="portfolio.listProjects()">
+                            <li ng-repeat="project in portfolio.listProjects()">
+                                <div class="grid__object">
+                                    <img ng-src="{{project.grid_picture}}" class="grid__object__image"/>
+                                    <div class="grid__object__overlay">
+                                        <h4>{{ project.title }}</h4>
+                                        <p>{{ project.description }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="plus">
+                                <div class="grid__object">
+                                    <a href="mailto:contact@skoli.fr"> <i class="fa fa-plus"/></a>
+                                    <div class="grid__object__overlay">
+                                        <h4>Votre étude ?</h4>
+                                        <p>Nous réalisons pour vous des outils et des applications de la création du savoir à sa mise en forme et sa diffusion sur le web.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tile">
+                        <skoli-newsfeed feed="portfolio.latestNews()" feed-title="Actualités de Skoli">
+                        </skoli-newsfeed>
+                    </div>
+                </section>
+            </div>
+            <skoli-footer></skoli-footer>
+        </div>
+    </div>
+</div>
