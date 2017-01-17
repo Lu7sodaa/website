@@ -6,11 +6,13 @@ export var PROJECTS = [
         slug: 'islam-objet-mediatique',
         url: 'http://islam-objet-mediatique.fr',
         description: "Etude sur le traitement médiatique de l'islam dans la presse française (1997-2015), basée sur l'analyse des archives numériques de Libération, Le Monde et le Figaro. Avec Moussa Bourekba (CIDOB)",
-        grid_picture: 'assets/images/projects/idlm/grid.jpg',
+        picture: 'assets/images/projects/idlm/grid.jpg',
         screenshots: [
-            'assets/images/projects/idlm/grid.jpg'
+            'assets/images/projects/idlm/screenshot1.png',
+            'assets/images/projects/idlm/screenshot2.png',
+            'assets/images/projects/idlm/screenshot3.png'
         ],
-        newsfeed: [
+        feed: [
             {
                 type: NEWS_TYPES.article,
                 source: 'CCIF (islamophobie.net)',
@@ -27,9 +29,16 @@ export var PROJECTS = [
             },
             {
                 type: NEWS_TYPES.event,
-                title: 'Présentation à l\atelier "Journalism Computationnel"',
+                title: 'Présentation à l\'atelier "Journalism Computationnel"',
                 source: 'EGC 2017',
                 date: '2017-01-24',
+                url: 'https://www.mediapart.fr/journal/economie/181116/lislam-objet-mediatique'
+            },
+            {
+                type: NEWS_TYPES.quote,
+                title: 'Présentation à l\'atelier "Journalism Computationnel"',
+                source: 'Raul Magni-Berton',
+                date: '2017-02-24',
                 url: 'https://www.mediapart.fr/journal/economie/181116/lislam-objet-mediatique'
             }
         ]
@@ -39,11 +48,11 @@ export var PROJECTS = [
         slug: 'derangeons-la-chambre',
         url: 'http://www.derangeonslachambre.fr',
         description: "Application web de science politique - A quoi ressemblerait l’Assemblée Nationale si l’on changeait le mode de scrutin aux élections législatives ? Avec R. Magni-Berton (Sciences Po Grenoble).",
-        grid_picture: 'assets/images/projects/dlc/grid.jpg',
+        picture: 'assets/images/projects/dlc/grid.jpg',
         screenshots: [
             'assets/images/projects/dlc/grid.jpg'
         ],
-        newsfeed: [
+        feed: [
             // {
             //     type: NEWS_TYPES.article,
             //     title: 'test test pof pof',

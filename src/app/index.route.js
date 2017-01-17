@@ -4,18 +4,18 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
         .state('app', {
             abstract: true,
             template: '<ui-view autoscroll="true"/>',
-            url: '/'
+            url: ''
         })
         .state('app.home', {
             data: { title: 'accueil' },
-            url: '',
+            url: '/',
             templateUrl: 'app/main/home/home.html',
             controller: 'HomeController',
             controllerAs: 'home'
         })
         .state('app.offer', {
             data: { title: 'offre' },
-            url: 'offre',
+            url: '/offre',
             templateUrl: 'app/main/offer/offer.html',
             controller: 'OfferController',
             controllerAs: 'offer',
@@ -33,27 +33,33 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
         })
         .state('app.agency', {
             data: { title: 'agence' },
-            url: 'agence',
+            url: '/agence',
             templateUrl: 'app/main/agency/agency.html',
             controller: 'AgencyController',
             controllerAs: 'agency'
         })
         .state('app.portfolio', {
             data: { title: 'portfolio' },
-            url: 'portfolio',
+            abstract: true,
+            template: '<skoli-page><ui-view/></skoli-page>',
+            url: '/portfolio'
+        })
+        .state('app.portfolio.list', {
             templateUrl: 'app/main/portfolio/portfolio.html',
             controller: 'PortfolioController',
-            controllerAs: 'portfolio'
+            controllerAs: 'portfolio',
+            url: ''
         })
         .state('app.portfolio.details', {
+            url: '/:slug',
+            templateUrl: 'app/main/portfolio/details/details.html',
             controller: 'DetailsController',
             controllerAs: 'details',
-            url: 'portfolio/:slug',
-            templateUrl: 'app/main/portfolio/details/details.html',
             resolve: {
-                project: (slug, PROJECTS, $stateParams, $log)=>{
-                    $log.log('slug = ', slug, $stateParams);
-                    return PROJECTS.find((project)=>project.slug == slug);
+                project: (PROJECTS, $stateParams, $log)=>{
+                    const project = PROJECTS.find((project)=>project.slug == $stateParams.slug);
+                    $log.log('resolve details / ', $stateParams.slug, project);
+                    return project;
                 }
             }
         })

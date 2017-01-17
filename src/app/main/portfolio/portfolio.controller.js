@@ -1,18 +1,21 @@
 import { NEWS_TYPES } from '../../components/constants/news';
 
 export class PortfolioController {
-    constructor (PROJECTS, NEWS, $log, $sce, $location) {
+    constructor (PROJECTS, NEWS, $log, $state, $sce, $location) {
         'ngInject';
+        $log.log('PortfolioController.constructor');
         this.news = NEWS;
         this.$log = $log;
+        this.$state = $state;
         this.$location = $location;
         this.projects = this.initProjects(PROJECTS);
-        this.newsfeed = this.initNewsFeed();
+        this.feed = this.initFeed();
     }
-    initNewsFeed(){
+
+    initFeed(){
         let _news = this.news;
         let all_news = this.projects.map(p=>{
-            return p.newsfeed.filter((news)=>news.type != NEWS_TYPES.quote);
+            return p.feed.filter((news)=>news.type != NEWS_TYPES.quote);
         });
         for(let i in all_news){
             let news = all_news[i];
@@ -22,6 +25,11 @@ export class PortfolioController {
         }
         return _news;
     }
+
+    goToDetails(project){
+        this.$state.go('app.portfolio.details', { slug: project.slug })
+    }
+
     initProjects(projects){
         return projects.map((p)=>p);
     }
@@ -30,7 +38,7 @@ export class PortfolioController {
         return this.projects;
     }
 
-    latestNews(){
-        return this.newsfeed;
+    listFeedItems(){
+        return this.feed;
     }
 }

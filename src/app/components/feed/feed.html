@@ -1,0 +1,15 @@
+<div class="feed">
+    <h1>{{ feed.feedTitle }}</h1>
+    <ul class="list-unstyled">
+        <li class="item" ng-repeat="item in feed.listFeedItems()">
+            <i class="fa" ng-class="feed.itemIcon(item)"/>
+            <div class="item-content">
+                <span class="item-date">{{ feed.itemDate(item) }}</span>&nbsp;-&nbsp;<span class="item-source">{{ item.source }}</span><br>
+                <span class="item-title">{{ item.title }}</span><br>
+                <span ng-if="item.url">
+                    <a ng-href="{{ item.url }}">{{ feed.itemDetailsText(item) }}</a>
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

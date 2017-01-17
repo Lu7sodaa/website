@@ -5,7 +5,9 @@ export function SidebarDirective() {
     restrict: 'E',
     replace: true,
     templateUrl: 'app/components/sidebar/sidebar.html',
-    scope: {},
+    scope: {
+        // onSidebarClose
+    },
     controller: SidebarController,
     controllerAs: 'sidebar',
     bindToController: true

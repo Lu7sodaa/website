@@ -5,6 +5,7 @@ import { runBlock } from './index.run';
 // controllers
 import { HomeController   } from './main/home/home.controller';
 import { PortfolioController   } from './main/portfolio/portfolio.controller';
+import { DetailsController     } from './main/portfolio/details/details.controller';
 import { OfferController  } from './main/offer/offer.controller';
 import { CHAPTERS         } from './main/offer/offer.constant';
 import { AgencyController } from './main/agency/agency.controller';
@@ -18,7 +19,10 @@ import { TriangleBackgroundDirective  } from './main/home/triangleBackground/tri
 import { TriangleChartDirective       } from '../app/components/triangleChart/triangleChart.directive';
 import { NavbarDirective              } from '../app/components/navbar/navbar.directive';
 import { SlideshowDirective           } from '../app/components/slideshow/slideshow.directive';
-import { NewsfeedDirective            } from '../app/components/newsfeed/newsfeed.directive';
+import { ImgLoadDirective             } from '../app/components/imgLoad.directive';
+import { FeedDirective                } from '../app/components/feed/feed.directive';
+import { GridDirective                } from '../app/components/grid/grid.directive';
+import { PageDirective                } from '../app/components/page/page.directive';
 import { SidebarDirective             } from '../app/components/sidebar/sidebar.directive';
 import { FooterDirective              } from '../app/components/footer/footer.directive';
 import { FullHeightSectionDirective   } from '../app/components/fullHeightSection/fullHeightSection.directive';
@@ -62,6 +66,7 @@ angular.module('skoli', dependencies )
   .service('platformService', PlatformService)
   .controller('HomeController', HomeController)
   .controller('PortfolioController', PortfolioController)
+  .controller('DetailsController', DetailsController)
   .controller('OfferController', OfferController)
   .controller('AgencyController', AgencyController)
   .filter('capitalize', CapitalizeFilter)
@@ -72,6 +77,9 @@ angular.module('skoli', dependencies )
   .directive('fullHeightSection', FullHeightSectionDirective)
   .directive('skoliFooter', FooterDirective)
   .directive('skoliSlideshow', SlideshowDirective)
-  .directive('skoliNewsfeed', NewsfeedDirective)
+  .directive('skoliFeed', FeedDirective)
+  .directive('skoliGrid', GridDirective)
+  .directive('skoliPage', PageDirective)
+  .directive('skoliImgLoad', ImgLoadDirective)
   .directive('skoliNavbar', NavbarDirective)
   .directive('skoliSidebar', SidebarDirective);

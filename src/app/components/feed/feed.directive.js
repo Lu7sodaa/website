@@ -15,41 +15,39 @@ const MONTHS = [
     'Decembre'
 ];
 
-export function NewsfeedDirective() {
+export function FeedDirective() {
   'ngInject';
 
   let directive = {
     restrict: 'E',
-    replace: true,
+    // replace: true,
     scope: {
-        feed: '=',
+        feedItems: '=',
         feedTitle:'@'
     },
-    templateUrl: 'app/components/newsfeed/newsfeed.html',
-    controller: NewsfeedController,
-    controllerAs: 'newsfeed',
+    templateUrl: 'app/components/feed/feed.html',
+    controller: FeedController,
+    controllerAs: 'feed',
     bindToController: true
   };
   return directive;
 }
 
-class NewsfeedController {
+class FeedController {
     constructor ($log) {
         'ngInject';
         this.$log = $log;
-        // $log.log('this', this, 'feed = ', this.feed);
+        $log.log('this', this, 'feed = ', this.feedItems);
         this.initFeed();
     }
     initFeed(){
         const _init = (news)=>(news.date = new Date(Date.parse(news.date)), news);
         const _sort = (newsA, newsB)=>newsB.date.getTime()-newsA.date.getTime()
-        this._feed = this.feed.map(_init);
-        this.$log.log('feed = ', this.feed);
-        this._feed = this.feed.sort(_sort);
+        this._feedItems = this.feedItems.map(_init).sort(_sort);
     }
 
-    listNewsItems(){
-        return this._feed;
+    listFeedItems(){
+        return this._feedItems;
     }
 
     itemIcon(item){
