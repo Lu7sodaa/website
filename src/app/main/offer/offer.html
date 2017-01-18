@@ -1,86 +1,77 @@
-<div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
-    <skoli-sidebar></skoli-sidebar>
-    <div class="view">
-        <skoli-navbar></skoli-navbar>
-        <div class="main offer">
-            <div class="inner">
-                <section class="main__header">
-                    <h1 class="main-title">Notre offre</h1>
-                    <hr>
-                    <div class="tile">
-                        <!-- <p>
-                            Nous proposons d’accompagner les organisations de recherche dans la
-                            transition numérique de leurs activités, et en particulier dans l’usage des
-                            données numériques.
-                        </p> -->
-                        <div class="row">
-                            <div class="col-md-4 chapter" ng-class="chapter.color_class"
-                                ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
-                                ng-click="offer.goToChapter(chapter)">
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-3 text-center" ng-bind-html="chapter.pictogram"></div>
-                                    <div class="col-md-12 col-xs-8">
-                                        <h3 class="bold small-underline">{{ chapter.title }}</h3>
-                                        <p class="small-underline-offset-h3">
-                                            {{ chapter.home_description}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="offer__chapter tiled" ng-class="chapter.color_class"
+<skoli-page main-class="offer">
+    <section class="main__header">
+        <h1 class="main-title">Notre offre</h1>
+        <hr>
+        <div class="tile">
+            <!-- <p>
+                Nous proposons d’accompagner les organisations de recherche dans la
+                transition numérique de leurs activités, et en particulier dans l’usage des
+                données numériques.
+            </p> -->
+            <div class="row">
+                <div class="col-md-4 chapter" ng-class="chapter.color_class"
                     ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
-                    id="{{chapter.title.toLowerCase() }}"
-                    ng-init="even=($index % 2 === 0)">
-                    <div class="tile-row">
-                        <div class="tile tile--half tile--vertical-auto tile--photo" style="background-image:url('{{chapter.background_image}}')">
-                            <!-- <span class="col-md-2 pictogram__holder" ng-bind-html="chapter.pictogram"></span> -->
-                            <div class="tile__vertical-holder">
-                                <h1>
-                                    <span class="sk-label-inverted"
-                                          ng-class="chapter.color_class">
-                                        {{ chapter.detailed_title }}
-                                    </span>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="tile tile--half tile--vertical-auto tile--colored">
-                            <div class="tile__vertical-holder">
-                                <p ng-bind-html="chapter.description"></p>
-                            </div>
+                    ng-click="offer.goToChapter(chapter)">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-3 text-center" ng-bind-html="chapter.pictogram"></div>
+                        <div class="col-md-12 col-xs-8">
+                            <h3 class="bold small-underline">{{ chapter.title }}</h3>
+                            <p class="small-underline-offset-h3">
+                                {{ chapter.home_description}}
+                            </p>
                         </div>
                     </div>
-                    <div class="tile">
-                        <div class="row" ng-if="chapter.services.length > 1">
-                            <div class="col-md-4 col-sm-4 category" ng-repeat="service in chapter.services">
-                                <h3 class="small-underline">
-                                    {{ service.name }}
-                                </h3>
-                                <ul class="list-unstyled">
-                                    <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
-                                        <sub-service service="sub_service"></sub-service>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div ng-if="chapter.services.length === 1" class="category" ng-init="service = chapter.services[0]">
-                            <h3 class="small-underline">
-                                {{ service.name }}
-                            </h3>
-                            <div class="row">
-                                <ul class="list-unstyled col-md-6">
-                                    <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
-                                        <sub-service service="sub_service"></sub-service>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
-            <skoli-footer></skoli-footer>
         </div>
-    </div>
-</div>
+    </section>
+    <section class="offer__chapter tiled" ng-class="chapter.color_class"
+        ng-repeat="chapter in offer.listChapters() | orderBy:'order'"
+        id="{{chapter.title.toLowerCase() }}"
+        ng-init="even=($index % 2 === 0)">
+        <div class="tile-row">
+            <div class="tile tile--half tile--vertical-auto tile--photo" style="background-image:url('{{chapter.background_image}}')">
+                <!-- <span class="col-md-2 pictogram__holder" ng-bind-html="chapter.pictogram"></span> -->
+                <div class="tile__vertical-holder">
+                    <h1>
+                        <span class="sk-label-inverted"
+                              ng-class="chapter.color_class">
+                            {{ chapter.detailed_title }}
+                        </span>
+                    </h1>
+                </div>
+            </div>
+            <div class="tile tile--half tile--vertical-auto tile--colored">
+                <div class="tile__vertical-holder">
+                    <p ng-bind-html="chapter.description"></p>
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="row" ng-if="chapter.services.length > 1">
+                <div class="col-md-4 col-sm-4 category" ng-repeat="service in chapter.services">
+                    <h3 class="small-underline">
+                        {{ service.name }}
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
+                            <sub-service service="sub_service"></sub-service>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-if="chapter.services.length === 1" class="category" ng-init="service = chapter.services[0]">
+                <h3 class="small-underline">
+                    {{ service.name }}
+                </h3>
+                <div class="row">
+                    <ul class="list-unstyled col-md-6">
+                        <li class="service__subservice" ng-repeat="sub_service in service.sub_services">
+                            <sub-service service="sub_service"></sub-service>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</skoli-page>

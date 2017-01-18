@@ -17,13 +17,12 @@ class LineChartBackgroundController {
         this.$window = angular.element($window);
         this.$origin_el = angular.element($element[0]);
         this.$element = d3.select($element[0]);
+        $log.log(this.$element);
         this.bindEvents();
+        this.draw();
     }
 
     bindEvents(){
-        this.$scope.$on('$stateChangeSuccess', ()=>{
-            this.draw();
-        });
         this.$window.bind('resize', ()=>{ this.resize(); })
     }
 
@@ -36,6 +35,7 @@ class LineChartBackgroundController {
     setUpSVG(){
         this.$svg = this.$element.append('svg');
         this.$g = this.$svg.append('g');
+        this.$log.log(this.$svg, this.$g);
     }
 
     line(){
@@ -64,11 +64,7 @@ class LineChartBackgroundController {
                 })
                 .attr('d', this.line())
                 .style('opacity', function(){
-                    if(d3.select(this).classed('animated')){
-                        return 0;
-                    } else {
-                        return 1;
-                    }
+                    return d3.select(this).classed('animated') ? 0 : 1;
                 })
                 .each((d,i,l)=>{
                     this.animateLine(d3.select(l[i]), this.data[i]);

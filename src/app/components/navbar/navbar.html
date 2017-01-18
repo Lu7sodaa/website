@@ -5,12 +5,18 @@
             <span ng-click="nav.toggleSidebar()"
                   class="fa fa-bars"></span>
 
-            <a class="skoli-logo" ui-sref="app.home({'#': 'top'})">
+            <a class="skoli-logo ariane" ui-sref="app.home({'#': 'top'})">
                 Skoli
             </a>
 
             <span ng-if="!nav.$state.is('app.home')">
-                &nbsp;/&nbsp;{{ nav.$state.current.data.title }}
+                &nbsp;/&nbsp;
+                <span ng-if="!nav.isProjectDetails()">{{ nav.$state.current.data.title }}</span>
+                <span ng-if="nav.isProjectDetails()">
+                    <a ui-sref="app.portfolio.list" class="ariane">{{ nav.$state.current.data.title }}</a>
+                    &nbsp;/&nbsp;
+                    {{ nav.currentProject.title}}
+                </span>
             </span>
         </div>
     </div>

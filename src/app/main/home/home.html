@@ -1,56 +1,47 @@
-<div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
-    <skoli-sidebar></skoli-sidebar>
-    <div class="view">
-        <skoli-navbar hide='true'></skoli-navbar>
-        <div class="main home">
-            <div class="inner">
-                <section class="intro main__header full-height-section line-chart-background">
-                    <div class="line-chart-background__overlay">
-                        <h1 class="skoli-logo">Skoli</h1>
-                        <h2 class="subtitle">Synchroniser Savoirs & Société</h2>
-                        <p class="lead text-right">
-                            Notre agence accompagne&nbsp;<br class='visible-md visible-lg'>la <span class="data-color sk-label">construction</span>, la <span class="design-color sk-label">valorisation</span> et<br class='visible-md visible-lg'>&nbsp;la <span class="interfaces-color sk-label">médiation</span> numérique des&nbsp;savoirs.
-                        </p>
-                    </div>
-                </section>
-                <section class="main__interval section section--with-background">
-                    <!-- <skoli-slideshow slides="home.projectsSlide"></skoli-slideshow> -->
-                    <div class="section__overlay text-center">
-                        <h1 class="bold">Portfolio</h1>
-                        <p>Découvrez nos projets et notre actualité</p>
-                        <a ui-sref="app.portfolio.list({'#': 'top'})" class="btn btn-default">Notre portfolio</a>
-                    </div>
-                    <img class="hidden-xs hidden-sm section__background" src="../assets/images/photos/library.jpg" du-parallax y="background"/>
-                    <img class="visible-xs visible-sm section__background" src="../assets/images/photos/library.jpg"/>
-                </section>
-                <section class="home__offer main__interval">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-4 col-sm-4 home__offer__chapter tile"
-                            ng-class="chapter.color_class"
-                            ng-repeat="chapter in home.listChapters()"
-                            ng-click="$state.go('app.offer', {'#': chapter.title.toLowerCase() })"
-                            ng-attr-tabindex="{{$index + 1}}">
-                            <h2 class="bold small-underline">{{ chapter.title }}</h2>
-                            <p class="small-underline-offset"
-                            ng-bind-html="chapter.home_description"></p>
-                            <span class="more small-underline-offset">En savoir plus</a>
-                        </div>
-                    </div>
-                </section>
-                <section class="section home__agency text-center triangle-background">
-                    <div class="triangle-background__overlay section__overlay">
-                        <div class="container">
-                            <h1 class="bold">Notre agence</h1>
-                            <h4>
-                                Notre action s'inscrit dans la transformation digitale de la recherche. Nous aidons nos clients à créer ou utiliser les bons outils numériques pour innover en matière de construction, d'accès et de diffusion des savoirs.<br><br>
-                                Skoli est un prestataire de services et s’adresse à tous les producteurs de savoirs : chercheurs, organismes de recherche, universités, institutions, think-tanks, éditeurs, fondations, auteurs, etc.
-                            </h4>
-                            <a ui-sref="app.agency({'#': 'top'})" class="btn btn-default">Qui sommes-nous ?</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <skoli-footer></skoli-footer>
+<skoli-page main-class="home" hide-navbar="true">
+    <section class="intro main__header full-height-section line-chart-background">
+        <div class="line-chart-background__overlay">
+            <h1 class="skoli-logo">Skoli</h1>
+            <h2 class="subtitle">Synchroniser Savoirs & Société</h2>
+            <p class="lead text-right">
+                Notre agence accompagne&nbsp;<br class='visible-md visible-lg'>la <span class="data-color sk-label">construction</span>, la <span class="design-color sk-label">valorisation</span> et<br class='visible-md visible-lg'>&nbsp;la <span class="interfaces-color sk-label">médiation</span> numérique des&nbsp;savoirs.
+            </p>
         </div>
-    </div>
-</div>
+    </section>
+    <section class="main__interval section section--with-background">
+        <!-- <skoli-slideshow slides="home.projectsSlide"></skoli-slideshow> -->
+        <div class="section__overlay text-center">
+            <h1 class="bold">Portfolio</h1>
+            <p>Découvrez nos projets et notre actualité</p>
+            <a ui-sref="app.portfolio.list({'#': 'top'})" class="btn btn-default">Notre portfolio</a>
+        </div>
+        <img class="hidden-xs hidden-sm section__background" src="../assets/images/photos/library.jpg" du-parallax y="background"/>
+        <img class="visible-xs visible-sm section__background" src="../assets/images/photos/library.jpg"/>
+    </section>
+    <section class="home__offer main__interval">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-sm-4 home__offer__chapter tile"
+                ng-class="chapter.color_class"
+                ng-repeat="chapter in home.listChapters()"
+                ng-click="$state.go('app.offer', {'#': chapter.title.toLowerCase() })"
+                ng-attr-tabindex="{{$index + 1}}">
+                <h2 class="bold small-underline">{{ chapter.title }}</h2>
+                <p class="small-underline-offset"
+                ng-bind-html="chapter.home_description"></p>
+                <span class="more small-underline-offset">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+    <section class="section home__agency text-center triangle-background">
+        <div class="triangle-background__overlay section__overlay">
+            <div class="container">
+                <h1 class="bold">Notre agence</h1>
+                <h4>
+                    Notre action s'inscrit dans la transformation digitale de la recherche. Nous aidons nos clients à créer ou utiliser les bons outils numériques pour innover en matière de construction, d'accès et de diffusion des savoirs.<br><br>
+                    Skoli est un prestataire de services et s’adresse à tous les producteurs de savoirs : chercheurs, organismes de recherche, universités, institutions, think-tanks, éditeurs, fondations, auteurs, etc.
+                </h4>
+                <a ui-sref="app.agency({'#': 'top'})" class="btn btn-default">Qui sommes-nous ?</a>
+            </div>
+        </div>
+    </section>
+</skoli-page>

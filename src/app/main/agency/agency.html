@@ -1,143 +1,134 @@
-<div class="content" ng-class="{ 'content--sidebar-opened': sidebar_opened }">
-    <skoli-sidebar></skoli-sidebar>
-    <div class="view">
-        <skoli-navbar></skoli-navbar>
-        <div class="main agency">
-            <div class="inner">
-                <section class="main__header">
-                    <h1 class="main-title">Notre agence</h1>
-                    <hr>
-                    <div class="tile">
-                        <h1>Métier</h1>
-                        <div class="row">
-                            <p class="col-md-4">
-                                Les données numériques sont devenues un matériau de recherche à part entière et indispensable pour décrypter le monde, ainsi que les sociétés qui l’habitent et le construisent.<br>
-                                Nous mettons notre savoir-faire à disposition des organisations de recherche pour les aider à <span class="sk-label">capter, traiter et exploiter des données numériques</span>.
-                            </p>
-                            <p class="col-md-4">
-                                Le format actuel de publication scientifique ne correspond pas au nouveau paradigme d’accès et de partage des connaissances, et les acquis de la recherche restent le plus souvent confinés aux spécialistes d’un domaine.<br>
-                                Nous aidons les chercheurs à réhabiliter le savoir en créant <span class="sk-label">des formats de restitution numériques innovants</span> et à forte audience, à la hauteur de l’intelligence mobilisée pour les produire.
+<skoli-page main-class="agency">
+    <section class="main__header">
+        <h1 class="main-title">Notre agence</h1>
+        <hr>
+        <div class="tile">
+            <h1>Métier</h1>
+            <div class="row">
+                <p class="col-md-4">
+                    Les données numériques sont devenues un matériau de recherche à part entière et indispensable pour décrypter le monde, ainsi que les sociétés qui l’habitent et le construisent.<br>
+                    Nous mettons notre savoir-faire à disposition des organisations de recherche pour les aider à <span class="sk-label">capter, traiter et exploiter des données numériques</span>.
+                </p>
+                <p class="col-md-4">
+                    Le format actuel de publication scientifique ne correspond pas au nouveau paradigme d’accès et de partage des connaissances, et les acquis de la recherche restent le plus souvent confinés aux spécialistes d’un domaine.<br>
+                    Nous aidons les chercheurs à réhabiliter le savoir en créant <span class="sk-label">des formats de restitution numériques innovants</span> et à forte audience, à la hauteur de l’intelligence mobilisée pour les produire.
 
-                            </p>
-                            <p class="col-md-4">
-                                <span class="sk-label">Nous ne sommes pas chercheurs.</span><br>
-                                Nous ne nous substituons pas à leur travail. Notre mission consiste à les accompagner dans la production et la transmission de leurs travaux.
-                            </p>
-                        </div>
-                    </div>
-                    <triangle-chart data="agency.chartData"></triangle-chart>
-                </section>
-                <section class="tiled">
-                    <div class="tile">
-                        <h1>Équipe</h1>
-                        <div class="row margin-top-15">
-                            <div class="col-md-4">
-                                <p class="definition italic">
-                                    <span class="bold">Synchroniser</span>&nbsp;: Faire se produire deux ou plusieurs choses dans le même temps ou dans une succession précise, les coordonner.
-                                </p>
-                                <p>
-                                    L’ambition de Skoli, synchroniser les sciences et la société, repose sur quatre convictions.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>
-                                    &ndash;&nbsp;La recherche est une priorité : elle doit être au coeur de la société, et non à la marge.
-                                </p>
-                                <p>
-                                    &ndash;&nbsp;Aucune information disponible, en particulier les mesures numériques du monde, ne doit rester inaccessible à la recherche pour enrichir la connaissance.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>
-                                    &ndash;&nbsp;Le savoir issu de la recherche doit être mieux diffusé pour accroître notre intelligence collective.
-                                </p>
-                                <p>
-                                    &ndash;&nbsp;Pour être utile, le savoir doit être réutilisable, c’est pourquoi nous encouragerons toujours l’ouverture des données et des codes sources.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row margin-top-30">
-                            <div class="col-md-8">
-                                <img style="width:100%" alt=""
-                                     src="../assets/images/photos/photo_collective_composee.jpg"/>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
-                                        <h4 class="light">
-                                            <a rel="nofollow" target="_blank" title="Profil linkedIn de {{ member.name }}" ng-href="{{ member.linkedin }}">{{ member.name }}</a>
-                                        </h4>
-                                        <h4 class="margin-top-5 light">
-                                            <span class="sk-label">{{ member.title }}</span>
-                                        </h4>
-                                        <p>
-                                            {{ member.function }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row margin-top-30">
-                            <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                <h4 class="small-underline"><span class="bold">Ingénierie</span></h4>
-                                <ul class="list-unstyled">
-                                    <li><span>Gestion de projet</span></li>
-                                    <li><span>Développement web</span></li>
-                                    <li><span>Data intelligence</span></li>
-                                    <li><span>Design d’interactions</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                <h4 class="small-underline"><span class="bold">Information</span></h4>
-                                <ul class="list-unstyled">
-                                    <li><span>Editorialisation</span></li>
-                                    <li><span>Journalisme</span></li>
-                                    <li><span>Design d’information</span></li>
-                                    <li><span>Architecture de l’information</span></li>
-                                    <li><span>Ludification</span></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-4 col-sm-4 col-sm-12 category">
-                                <h4 class="small-underline"><span class="bold">Communication</span></h4>
-                                <ul class="list-unstyled">
-                                    <li><span>Médiation scientifique</span></li>
-                                    <li><span>Stratégie digitale</span></li>
-                                    <li><span>Communication institutionnelle</span></li>
-                                    <li><span>Réseaux sociaux</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <h1>
-                            Expériences
-                        </h1>
-                        <p>
-                            Nous sommes issus du monde du web. Nos différents
-                            parcours au sein d'agences (web, design et data-journalisme)
-                            nous ont appris à cerner les enjeux et l'importance
-                            de la production d'une information de qualité. Nous
-                            avons sélectionné quelques réalisations auxquelles
-                            nous avons participé à titre individuel ou collectif
-                            afin de mieux illustrer nos savoir-faire.
-                        </p>
-                        <div class="row margin-top-30">
-                            <div class="col-md-4 col-sm-6 col-xs-12 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
-                                <h4 class="light">
-                                    <a title="Aller sur le site de {{ previousWord.title }}"
-                                       target="_blank"
-                                       ng-href="{{ previousWork.link }}"
-                                       rel="nofollow">{{ previousWork.title }}</a>
-                                </h4>
-                                <h4 class="margin-top-5 light"><span class="sk-label">{{ previousWork.type }}</span></h4>
-                                <p ng-bind-html="previousWork.subtitle"></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </p>
+                <p class="col-md-4">
+                    <span class="sk-label">Nous ne sommes pas chercheurs.</span><br>
+                    Nous ne nous substituons pas à leur travail. Notre mission consiste à les accompagner dans la production et la transmission de leurs travaux.
+                </p>
             </div>
-            <skoli-footer></skoli-footer>
         </div>
-    </div>
-</div>
+        <triangle-chart data="agency.chartData"></triangle-chart>
+    </section>
+    <section class="tiled">
+        <div class="tile">
+            <h1>Équipe</h1>
+            <div class="row margin-top-15">
+                <div class="col-md-4">
+                    <p class="definition italic">
+                        <span class="bold">Synchroniser</span>&nbsp;: Faire se produire deux ou plusieurs choses dans le même temps ou dans une succession précise, les coordonner.
+                    </p>
+                    <p>
+                        L’ambition de Skoli, synchroniser les sciences et la société, repose sur quatre convictions.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        &ndash;&nbsp;La recherche est une priorité : elle doit être au coeur de la société, et non à la marge.
+                    </p>
+                    <p>
+                        &ndash;&nbsp;Aucune information disponible, en particulier les mesures numériques du monde, ne doit rester inaccessible à la recherche pour enrichir la connaissance.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        &ndash;&nbsp;Le savoir issu de la recherche doit être mieux diffusé pour accroître notre intelligence collective.
+                    </p>
+                    <p>
+                        &ndash;&nbsp;Pour être utile, le savoir doit être réutilisable, c’est pourquoi nous encouragerons toujours l’ouverture des données et des codes sources.
+                    </p>
+                </div>
+            </div>
+            <div class="row margin-top-30">
+                <div class="col-md-8">
+                    <img style="width:100%" alt=""
+                         src="../assets/images/photos/photo_collective_composee.jpg"/>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-4 col-xs-12 member" ng-repeat="member in agency.listMembers()">
+                            <h4 class="light">
+                                <a rel="nofollow" target="_blank" title="Profil linkedIn de {{ member.name }}" ng-href="{{ member.linkedin }}">{{ member.name }}</a>
+                            </h4>
+                            <h4 class="margin-top-5 light">
+                                <span class="sk-label">{{ member.title }}</span>
+                            </h4>
+                            <p>
+                                {{ member.function }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-30">
+                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                    <h4 class="small-underline"><span class="bold">Ingénierie</span></h4>
+                    <ul class="list-unstyled">
+                        <li><span>Gestion de projet</span></li>
+                        <li><span>Développement web</span></li>
+                        <li><span>Data intelligence</span></li>
+                        <li><span>Design d’interactions</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                    <h4 class="small-underline"><span class="bold">Information</span></h4>
+                    <ul class="list-unstyled">
+                        <li><span>Editorialisation</span></li>
+                        <li><span>Journalisme</span></li>
+                        <li><span>Design d’information</span></li>
+                        <li><span>Architecture de l’information</span></li>
+                        <li><span>Ludification</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-sm-12 category">
+                    <h4 class="small-underline"><span class="bold">Communication</span></h4>
+                    <ul class="list-unstyled">
+                        <li><span>Médiation scientifique</span></li>
+                        <li><span>Stratégie digitale</span></li>
+                        <li><span>Communication institutionnelle</span></li>
+                        <li><span>Réseaux sociaux</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <h1>
+                Expériences
+            </h1>
+            <p>
+                Nous sommes issus du monde du web. Nos différents
+                parcours au sein d'agences (web, design et data-journalisme)
+                nous ont appris à cerner les enjeux et l'importance
+                de la production d'une information de qualité. Nous
+                avons sélectionné quelques réalisations auxquelles
+                nous avons participé à titre individuel ou collectif
+                afin de mieux illustrer nos savoir-faire.
+            </p>
+            <div class="row margin-top-30">
+                <div class="col-md-4 col-sm-6 col-xs-12 previous-work" ng-repeat="previousWork in agency.listPreviousWork()">
+                    <h4 class="light">
+                        <a title="Aller sur le site de {{ previousWord.title }}"
+                           target="_blank"
+                           ng-href="{{ previousWork.link }}"
+                           rel="nofollow">{{ previousWork.title }}</a>
+                    </h4>
+                    <h4 class="margin-top-5 light"><span class="sk-label">{{ previousWork.type }}</span></h4>
+                    <p ng-bind-html="previousWork.subtitle"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</skoli-page>

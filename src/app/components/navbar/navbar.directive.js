@@ -5,7 +5,8 @@ export function NavbarDirective() {
     restrict: 'E',
     replace: true,
     scope: {
-        'hide': '@'
+        'onToggleSidebar': '&',
+        'hide': '='
     },
     templateUrl: 'app/components/navbar/navbar.html',
     controller: NavbarController,
@@ -16,7 +17,7 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-    constructor ($log, $rootScope,$element,$document,$window, platformService, EVENTS) {
+    constructor ($log, $rootScope,$element,$document,$window, $stateParams, platformService, PROJECTS, EVENTS) {
         'ngInject';
         this.$log = $log;
         this.sidebar_opened = false;
@@ -38,14 +39,19 @@ class NavbarController {
             this.$nav.addClass(this.revealed_class);
         }
 
-        this.handler = this.$rootScope.$watch('sidebar_opened', (newVal)=>{
-            this.sidebar_opened = newVal;
-        });
+        if(this.isProjectDetails()){
+            this.currentProject = PROJECTS.find((project)=>project.slug == $stateParams.slug)
+        }
+    }
+
+    isProjectDetails(){
+        return this.$state.is('app.portfolio.details');
     }
 
     toggleSidebar(){
-        this.sidebar_opened = !this.sidebar_opened;
-        this.$rootScope.$broadcast(this.EVENTS.sidebar.toggle, this.sidebar_opened);
+        if(this.onToggleSidebar){
+            this.onToggleSidebar();
+        }
     }
 
 }

@@ -6,7 +6,7 @@ export function SidebarDirective() {
     replace: true,
     templateUrl: 'app/components/sidebar/sidebar.html',
     scope: {
-        // onSidebarClose
+        onSidebarClose: '&'
     },
     controller: SidebarController,
     controllerAs: 'sidebar',
@@ -17,29 +17,23 @@ export function SidebarDirective() {
 }
 
 class SidebarController {
-    constructor ($log, $rootScope,$window, EVENTS) {
+    constructor ($log, $window, $state) {
         'ngInject';
         this.$w = $window;
-        this.$state = $rootScope.$state;
-
-        this.handler = $rootScope.$on(EVENTS.sidebar.toggle, (e, data)=>{
-            $rootScope.sidebar_opened = data;
-        });
-
-        $rootScope.sidebar_opened = false;
-        this.$scope = $rootScope;
+        this.$state = $state;
     }
 
     scrollToBottom(){
         let scroll_top = angular.element('div[ui-view]').innerHeight();
-        this.$scope.sidebar_opened = false;
         angular.element('html,body').animate({
             scrollTop:  scroll_top
         });
     }
 
     close(){
-        this.$scope.sidebar_opened = false;
+        if(this.onSidebarClose){
+            this.onSidebarClose();
+        }
     }
 
 }
