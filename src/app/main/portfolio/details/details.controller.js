@@ -9,17 +9,35 @@ export class DetailsController {
         $log.log('DetailsController.controller', project);
     }
 
-    onFullScreenImageLoad(){
+    nextImage(){
+        this.currentImageIndex += 1;
+        if(this.currentImageIndex > this.images.length-1){
+            this.currentImageIndex = 0;
+        }
     }
 
-    openFullscreen(img){
+    previousImage(){
+        this.currentImageIndex -= 1;
+        if(this.currentImageIndex < 0){
+            this.currentImageIndex = this.images.length-1;
+        }
+
+    }
+
+    fullscreenImage(){
+        return this.images[this.currentImageIndex].picture;
+    }
+
+    openFullscreen(img, index){
+        this.$log.log('openFullscreen(',img,index,')')
+        this.currentImageIndex = index;
         this.fullscreenImgLoaded = false;
-        this.fullscreenImg = img.picture;
+        this.isFullscreenOpened = true;
     }
 
     closeFullscreen(){
         this.fullscreenImgLoaded = false;
-        this.fullscreenImg = null;
+        this.isFullscreenOpened = false;
     }
 
     shouldOpenFullscreen(){

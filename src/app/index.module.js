@@ -48,7 +48,9 @@ var dependencies = [
     'ngSanitize',
     'ngAria',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'btford.markdown'
+    // 'ngSanitize',
 ];
 
 angular.module('skoli', dependencies )

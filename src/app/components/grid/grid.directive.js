@@ -26,10 +26,10 @@ class GridController {
         this.$window = $window;
     }
 
-    onItemClicked(item){
+    onItemClicked(item, index){
         if(this.gridOnItemClicked){
-            this.$log.log('GridController.onItemClicked(',item,')');
-            this.gridOnItemClicked({item:item});
+            // this.$log.log('GridController.onItemClicked(',item,index,')');
+            this.gridOnItemClicked({item:item, index:index});
         }
     }
 

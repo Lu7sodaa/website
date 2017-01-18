@@ -3,8 +3,8 @@
     ag-grid-width="300"
     ag-id="tile-{{ grid.id }}"
     angular-grid="grid.listGridItems()">
-    <li ng-repeat="item in grid.listGridItems()">
-        <div class="grid__object" ng-click="grid.onItemClicked(item)">
+    <li ng-repeat="item in grid.listGridItems() track by $index">
+        <div class="grid__object" ng-click="grid.onItemClicked(item, $index)">
             <img ng-src="{{item.picture}}" class="grid__object__image"/>
             <div class="grid__object__overlay">
                 <div ng-if="grid.gridUseFullscreen">
