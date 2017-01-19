@@ -22,7 +22,6 @@ export function GridDirective() {
 class GridController {
     constructor ($log, $window) {
         'ngInject';
-        $log.log(this);
         this.id = (new Date()).getTime();
         this.$log = $log;
         this.$window = $window;

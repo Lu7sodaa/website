@@ -8,8 +8,6 @@ export function runBlock ($log, $rootScope, $state, $stateParams, $anchorScroll,
 
     $rootScope.stateChangeSuccessHandler = $rootScope.$on('$stateChangeSuccess', ()=>{
         const hash = $location.hash();
-        // $log.log('$stateChangeSuccess', h);
-        // $log.log('$stateChangeSuccess', toParams, toState, event);
         if(hash){
             $anchorScroll(hash);
         }
