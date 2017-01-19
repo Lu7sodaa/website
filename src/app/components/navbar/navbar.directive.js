@@ -5,6 +5,7 @@ export function NavbarDirective() {
     restrict: 'E',
     replace: true,
     scope: {
+        'details': '=',
         'onToggleSidebar': '&',
         'hide': '='
     },
@@ -17,13 +18,12 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-    constructor ($log, $rootScope,$element,$document,$window, $stateParams, platformService, PROJECTS, EVENTS) {
+    constructor ($log, $state, $scope, $element,$document,$window, $stateParams, platformService, PROJECTS, EVENTS) {
         'ngInject';
         this.$log = $log;
         this.sidebar_opened = false;
         this.EVENTS = EVENTS;
-        this.$rootScope = $rootScope;
-        this.$state = $rootScope.$state;
+        this.$state = $state;
         this.$nav = angular.element($element[0]);
         this.revealed_class = 'navbar--revealed';
         let w = angular.element($window);
@@ -37,10 +37,6 @@ class NavbarController {
             });
         } else {
             this.$nav.addClass(this.revealed_class);
-        }
-
-        if(this.isProjectDetails()){
-            this.currentProject = PROJECTS.find((project)=>project.slug == $stateParams.slug)
         }
     }
 

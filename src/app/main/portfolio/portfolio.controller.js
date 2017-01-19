@@ -3,7 +3,6 @@ import { NEWS_TYPES } from '../../components/constants/news';
 export class PortfolioController {
     constructor (PROJECTS, NEWS, $log, $state, $sce, $location) {
         'ngInject';
-        $log.log('PortfolioController.constructor');
         this.news = NEWS;
         this.$log = $log;
         this.$state = $state;

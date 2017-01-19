@@ -1,7 +1,7 @@
-<div class="content" ng-class="{ 'content--sidebar-opened': page.sidebar_opened }">
+<div class="content" id="top" ng-class="{ 'content--sidebar-opened': page.sidebar_opened }">
     <skoli-sidebar on-sidebar-close="page.closeSidebar()"></skoli-sidebar>
-    <div class="view">
-        <skoli-navbar on-toggle-sidebar="page.toggleSidebar()" hide="page.hideNavbar"></skoli-navbar>
+    <div class="page view">
+        <skoli-navbar on-toggle-sidebar="page.toggleSidebar()" hide="page.hideNavbar" details="page.details"></skoli-navbar>
         <div class="main {{page.mainClass}}">
             <div class="inner" ng-transclude></div>
             <skoli-footer></skoli-footer>

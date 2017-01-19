@@ -1,7 +1,7 @@
 <div class="feed">
     <h1>{{ feed.feedTitle }}</h1>
     <ul class="list-unstyled">
-        <li class="item" ng-repeat="item in feed.listFeedItems()">
+        <li class="item" ng-repeat="item in feed.listFeedItems() track by $id(item)">
             <i class="fa" ng-class="feed.itemIcon(item)"/>
             <div class="item-content">
                 <span class="item-date">{{ feed.itemDate(item) }}</span>&nbsp;-&nbsp;<span class="item-source">{{ item.source }}</span><br>

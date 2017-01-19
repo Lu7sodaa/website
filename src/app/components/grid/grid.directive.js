@@ -5,6 +5,7 @@ export function GridDirective() {
     restrict: 'E',
     replace: false,
     scope: {
+        gridDetailsState: '@',
         gridOnItemClicked: '&',
         gridUseFullscreen: '=',
         gridUseContactItem: '=',
@@ -21,20 +22,25 @@ export function GridDirective() {
 class GridController {
     constructor ($log, $window) {
         'ngInject';
+        $log.log(this);
         this.id = (new Date()).getTime();
         this.$log = $log;
         this.$window = $window;
+        this.items = [];
+        for(let i=0; i<this.gridItems.length; i++){
+            const item = Object.assign(this.gridItems[i], {id: i});
+            this.items.push(item);
+        }
     }
 
     onItemClicked(item, index){
         if(this.gridOnItemClicked){
-            // this.$log.log('GridController.onItemClicked(',item,index,')');
             this.gridOnItemClicked({item:item, index:index});
         }
     }
 
     listGridItems(){
-        return this.gridItems;
+        return this.items;
     }
 
     openExternal(link){

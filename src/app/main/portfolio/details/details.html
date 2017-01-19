@@ -1,30 +1,27 @@
-<section class="main__header">
-    <div class="tile">
-        <h1 class="main-title">{{ details.project.title }}</h1>
-        <div btf-markdown="details.project.full_description"></div>
-        <a class="btn btn-primary" target="_blank" rel="nofollow" ng-if="details.project.url" ng-href="{{details.project.url}}">Visiter l'application</a>
-    </div>
-    <hr>
-    <div class="tile">
-        <skoli-grid
-            grid-items="details.listImages()"
-            grid-use-fullscreen="true"
-            grid-on-item-clicked="details.openFullscreen(item, index)"></skoli-grid>
-    </div>
-    <div class="tile">
-        <skoli-feed feed-items="details.listFeedItems()" feed-title="Actualités"></skoli-feed>
-    </div>
+<skoli-page details='details.project'>
+    <section class="main__header">
+        <div class="tile">
+            <h1 class="main-title">{{ details.project.title }}</h1>
+            <div btf-markdown="details.project.full_description"></div>
+            <a class="btn btn-primary" target="_blank" rel="nofollow" ng-if="details.project.url" ng-href="{{details.project.url}}">Visiter l'application</a>
+        </div>
+        <hr>
+        <div class="tile">
+            <skoli-grid grid-items="details.listImages()" grid-use-fullscreen="true" grid-on-item-clicked="details.openFullscreen(item, index)"></skoli-grid>
+        </div>
+        <div class="tile">
+            <skoli-feed feed-items="details.listFeedItems()" feed-title="Actualités"></skoli-feed>
+        </div>
 
-    <div class="fullscreen" ng-class="{ 'fullscreen--opened': details.isFullscreenOpened }">
-        <div class="fullscreen__close">
-            <a class="control" ng-click="details.closeFullscreen()"><i class="fa fa-close"></i></a>
+        <div class="fullscreen" ng-class="{ 'fullscreen--opened': details.isFullscreenOpened }">
+            <div class="fullscreen__close">
+                <a class="control" ng-click="details.closeFullscreen()"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="fullscreen__controls">
+                <a class="control control--previous" ng-click="details.previousImage()"><i class="fa fa-chevron-left"></i></a>
+                <a class="control control--next" ng-click="details.nextImage()"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <img ng-if="details.currentImageIndex >= 0" ng-src="{{ details.fullscreenImage()}}" skoli-img-load="details.fullscreenImgLoaded = true" />
         </div>
-        <div class="fullscreen__controls">
-            <a class="control control--previous" ng-click="details.previousImage()"><i class="fa fa-chevron-left"></i></a>
-            <a class="control control--next"     ng-click="details.nextImage()"><i class="fa fa-chevron-right"></i></a>
-        </div>
-        <img ng-if="details.currentImageIndex >= 0"
-            ng-src="{{ details.fullscreenImage()}}"
-            skoli-img-load="details.fullscreenImgLoaded = true"/>
-    </div>
-</section>
+    </section>
+</skoli-page>

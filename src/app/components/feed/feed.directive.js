@@ -34,16 +34,18 @@ export function FeedDirective() {
 }
 
 class FeedController {
-    constructor ($log) {
+    constructor ($log, $scope) {
         'ngInject';
         this.$log = $log;
-        $log.log('this', this, 'feed = ', this.feedItems);
-        this.initFeed();
+        this.initFeed(this.feedItems);
+        $scope.$watch('feed.feedItems', (items)=>{
+            this.initFeed(items);
+        });
     }
-    initFeed(){
+    initFeed(items){
         const _init = (news)=>(news.date = new Date(Date.parse(news.date)), news);
         const _sort = (newsA, newsB)=>newsB.date.getTime()-newsA.date.getTime()
-        this._feedItems = this.feedItems.map(_init).sort(_sort);
+        this._feedItems = items.map(_init).sort(_sort);
     }
 
     listFeedItems(){

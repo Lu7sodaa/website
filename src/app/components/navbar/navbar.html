@@ -13,9 +13,9 @@
                 &nbsp;/&nbsp;
                 <span ng-if="!nav.isProjectDetails()">{{ nav.$state.current.data.title }}</span>
                 <span ng-if="nav.isProjectDetails()">
-                    <a ui-sref="app.portfolio.list" class="ariane">{{ nav.$state.current.data.title }}</a>
+                    <a ui-sref="app.portfolio.list({'#': 'top'})" class="ariane">{{ nav.$state.current.data.title }}</a>
                     &nbsp;/&nbsp;
-                    {{ nav.currentProject.title}}
+                    {{ nav.details.title}}
                 </span>
             </span>
         </div>

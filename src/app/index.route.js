@@ -41,7 +41,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
         .state('app.portfolio', {
             data: { title: 'portfolio' },
             abstract: true,
-            template: '<skoli-page><ui-view/></skoli-page>',
+            template: '<ui-view/>',
             url: '/portfolio'
         })
         .state('app.portfolio.list', {
@@ -56,10 +56,18 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
             controller: 'DetailsController',
             controllerAs: 'details',
             resolve: {
-                project: (PROJECTS, $stateParams, $log)=>{
-                    const project = PROJECTS.find((project)=>project.slug == $stateParams.slug);
-                    $log.log('resolve details / ', $stateParams.slug, project);
-                    return project;
+                project: (PROJECTS, $stateParams, $state, $log, $q)=>{
+                    const deferred = $q.defer();
+                    const slug = $stateParams.slug;
+                    const project = PROJECTS.find((project)=>project.slug == slug);
+                    if(slug && project){
+                        deferred.resolve(project);
+                    } else {
+                        deferred.reject();
+                    }
+                    return deferred.promise.catch(()=>{
+                        $state.transitionTo('app.portfolio.list', {'#':'top'});
+                    })
                 }
             }
         })

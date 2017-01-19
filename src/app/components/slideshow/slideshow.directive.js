@@ -21,7 +21,6 @@ class SlideshowController {
         this.$log = $log;
         this.$window = $window;
         this.$timeout = $timeout;
-        $log.log('slides', this.slides)
         this.animationTimeout = 7000;
         this.activeIndex = 0;
         this.$el = angular.element($element[0]);

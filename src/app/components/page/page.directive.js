@@ -5,6 +5,7 @@ export function PageDirective() {
     restrict: 'E',
     transclude: true,
     scope: {
+        details: '=',
         mainClass: '@',
         hideNavbar: '='
     },
@@ -17,11 +18,11 @@ export function PageDirective() {
 }
 
 class PageController {
-    constructor($log){
+    constructor(){
         'ngInject';
-        $log.log('this.mainClass', this.mainClass);
         this.sidebar_opened = false;
     }
+
     toggleSidebar(){
         this.sidebar_opened = !this.sidebar_opened;
     }

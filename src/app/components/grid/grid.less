@@ -6,24 +6,36 @@
         padding: 0;
         margin:0;
         &.plus {
-            @plus-height: 200px;
-            text-align: center;
-            // display: block;
-            z-index: 10;
-            position: relative;
-            width: 100%;
-            height: @plus-height;
-            background: @blue-grey;
+            .grid__object__overlay {
+                text-align: left;
+                color: @black;
+            }
             .fa-plus {
+                @plus-height: 200px;
+                text-align: center;
+                display: block;
+                z-index: 10;
+                position: relative;
+                width: 100%;
+                height: @plus-height;
+                background: @blue-grey;
                 color: white;
                 text-shadow: 0 0 1px darken(@blue-grey, 50%);
-                line-height: @plus-height + 15px;
+                line-height: @plus-height;
                 font-size: 10em;
             }
         }
     }
     &__object {
-        // background-size: cover;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: @black;
+            &:hover {
+                text-decoration: none;
+                color: @blue-grey;
+            }
+        }
         &__image {
             width: 100%;
         }
@@ -31,10 +43,10 @@
             opacity: 1;
         }
         &__overlay {
+            display: block;
             z-index: 20;
             opacity: 0;
             transition: opacity .5s ease-out;
-            cursor: pointer;
             background-color: rgba(255,255,255,0.9);
             position: absolute;
             padding: 10px;
@@ -43,5 +55,30 @@
             top: 0;
             bottom: 0;
         }
+    }
+
+    @media screen and (max-width: @screen-sm-max){
+        ul& {
+            margin-bottom: 2.5em;
+        }
+        &__object {
+            // &:last-of-type {
+            //     margin-bottom: 2em;
+            // }
+            span&__overlay {
+                position: static;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom:auto;
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (max-width: @screen-xs-max){
+        ul& {
+            margin-bottom: 0;
+        }
+
     }
 }

@@ -6,7 +6,6 @@ export class DetailsController {
         this.project = project;
         this.title = project.title;
         this.images = project.screenshots.map((url)=>{ return {picture:url } });
-        $log.log('DetailsController.controller', project);
     }
 
     nextImage(){
@@ -29,7 +28,6 @@ export class DetailsController {
     }
 
     openFullscreen(img, index){
-        this.$log.log('openFullscreen(',img,index,')')
         this.currentImageIndex = index;
         this.fullscreenImgLoaded = false;
         this.isFullscreenOpened = true;

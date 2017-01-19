@@ -1,10 +1,15 @@
-<section class="main__header">
-    <h1 class="main-title">Portfolio</h1>
-    <hr>
-    <div class="tile">
-        <skoli-grid grid-items="portfolio.listProjects()" grid-use-contact-item="true" grid-on-item-clicked="portfolio.goToDetails(item)"></skoli-grid>
-    </div>
-    <div class="tile">
-        <skoli-feed feed-items="portfolio.listFeedItems()" feed-title="Actualités"></skoli-feed>
-    </div>
-</section>
+<skoli-page>
+    <section class="main__header">
+        <h1 class="main-title">Portfolio</h1>
+        <hr>
+        <div class="tile">
+            <skoli-grid
+                grid-details-state="app.portfolio.details"
+                grid-items="portfolio.listProjects()"
+                grid-use-contact-item="true"></skoli-grid>
+        </div>
+        <div class="tile">
+            <skoli-feed feed-items="portfolio.listFeedItems()" feed-title="Actualités"></skoli-feed>
+        </div>
+    </section>
+</skoli-page>

@@ -1,30 +1,33 @@
 <ul class="grid dynamic-grid"
     ag-gutter-size="30"
-    ag-grid-width="300"
+    ag-grid-width="350"
     ag-id="tile-{{ grid.id }}"
     angular-grid="grid.listGridItems()">
-    <li ng-repeat="item in grid.listGridItems() track by $index">
-        <div class="grid__object" ng-click="grid.onItemClicked(item, $index)">
+    <li ng-repeat="item in grid.listGridItems() track by item.id" class="grid__object">
+        <span ng-if="grid.gridUseFullscreen" ng-click="grid.onItemClicked(item, $index)">
             <img ng-src="{{item.picture}}" class="grid__object__image"/>
-            <div class="grid__object__overlay">
-                <div ng-if="grid.gridUseFullscreen">
-                    <h4>Cliquez pour aggrandir l'image</h4>
-                </div>
-                <div ng-if="!grid.gridUseFullscreen">
+            <span class="grid__object__overlay">
+                <h4>Cliquez pour aggrandir l'image</h4>
+            </span>
+        </span>
+        <span ng-if="!grid.gridUseFullscreen">
+            <a ui-sref="{{ grid.gridDetailsState }}({slug: '{{ item.slug }}', '#': 'top'})">
+                <img ng-src="{{item.picture}}" class="grid__object__image"/>
+                <span class="grid__object__overlay">
                     <h4>{{ item.title }}</h4>
                     <p>{{ item.description }}</p>
                     <label>Cliquez pour plus de détails</label>
-                </div>
-            </div>
-        </div>
+                </span>
+            </a>
+        </span>
     </li>
-    <li ng-if="grid.gridUseContactItem" class="plus">
-        <div class="grid__object" ng-click="grid.openExternal('mailto:contact@skoli.fr')">
+    <li ng-if="grid.gridUseContactItem" class="plus grid__object">
+        <a href="mailto:contact@skoli.fr">
             <i class="fa fa-plus"/>
-            <div class="grid__object__overlay">
+            <span class="grid__object__overlay">
                 <h4>Votre étude ?</h4>
                 <p>Nous réalisons pour vous des outils et des applications de la création du savoir à sa mise en forme et sa diffusion sur le web.</p>
             </div>
-        </div>
+        </span>
     </li>
 </ul>
