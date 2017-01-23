@@ -1,35 +1,21 @@
 .feed {
     .item {
         margin-bottom: 30px;
+        display: flex;
         i {
             vertical-align: top;
             text-align: center;
-            font-size: 3em;
-            display: inline-block;
-            // height: 4em;
-            width: 8%;
-            padding-top: 10px;
+            font-size: 2em;
+            width: 2em;
+            padding-top: 0.2em;
         }
 
         &-content {
-            width: 85%;
-            display: inline-block;
-            // font-size: 1.1em;
+            width: 95%;
         }
 
         &-source {
             font-weight: bold;
-            // font-style: italic;
-        }
-    }
-    @media(max-width: @screen-xs-max){
-        .item {
-            i {
-                font-size: 2em;
-            }
-            &-content {
-                font-size: 1.15em;
-            }
         }
     }
 }

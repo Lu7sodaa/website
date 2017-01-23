@@ -11,7 +11,7 @@
                        ng-if="item.source_url">{{ item.source }}</a>
                 </span><br>
                 <span class="item-title">{{ item.title }}</span><br>
-                <span ng-if="item.url">
+                <span class="item-url" ng-if="item.url">
                     <a ng-href="{{ item.url }}">{{ feed.itemDetailsText(item) }}</a>
                 </span>
             </div>
