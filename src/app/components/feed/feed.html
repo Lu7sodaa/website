@@ -2,7 +2,7 @@
     <h1>{{ feed.feedTitle }}</h1>
     <ul class="list-unstyled">
         <li class="item" ng-repeat="item in feed.listFeedItems() track by $index">
-            <i class="fa" ng-class="feed.itemIcon(item)"/>
+            <i class="fa" ng-class="feed.itemIcon(item)"></i>
             <div class="item-content">
                 <span class="item-date">{{ feed.itemDate(item) }}</span>&nbsp;-&nbsp;<span class="item-source">
                     <span ng-if="!item.source_url">{{ item.source }}</span>
