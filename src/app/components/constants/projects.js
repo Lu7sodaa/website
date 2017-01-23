@@ -39,16 +39,18 @@ Moussa Bourekba est chercheur au [Centre de Barcelone pour les Affaires Internat
             {
                 type: NEWS_TYPES.event,
                 title: 'Présentation à l\'atelier "Journalism Computationnel"',
-                source: 'EGC 2017',
+                source: 'CompJournalism 2017',
+                source_url: 'http://compjournalism2017.irisa.fr/',
                 date: '2017-01-24',
-                url: 'https://www.mediapart.fr/journal/economie/181116/lislam-objet-mediatique'
+                url: null
             },
             {
-                type: NEWS_TYPES.quote,
-                title: 'Présentation à l\'atelier "Journalism Computationnel"',
-                source: 'Raul Magni-Berton',
-                date: '2017-02-24',
-                url: 'https://www.mediapart.fr/journal/economie/181116/lislam-objet-mediatique'
+                type: NEWS_TYPES.event,
+                source: 'EGC 2017',
+                title: 'Présentation à l\'atelier "Visualisation d\'informations, interaction et fouille de données"',
+                source_url: 'http://gt-vif.polytech.univ-nantes.fr/egc-vif2017/',
+                date: '2017-01-24',
+                url:null
             }
         ]
     },
@@ -70,9 +72,9 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
         screenshots: [
             'assets/images/projects/dlc/screenshot1.png',
             'assets/images/projects/dlc/screenshot2.png',
-            'assets/images/projects/dlc/screenshot3.png',
+            'assets/images/projects/dlc/screenshot5.png',
             'assets/images/projects/dlc/screenshot4.png',
-            'assets/images/projects/dlc/screenshot5.png'
+            'assets/images/projects/dlc/screenshot3.png'
         ],
         feed: [
             {
@@ -85,7 +87,7 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
             {
                 type: NEWS_TYPES.event,
                 source: 'Sciences Po Grenoble',
-                title: 'Conférence de Raoul Magni-Berton - « Dérangeons la chambre » la nouvelle application qui permet de visualiser l’influence des règles électorales.',
+                title: 'Conférence de Raul Magni-Berton - « Dérangeons la chambre » la nouvelle application qui permet de visualiser l’influence des règles électorales.',
                 date: '2016-12-20'
             }
         ]

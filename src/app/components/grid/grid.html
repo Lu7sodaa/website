@@ -6,8 +6,8 @@
     <li ng-repeat="item in grid.listGridItems() track by item.id" class="grid__object">
         <span ng-if="grid.gridUseFullscreen" ng-click="grid.onItemClicked(item, $index)">
             <img ng-src="{{item.picture}}" class="grid__object__image"/>
-            <span class="grid__object__overlay">
-                <h4>Cliquez pour aggrandir l'image</h4>
+            <span class="grid__object__overlay text-center fs">
+                <h4>Cliquez pour agrandir l'image</h4>
             </span>
         </span>
         <span ng-if="!grid.gridUseFullscreen">
