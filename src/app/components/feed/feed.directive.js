@@ -37,6 +37,7 @@ class FeedController {
     constructor ($log, $scope) {
         'ngInject';
         this.$log = $log;
+        $log.log('items given', this.feedItems);
         this.initFeed(this.feedItems);
         $scope.$watch('feed.feedItems', (items)=>{
             this.initFeed(items);

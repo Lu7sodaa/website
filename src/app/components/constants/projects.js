@@ -51,6 +51,22 @@ Moussa Bourekba est chercheur au [Centre de Barcelone pour les Affaires Internat
                 source_url: 'http://gt-vif.polytech.univ-nantes.fr/egc-vif2017/',
                 date: '2017-01-24',
                 url:null
+            },
+            {
+                type: NEWS_TYPES.article,
+                source: 'datadrivenjournalism.net',
+                title: 'Islam, media subject: How to quantify the perception of Islam in the media',
+                source_url: null,
+                date: '2017-02-05',
+                url:'http://datadrivenjournalism.net/featured_projects/islam_media_subject_how_to_quantify_the_perception_of_islam_in_the_media'
+            },
+            {
+                type: NEWS_TYPES.article,
+                source: 'Medium',
+                title: 'How to detect duplicates in a Django database',
+                source_url: null,
+                date: '2017-02-07',
+                url:'https://medium.com/@AgenceSkoli/how-to-detect-duplicates-on-a-django-database-db3b009e9d60'
             }
         ]
     },

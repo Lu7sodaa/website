@@ -32,6 +32,7 @@ import { CapitalizeFilter  } from '../app/components/filters/capitalize';
 
 // services
 import { PlatformService } from '../app/components/platform.service';
+import { FeedService   } from './main/portfolio/feed.service';
 
 // constants
 import { NEWS } from '../app/components/constants/news';
@@ -66,6 +67,7 @@ angular.module('skoli', dependencies )
   .constant('CHAPTERS', CHAPTERS)
   .constant('EVENTS', EVENTS)
   .service('platformService', PlatformService)
+  .service('feedService', FeedService)
   .controller('HomeController', HomeController)
   .controller('PortfolioController', PortfolioController)
   .controller('DetailsController', DetailsController)
