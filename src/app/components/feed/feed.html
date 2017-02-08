@@ -1,6 +1,14 @@
 <div class="feed">
     <h1>{{ feed.feedTitle }}</h1>
-    <ul class="list-unstyled">
+    <ul class="feed__pagination list-unstyled" ng-if="feed.hasPages()">
+        <li class="feed__pagination__item"
+            ng-class="{'feed__pagination__item--active': (page == feed.currentPage)}"
+            ng-repeat="page in feed.listPages()"
+            ng-click="feed.goToPage(page)">
+            {{ page+1 }}
+        </li>
+    </ul>
+    <ul class="list-unstyled feed__items">
         <li class="item" ng-repeat="item in feed.listFeedItems() track by $index">
             <i class="fa" ng-class="feed.itemIcon(item)"></i>
             <div class="item-content">

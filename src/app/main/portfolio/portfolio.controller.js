@@ -7,7 +7,6 @@ export class PortfolioController {
         this.$location = $location;
         this.projects = this.initProjects(PROJECTS);
         this.feed = feedService.getFeed();
-        $log.log('this.feed = ', this.feed, feedService);
     }
 
     goToDetails(project){

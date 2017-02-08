@@ -34,15 +34,17 @@ export function FeedDirective() {
 }
 
 class FeedController {
-    constructor ($log, $scope) {
+    constructor (CONFIG, $log, $scope) {
         'ngInject';
+        this.currentPage = 0;
+        this.itemsPerPage = CONFIG.feed.itemsPerPage;
         this.$log = $log;
-        $log.log('items given', this.feedItems);
         this.initFeed(this.feedItems);
         $scope.$watch('feed.feedItems', (items)=>{
             this.initFeed(items);
         });
     }
+
     initFeed(items){
         const _init = (news)=>(news.date = new Date(Date.parse(news.date)), news);
         const _sort = (newsA, newsB)=>newsB.date.getTime()-newsA.date.getTime()
@@ -50,7 +52,24 @@ class FeedController {
     }
 
     listFeedItems(){
-        return this._feedItems;
+        let i = this.currentPage * this.itemsPerPage;
+        let j = i+this.itemsPerPage;
+        let items = this._feedItems.slice(i,j);
+        return items;
+    }
+
+    hasPages(){
+        return this._feedItems.length > this.itemsPerPage;
+    }
+
+    listPages(){
+        const len = this._feedItems.length;
+        const pageNumber = Math.ceil(len / this.itemsPerPage);
+        return Array.from(Array(pageNumber).keys());
+    }
+
+    goToPage(page){
+        this.currentPage = page;
     }
 
     itemIcon(item){
