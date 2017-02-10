@@ -67,6 +67,14 @@ Moussa Bourekba est chercheur au [Centre de Barcelone pour les Affaires Internat
                 source_url: null,
                 date: '2017-02-07',
                 url:'https://medium.com/@AgenceSkoli/how-to-detect-duplicates-on-a-django-database-db3b009e9d60'
+            },
+            {
+                type: NEWS_TYPES.article,
+                source: 'Medium',
+                title: 'islam, contre-champ médiatique',
+                source_url: null,
+                date: '2017-02-08',
+                url:'https://medium.com/@AgenceSkoli/islam-contre-champ-m%C3%A9diatique-d363cf8351a6#.en0ww5u1m'
             }
         ]
     },

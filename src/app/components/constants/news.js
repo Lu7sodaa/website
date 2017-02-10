@@ -5,11 +5,11 @@ export const NEWS_TYPES = {
 };
 // global news object
 export var NEWS = [
-    // {
-    //     date: '2017-01-20',
-    //     type: NEWS_TYPES.article,
-    //     title: 'How to detect doublon in a large corpus?',
-    //     source: 'Medium',
-    //     url: 'http://medium.com/article'
-    // }
+    {
+        date: '2017-02-09',
+        type: NEWS_TYPES.article,
+        title: 'Construire, valoriser et entremettre les savoirs',
+        source: 'Medium',
+        url: 'https://medium.com/@AgenceSkoli/construire-valoriser-et-entremettre-les-savoirs-f0971224c76f#.smpwnl9tr'
+    }
 ];
