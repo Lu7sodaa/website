@@ -2,6 +2,21 @@ import {NEWS_TYPES} from './news';
 
 export var PROJECTS = [
     {
+        title: 'Un exploration (des données) de Persée',
+        slug: 'prototype-exploration-persee-fr',
+        url: 'http://skoli-persee-vis.surge.sh',
+        description: 'Un exemple de réutilisation du TripleStore de Persée.',
+        full_description: `Le Portail Persée, regroupant des milliers de publications scientifiques accessibles en ligne  a récemment ouvert son TripleStore ([data.persee.fr](http://data.persee.fr)). Une entrée remarquée dans le monde des données liées. Afin d’esquisser la puissance et les possibilités ouvertes par ce nouvel environnement, ce prototype présente, de manière graphique et augmentée par une biographie issue de [dbpédia.org](http://dbpedia.org), l’oeuvre d’auteurs présents sur le portail.
+
+Ce prototype n’a pas vocation à être généralisé à l’ensemble de la base de donnée, il est plutôt une preuve de l’efficacité, de la pertinence et de la puissance de cet environnement RDF et vise à attirer l’intérêt des chercheurs et autres utilisateurs du portail pour le TripleStore.`,
+        picture: 'assets/images/projects/prototype-persee/bourdieu-annee.png',
+        screenshots: [
+            'assets/images/projects/prototype-persee/bourdieu-annee.png',
+            'assets/images/projects/prototype-persee/bourdieu-editeur.png'
+        ],
+        feed: []
+    },
+    {
         title: 'Islam, objet médiatique',
         slug: 'islam-objet-mediatique',
         url: 'http://islam-objet-mediatique.fr',
