@@ -42,6 +42,10 @@ export class DetailsController {
         return this.fullscreenImg && this.fullscreenImgLoaded;
     }
 
+    hasFeedItems(){
+        return this.listFeedItems().length > 0;
+    }
+
     listFeedItems(){
         return this.project.feed;
     }

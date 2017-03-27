@@ -10,7 +10,9 @@
             <skoli-grid grid-items="details.listImages()" grid-use-fullscreen="true" grid-on-item-clicked="details.openFullscreen(item, index)"></skoli-grid>
         </div>
         <div class="tile" style="padding-top:0">
-            <skoli-feed feed-items="details.listFeedItems()" feed-title="Actualités"></skoli-feed>
+            <skoli-feed
+                ng-if="details.hasFeedItems()"
+                feed-items="details.listFeedItems()" feed-title="Actualités"></skoli-feed>
         </div>
 
         <div class="fullscreen" ng-class="{ 'fullscreen--opened': details.isFullscreenOpened }">
