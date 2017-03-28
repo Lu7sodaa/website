@@ -39,6 +39,13 @@ Moussa Bourekba est chercheur au [Centre de Barcelone pour les Affaires Internat
         feed: [
             {
                 type: NEWS_TYPES.article,
+                source: 'Contre-Attaque(s)',
+                title: 'L’islam dans les journaux : étude d’un (mal)traitement médiatique, de 1997 à 2015',
+                date: '2017-03-28',
+                url: 'http://contre-attaques.org/magazine/article/islam-objet'
+            },
+            {
+                type: NEWS_TYPES.article,
                 source: 'CCIF (islamophobie.net)',
                 title: '« L’islam comme objet médiatique » : les questions que pose l’étude de l’agence Skoli',
                 date: '2016-12-06',

@@ -20,7 +20,7 @@
                 </span><br>
                 <span class="item-title">{{ item.title }}</span><br>
                 <span class="item-url" ng-if="item.url">
-                    <a ng-href="{{ item.url }}">{{ feed.itemDetailsText(item) }}</a>
+                    <a target="_blank" rel="nofollow" ng-href="{{ item.url }}">{{ feed.itemDetailsText(item) }}</a>
                 </span>
             </div>
         </li>
