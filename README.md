@@ -15,6 +15,10 @@ We use gulp to compile static files & serve a local version of the website.
 ```sh
 gulp serve
 ```
+## How to deploy
+```sh
+gulp deploy
+```
 
 ## Thanks
 This project wouldn't have been possible without these great projects:
