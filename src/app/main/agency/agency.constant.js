@@ -24,7 +24,7 @@ export var PREVIOUS_WORK = [
         title: 'Jeu d\'Influences',
         type: 'Serious Game',
         subtitle: 'Développé au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
-        link: 'https://jeu-d-influences.france5.fr'
+        link: 'http://jeu-d-influences.nouvelles-ecritures.francetv.fr/'
     },
     {
         title: 'Municipaly',
@@ -42,13 +42,13 @@ export var PREVIOUS_WORK = [
         title: 'World of Work',
         type: 'Étude ludifiée',
         subtitle: 'Développée au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
-        link: 'http://europe.arte.tv/fr/evenements/world-of-work/'
+        link: 'http://pbellon.github.io/#!/fr/projects/3'
     },
     {
         title: 'Detective.io',
         type: 'Outil d\'investigation',
         subtitle: 'Développé au sein de <a href="http://jplusplus.org" title="Visitez le site de J++" rel="nofollow" target="_blank">J++</a>',
-        link: 'http://detective.io/'
+        link: 'http://pbellon.github.io/#!/en/projects/1'
     }
 ];
 
