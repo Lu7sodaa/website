@@ -137,5 +137,28 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
                 date: '2016-12-20'
             }
         ]
+    },
+    {
+        title: 'Exode(s) Charnel(s)',
+        slug: 'exodes-charnels',
+        url: 'http://www.exodes-charnels.universite-lyon.fr',
+        full_description: "Une fiction interactive basée sur des travaux de recherche et explorant les méandres des migrations prostitutionnelles. A travers trois parcours fictifs, **Exode(s)-Charnel(s)** effectue une plongée dans les travaux de sciences sociales autour des questions migratoires et prostitutionnelles. Les évolutions structurelles qui ont modifiés l'univers du commerce du sexe en France s'expliquent largement par de nouvelles stratégies migratoires (notamment féminines). Cette fiction remet en question la vision largement partagée d'une prostitution organisée par des réseaux criminels internationaux et questionne la notion de *contrainte*. Réalisée dans le cadre des rencontres [Et si on en parlait](http://www.etsionenparlait.hypotheses.org) organisées par l'[Université de Lyon](http://http://www.universite-lyon.fr/), cette application est un support au débat organisé le 02/11/2017 entre la doctorante [Laure Sizaire](http://univ-lyon2.academia.edu/LaureSizaire) le sociologue [Lilian Mathieu](https://lectures.revues.org/11506), ainsi que le sociologue [Nicola Mai](http://www.lames.cnrs.fr/spip.php?article126), par ailleurs réalisateur du film [Travel](http://www.film-documentaire.fr/4DACTION/w_fiche_film/48752_1) présenté à l'occasion.",
+        description: "Fiction interactive - Que dit la recherche en sciences-sociales des questions prostitutionnelles au prisme des migrations",
+        picture: 'assets/images/projects/exodescharnels/RSCard.png',
+        screenshots: [
+            'assets/images/projects/exodescharnels/screenshot1.png',
+            'assets/images/projects/exodescharnels/screenshot2.png',
+            'assets/images/projects/exodescharnels/screenshot3.png',
+            'assets/images/projects/exodescharnels/screenshot4.png'
+        ],
+        feed: [
+            {
+                type: NEWS_TYPES.article,
+                source: 'PopSciences (Université de Lyon)',
+                title: 'Exode(s) Charnel(s). Trois parcours de la migration à la prostitution',
+                date: '2017-11-03',
+                url: 'https://popsciences.universite-lyon.fr/ressources/exodes-charnels-trois-parcours-de-migration-a-prostitution/'
+            }
+        ]
     }
 ];
