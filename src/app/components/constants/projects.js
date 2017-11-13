@@ -160,5 +160,30 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
                 url: 'https://popsciences.universite-lyon.fr/ressources/exodes-charnels-trois-parcours-de-migration-a-prostitution/'
             }
         ]
+    },
+    {
+        title: 'Vi(c)e organique',
+        slug: 'viceorganique',
+        url: 'XXXXX',
+        full_description: `**Vi(c)e organique** est une plongée au coeur des lobbys climatiques européens. En 2013, la Commission Européenne a lancé une Consultation sur le nouveau cadre pour le climat à l’horizon 2030. Cette application nous immerge à travers les réponses fournies par 550 organisations qui ont répondu à cette consultation. La création par la Commission Européenne d'un registre de transparence visant à rendre publiques les activités de lobbying et les sommes engagées a permis le croisement de cette base avec les résultats de la consultation sur les objectifs climatiques pour 2030. </br>
+        Cette oeuvre met en lumière les réseaux d'influence, les prises de position des lobbyistes ainsi que les montants dépensés vis-à-vis des sujets climatiques. **Vi(c)e organique** a choisi de se concentrer sur 4 de ces aspects (globalement moins techniques et) ayant fait l’objet de débats controversés. La réduction des émissions de gaz à effet de serre, les énergies renouvelables et l’efficacité énergétique correspondent aux grands objectifs sur lesquels s’est prononcée la Commission et le devenir du gaz de schiste est un sujet brûlant toujours en discussion. </br></br>
+        Une partie des données (type d'organisations, origines géographiques, coûts…) est issue de l'incomplet registre de transparence. En effet, bien que l'inscription sur ce registre soit obligatoire « *pour tout groupe d’intérêt qui voudrait s’entretenir avec un fonctionnaire de haut niveau* », aucune sanction n'est prévue pour les contrevenants. Les positions des organisations proviennent quand à elles des recherches du [Simpol project](https://simpolproject.eu/), notamment de la campagne de crowdsourcing qui permet d’analyser les réponses des organisations à la consultation de la Commission européenne sur le Cadre pour le climat à l’horizon 2030. </br> </br>
+        Ce projet a été porté par [Fabrice Sabatier](http://www.corp-lab.com/researchsabatier/a-propos/), designer graphique, chercheur en Art et science de l'art à l'[Université Libre de Bruxelles](http://www.ulb.ac.be/) (ULB) et chercheur associé au [RANDOM(lab)](http://www.esadse.fr/fr/la-recherche/171012-laboratoire-random-lab-) de l'[École supérieure d'art et de design](http://www.esadse.fr/fr/home/) de Saint Etienne. Skoli l'a accompagné pour le rendu graphique organique de l'application.`,
+        description: "Immersion au coeur des lobbys climatiques européens",
+        picture: 'assets/images/projects/viceorganique/image1.png',
+        screenshots: [
+            'assets/images/projects/viceorganique/screen11.png',
+            'assets/images/projects/viceorganique/screen21.png',
+            'assets/images/projects/viceorganique/screen31.png'
+        ],
+        feed: [
+            {
+                type: NEWS_TYPES.article,
+                source: "L'Assaut de la menuiserie",
+                title: 'Curiosités économiques : dissections et incantations. Laboratoire sauvage Désorceler la finance et Fabrice Sabatier',
+                date: '2017-11-13',
+                url: 'https://www.lassautdelamenuiserie.com/2017/fabrice-sabatier/'
+            }
+        ]
     }
 ];

@@ -2,8 +2,7 @@
   "name": "skoli",
   "version": "0.0.0",
   "dependencies": {},
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "babel-core": "~5.8.25",
     "babel-loader": "~5.3.2",
@@ -47,5 +46,17 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "description": "- npm - bower",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skoli-Code/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skoli-Code/website/issues"
+  },
+  "homepage": "https://github.com/Skoli-Code/website#readme"
 }
