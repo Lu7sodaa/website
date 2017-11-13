@@ -185,5 +185,53 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
                 url: 'https://www.lassautdelamenuiserie.com/2017/fabrice-sabatier/'
             }
         ]
+    },
+    {
+        title: 'Aridity World Map',
+        slug: 'AridityWorldMap',
+        url: 'http://www.aridityworldmap.org/',
+        full_description: `**Aridity World Map** permet de créer des cartes personnalisables à différentes échelles, avec un calcul en temps réel des données relatives à l’aridité. Cette interface offre un support exceptionnel pour modéliser et envisager différents scenarii d’évolution des zones arides. </br>
+        Cette carte interactive a été conçue à partir de la carte mondiale des zones arides et semi-arides, préparée au Laboratoire de cartographie thématique du [CNRS](http://www.cnrs.fr/) et publiée en 1977 par l’[UNESCO](https://fr.unesco.org/) à l’échelle 1/25 000 000e. </br> </br>
+        En analysant sa légende, deux laboratoires de recherche ont élaboré une base de données à référence spatiale (SIRS) : à Paris, le Laboratoire d’Informatique et de Systèmes Complexes (LaISC) de l’[École Pratique des Hautes Études](https://www.ephe.fr/) (EPHE) aujourd’hui devenu [Laboratoire Cognition Artificielle et humaine](http://www.cognition-usages.org/chart2/) (CHArt) et, au Caire, le [Centre d’Études et de Documentation Juridiques, Économiques et sociales](http://cedej-eg.org/) (CEDEJ) rattaché au CNRS. </br></br>
+        **Aridity World Map** s’inscrit dans une démarche de science participative et citoyenne. La base de données sur l’aridité à référence spatiale pourra être actualisée et enrichie d’illustrations et de données, [grâce à la collaboration de la communauté scientifique, des décideurs ou des acteurs de la société civile](http://www.aridityworldmap.org/page/contribute). </br>`,
+        description: "Un portail cartographique de l'aridité dans le monde",
+        picture: 'assets/images/projects/AridityWorldMap/image1.png',
+        screenshots: [
+            'assets/images/projects/AridityWorldMap/screen11.png',
+            'assets/images/projects/AridityWorldMap/screen22.png',
+            'assets/images/projects/AridityWorldMap/screen31.png'
+        ],
+        feed: [
+              {
+                  type: NEWS_TYPES.article,
+                  source: "",
+                  title: '',
+                  date: '',
+                  url: ''
+              }
+          ]
+    },
+    {
+        title: 'CERAH- HEW 2017',
+        slug: 'cerah-hew',
+        url: 'https://humanitarianencyclopedia.org/',
+        full_description: `Dans le cadre de la [Humanitarian Evidence Week](http://www.evidenceaid.org/events-and-training/hew/) 2017, Skoli a accompagné la communication du [Centre for Education and Research in Humanitarian Action](http://www.cerahgeneve.ch/home/) (CERAH) basé à Genève. En partenariat avec l'[Université de Geneve](https://www.unige.ch/) et l'[Institut de Hautes Études Internationales et du Développement](http://graduateinstitute.ch/fr/home.html), le CERAH propose une recherche mutidisciplinaire sur les sujets de l'action humanitaire. </br> </br>
+        Le CERAH est porteur d'un ambitieux projet humanitaire visant à mettre en place, par une démarche collaborative une [Encyclopédie Humanitaire](https://humanitarianencyclopedia.org/) regroupant les acteurs humanitaires et les centres de recherche. Dans le cadre de la HEW, il dévoilait les premières pistes de réfléxion issues de l'analyse des données encore en cours de récolte.`,
+        description: "Datavisualisations dans le cadre de la Humanitarian Evidence Week 2017",
+        picture: 'assets/images/projects/cerah-hew/image1.png',
+        screenshots: [
+            'assets/images/projects/cerah-hew/screen11.png',
+            'assets/images/projects/cerah-hew/screen21.png',
+            'assets/images/projects/cerah-hew/screen31.png'
+        ],
+        feed: [
+            {
+                type: NEWS_TYPES.article,
+                source: "Humanitarian Encyclopedia",
+                title: 'An expanding humanitarian sector',
+                date: '2017-11-07',
+                url: 'https://humanitarianencyclopedia.org/hew2017/hew2017_evidence1/'
+            }
+        ]
     }
 ];
