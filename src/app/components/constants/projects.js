@@ -193,11 +193,12 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
         full_description: `Dans le cadre de la [Humanitarian Evidence Week](http://www.evidenceaid.org/events-and-training/hew/) 2017, Skoli a accompagné la communication du [Centre for Education and Research in Humanitarian Action](http://www.cerahgeneve.ch/home/) (CERAH) basé à Genève. En partenariat avec l'[Université de Geneve](https://www.unige.ch/) et l'[Institut de Hautes Études Internationales et du Développement](http://graduateinstitute.ch/fr/home.html), le CERAH propose une recherche mutidisciplinaire sur les sujets de l'action humanitaire. </br> </br>
         Le CERAH est porteur d'un ambitieux projet humanitaire visant à mettre en place, par une démarche collaborative une [Encyclopédie Humanitaire](https://humanitarianencyclopedia.org/) regroupant les acteurs humanitaires et les centres de recherche. Dans le cadre de la HEW, il dévoilait les premières pistes de réfléxion issues de l'analyse des données encore en cours de récolte.`,
         description: "Datavisualisations dans le cadre de la Humanitarian Evidence Week 2017",
-        picture: 'assets/images/projects/cerah-hew/image.png',
+        picture: 'assets/images/projects/cerah-hew/ima.png',
         screenshots: [
             'assets/images/projects/cerah-hew/screen11.png',
             'assets/images/projects/cerah-hew/screen21.png',
-            'assets/images/projects/cerah-hew/screen31.png'
+            'assets/images/projects/cerah-hew/screen31.png',
+            'assets/images/projects/cerah-hew/screen41.png'
         ],
         feed: [
             {
@@ -224,15 +225,7 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
             'assets/images/projects/AridityWorldMap/screen22.png',
             'assets/images/projects/AridityWorldMap/screen31.png'
         ],
-        feed: [
-              {
-                  type: NEWS_TYPES.article,
-                  source: "",
-                  title: '',
-                  date: '',
-                  url: ''
-              }
-          ]
+        feed: []
     }
 
 ];
