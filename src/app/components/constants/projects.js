@@ -186,6 +186,24 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
             }
         ]
     },*/
+    /*{
+        title: "Cerema - FVG",
+        slug: 'cerema',
+        url: 'XXXX',
+        full_description: `Ce projet s'inscrit dans le cadre de la restitution d'une étude innovante menée conjointement par le [Centre d’études et d’expertise sur les risques, l’environnement, la mobilité et l’aménagement](www.cerema.fr/) et [Cap.T](http://www.capterritoires.fr/). Elle consiste à identifier, par la concertation de neuf services de l'Etat et quinze experts contributeurs, les potentiels et ressources des territoires français du genevois.
+
+En trois mois de travail collaboratif l'équipe du projet a identifié 35 potentiels et plus de 150 ressources associées les priorités à développer par l'Etat.
+
+Dans ce cadre, Skoli a cherché a traduire visuellement, la densité et le côté collaboratif de l'étude, ses principales conclusions ou encore son utilité décisionnelle. La constitution des posters nécessitait ici une compréhension fine des enjeux, une analyse des principales caractéristiques de l'étude afin d'en produire une synthèse efficace. `,
+        description: "Synthèse visuelle d'une étude publique collaborative sur le territoire franco-valdo-genevois.",
+        picture: 'assets/images/projects/cerema/img2.png',
+        screenshots: [
+            'assets/images/projects/cerema/p1.png',
+            'assets/images/projects/cerema/p2.png',
+            'assets/images/projects/cerema/p3.png'
+        ],
+        feed: []
+    },*/
     {
         title: 'CERAH- HEW 2017',
         slug: 'cerah-hew',
