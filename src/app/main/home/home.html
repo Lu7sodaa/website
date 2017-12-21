@@ -44,4 +44,16 @@
             </div>
         </div>
     </section>
+    <section class="section home__partners text-center">
+      <h1 class="bold">Ils nous font confiance</h1>
+      <div class="row">
+        <div class="partner"
+            ng-repeat="partner in home.listPartners()"
+            ng-style="{
+              'background-image': 'url('+ partner.logo.url +')',
+              'width': partner.logo.width+'px',
+              'height': partner.logo.height+'px'
+            }"></div>
+      </div>
+    </section>
 </skoli-page>

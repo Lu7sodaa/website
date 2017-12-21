@@ -1,4 +1,8 @@
-#!/usr/bin/env zsh
+#!/bin/bash
+
+gulp(){
+  ./node_modules/.bin/gulp $@
+}
 
 run(){
     gulp serve
@@ -22,7 +26,7 @@ deploy(){
     gulp deploy
 }
 
-if [[ "$(type -w $@)" =~ .*function ]];
+if [[ "$(type -t $@)" =~ .*function ]];
 then
   echo Starting "$@"
   eval $(printf "%q " "$@")

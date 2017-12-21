@@ -99,6 +99,24 @@
         }
     }
 
+    &__partners {
+      padding-top: 60px;
+      padding-bottom: 70px;
+      h1 {
+        margin-bottom: 40px;
+      }
+      .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+
+      .partner {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
     // responsive rules
     @media screen and (max-width: @screen-sm){
         .main__header {
@@ -148,6 +166,13 @@
                     padding-bottom: 0;
                 }
             }
+        }
+        &__partners {
+          .row {
+            flex-direction: column;
+            align-items: center;
+          }
+          
         }
     }
 }

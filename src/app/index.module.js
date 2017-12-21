@@ -39,6 +39,7 @@ import { CONFIG } from '../app/components/constants/config';
 import { NEWS } from '../app/components/constants/news';
 import { EVENTS } from '../app/components/constants/events';
 import { PROJECTS } from '../app/components/constants/projects';
+import { PARTNERS } from '../app/components/constants/partners';
 
 var dependencies = [
     'angular-scroll-animate',
@@ -61,6 +62,7 @@ angular.module('skoli', dependencies )
   .run(runBlock)
   .constant('CONFIG', CONFIG)
   .constant('PROJECTS', PROJECTS)
+  .constant('PARTNERS', PARTNERS)
   .constant('PROCESS', PROCESS)
   .constant('NEWS', NEWS)
   .constant('MEMBERS', MEMBERS)
