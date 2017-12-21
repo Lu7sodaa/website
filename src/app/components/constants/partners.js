@@ -1,7 +1,7 @@
-export var PARTNERS = [
+  export var PARTNERS = [
   {
     logo: { 
-      url:'assets/images/partners/udl.png',
+      url:'assets/images/partners/cerema.png',
       width: 200,
       height: 150
     },
@@ -9,7 +9,7 @@ export var PARTNERS = [
   },
   {
     logo: {
-      url:'assets/images/partners/cerema.png',
+      url:'assets/images/partners/udl.png',
       width: 200,
       height: 150
     },
@@ -25,7 +25,7 @@ export var PARTNERS = [
   },
   {
     logo: {
-      url:'assets/images/partners/metropole.png',
+      url:'assets/images/partners/he.png',
       width: 200,
       height: 150
     },
@@ -33,7 +33,7 @@ export var PARTNERS = [
   },
   {
     logo: {
-      url: 'assets/images/partners/he.png',
+      url: 'assets/images/partners/metropole.png',
       width: 200,
       height: 150
     },
