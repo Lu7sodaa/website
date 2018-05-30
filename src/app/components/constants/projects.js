@@ -192,7 +192,7 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
         url: 'XXXX',
         full_description: `Ce projet s'inscrit dans le cadre de la restitution d'une étude innovante menée conjointement par le [Centre d’études et d’expertise sur les risques, l’environnement, la mobilité et l’aménagement](www.cerema.fr/) et [Cap.T](http://www.capterritoires.fr/). Elle consiste à identifier, par la concertation de neuf services de l'Etat et quinze experts contributeurs, les potentiels et ressources des territoires français du genevois.
 
-En trois mois de travail collaboratif l'équipe du projet a identifié 35 potentiels et plus de 150 ressources associées les priorités à développer par l'Etat.
+En trois mois de travail collaboratif l'équipe du projet a identifié 35 potentiels et plus de 150 ressources associées, ainsi  les priorités à développer par l'Etat.
 
 Dans ce cadre, Skoli a cherché a traduire visuellement, la densité et le côté collaboratif de l'étude, ses principales conclusions ou encore son utilité décisionnelle. La constitution des posters nécessitait ici une compréhension fine des enjeux, une analyse des principales caractéristiques de l'étude afin d'en produire une synthèse efficace. `,
         description: "Synthèse visuelle d'une étude publique collaborative sur le territoire franco-valdo-genevois.",
@@ -242,6 +242,22 @@ Dans ce cadre, Skoli a cherché a traduire visuellement, la densité et le côt�
             'assets/images/projects/AridityWorldMap/screen11.png',
             'assets/images/projects/AridityWorldMap/screen22.png',
             'assets/images/projects/AridityWorldMap/screen31.png'
+        ],
+        feed: []
+    },
+    {
+        title: "Infographie Start-Up",
+        slug: 'grandlyon',
+        url: 'https://www.millenaire3.com/publications/Les-grandes-etapes-du-developpement-d-une-start-up',
+        full_description: 'Qui sont les start-up du Grand Lyon ? Afin de mieux comprendre cet écosystème, le Grand Lyon a mené une enquête auprès des start-up du territoire dans le but d’interroger leurs parcours et de mieux évaluer leur impact sur l’économie locale. Cette infographie présente, loin des idées reçues que véhicule l’imaginaire des start-up, les grandes étapes de leur développement ainsi que des chiffres clés pour donner à voir et à comprendre la réalité des start-up de notre territoire. ',
+        description: "Infographie de restitution d'une étude menée par la cellule de veille prospective du Grand Lyon",
+        picture: 'assets/images/projects/metropole/ca.png',
+        screenshots: [
+            'assets/images/projects/metropole/startup.png',
+            'assets/images/projects/metropole/p1.png',
+            'assets/images/projects/metropole/p2.png',
+            'assets/images/projects/metropole/p3.png',
+            'assets/images/projects/metropole/p4.png'
         ],
         feed: []
     }
