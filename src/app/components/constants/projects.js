@@ -183,6 +183,13 @@ Raul Magni Berton est professeur de science politique à [Sciences Po Grenoble](
                 title: 'Curiosités économiques : dissections et incantations. Laboratoire sauvage Désorceler la finance et Fabrice Sabatier',
                 date: '2017-11-13',
                 url: 'https://www.lassautdelamenuiserie.com/2017/fabrice-sabatier/'
+            },
+            {
+                type: NEWS_TYPES.article,
+                source: 'Cairn',
+                title: 'Vi(c)e organique – Sciences du Design 07',
+                date: '2018-07-09',
+                url: 'https://www.cairn.info/revue-sciences-du-design-2018-1-page-11.htm'
             }
         ]
     },
