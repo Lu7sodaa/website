@@ -32,5 +32,13 @@ export var NEWS = [
         title: 'Humanitarian Encyclopedia – Practitioners workshop',
         source: 'Humanitarian Encyclopedia',
         url: 'https://humanitarianencyclopedia.org/2018/05/09/humanitarian-encyclopedia-practitioners-workshop/'
+    },
+    {
+        date: '2018-07-09',
+        type: NEWS_TYPES.article,
+        title: 'Vi(c)e organique – Sciences du Design 07',
+        source: 'Cairn',
+        url: 'https://www.cairn.info/revue-sciences-du-design-2018-1-page-11.htm'
     }
+
 ];
